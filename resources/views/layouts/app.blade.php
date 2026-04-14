@@ -4,7 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@yield('title', config('app.name'))</title>
+
+    {{-- Tailwind CSS CDN --}}
+    <script src="https://cdn.tailwindcss.com"></script>
+
     <style>
+        @font-face {
+            font-family: 'EducaPeru';
+            src: url('/fonts/educaperu.woff2') format('woff2'),
+                 url('/fonts/educaperu.woff') format('woff'),
+                 url('/fonts/educaperu.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: 'EducaPeru';
+            src: url('/fonts/educaperu-bold.woff2') format('woff2'),
+                 url('/fonts/educaperu-bold.woff') format('woff'),
+                 url('/fonts/educaperu-bold.ttf') format('truetype');
+            font-weight: 700;
+            font-style: normal;
+            font-display: swap;
+        }
+
         * {
             margin: 0;
             padding: 0;
@@ -12,158 +36,113 @@
         }
 
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            background-color: #f5f0eb;
-            color: #1a1a1a;
+            font-family: 'EducaPeru', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
         }
 
-        /* ── HEADER ── */
-        header {
-            background-color: #f5f0eb;
-            border-bottom: 1px solid rgba(0,0,0,0.06);
-            padding: 0 40px;
-            height: 64px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
+        /* Smooth hover transitions */
+        .nav-link {
+            position: relative;
+            transition: color 0.2s ease;
         }
 
-        /* Logo */
-        .header-logo {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            text-decoration: none;
-            color: #1a1a1a;
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: #3b82f6;
+            transition: width 0.3s ease;
         }
 
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        /* Logo animation */
         .logo-icon {
-            width: 32px;
-            height: 32px;
-            background-color: #2563eb;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
-        .logo-icon svg {
-            width: 18px;
-            height: 18px;
-            fill: white;
+        .header-logo:hover .logo-icon {
+            transform: rotate(360deg) scale(1.05);
+            box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
         }
 
-        .logo-text {
-            font-size: 20px;
-            font-weight: 600;
-            letter-spacing: -0.3px;
-            color: #1a1a1a;
-        }
-
-        /* Nav links */
-        nav.header-nav {
-            display: flex;
-            align-items: center;
-            gap: 32px;
-        }
-
-        nav.header-nav a {
-            text-decoration: none;
-            font-size: 14.5px;
-            color: #1a1a1a;
-            font-weight: 400;
-            transition: color 0.15s;
-        }
-
-        nav.header-nav a:hover {
-            color: #2563eb;
-        }
-
-        /* Right side */
-        .header-right {
-            display: flex;
-            align-items: center;
-            gap: 16px;
-        }
-
-        .header-region {
-            display: flex;
-            align-items: center;
-            gap: 6px;
-            font-size: 14px;
-            color: #1a1a1a;
-            cursor: pointer;
-        }
-
-        .header-region svg {
-            width: 16px;
-            height: 16px;
-            stroke: #1a1a1a;
-            fill: none;
-        }
-
+        /* Button hover effect */
         .btn-login {
-            background-color: #1a1a1a;
-            color: #fff;
-            border: none;
-            padding: 9px 20px;
-            border-radius: 8px;
-            font-size: 14px;
-            font-weight: 500;
-            cursor: pointer;
-            text-decoration: none;
-            transition: background 0.15s;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 8px rgba(26, 26, 26, 0.15);
         }
 
         .btn-login:hover {
-            background-color: #333;
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(26, 26, 26, 0.25);
         }
 
-        /* ── MAIN CONTENT ── */
-        main {
-            padding: 40px;
+        /* Region selector hover */
+        .header-region {
+            transition: all 0.2s ease;
+        }
+
+        .header-region:hover {
+            color: #3b82f6;
+        }
+
+        .header-region:hover svg {
+            stroke: #3b82f6;
         }
     </style>
 </head>
-<body>
+<body class="bg-[#f5f0eb] text-gray-900 antialiased">
 
-<header>
-    {{-- Logo --}}
-    <a href="/" class="header-logo">
-        <div class="logo-icon">
-            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="12" cy="12" r="5" fill="white"/>
-                <circle cx="12" cy="4"  r="2" fill="white"/>
-            </svg>
+<header class="bg-[#f5f0eb] border-b border-gray-200/60 sticky top-0 z-50 backdrop-blur-sm bg-opacity-95">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8">
+        <div class="flex items-center justify-between h-16">
+
+            {{-- Logo --}}
+            <a href="/" class="header-logo flex items-center gap-3 group">
+                <img src="{{ asset('image/logo1prueba.webp') }}" alt="{{ config('app.name') }}" class="logo-icon h-10 w-auto object-contain">
+            </a>
+
+            {{-- Navigation --}}
+            <nav class="hidden md:flex items-center space-x-8">
+                <a href="#" class="nav-link text-sm font-medium text-gray-700 hover:text-blue-600">Incorporation</a>
+                <a href="#" class="nav-link text-sm font-medium text-gray-700 hover:text-blue-600">Accounting</a>
+                <a href="#" class="nav-link text-sm font-medium text-gray-700 hover:text-blue-600">Secretary</a>
+                <a href="#" class="nav-link text-sm font-medium text-gray-700 hover:text-blue-600">Pricing</a>
+                <a href="#" class="nav-link text-sm font-medium text-gray-700 hover:text-blue-600">Resources</a>
+                <a href="#" class="nav-link text-sm font-medium text-gray-700 hover:text-blue-600">About</a>
+            </nav>
+
+            {{-- Right Side --}}
+            <div class="flex items-center gap-4">
+                <button class="header-region flex items-center gap-1.5 text-sm font-medium text-gray-700 hover:text-blue-600 cursor-pointer">
+                    <svg class="w-4 h-4 stroke-current" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="10"/>
+                        <line x1="2" y1="12" x2="22" y2="12"/>
+                        <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+                    </svg>
+                    <span>SG</span>
+                </button>
+
+                <a href="/login" class="btn-login inline-flex items-center justify-center bg-gray-900 text-white px-5 py-2 rounded-lg text-sm font-semibold hover:bg-gray-800">
+                    Login
+                </a>
+            </div>
+
+            {{-- Mobile Menu Button --}}
+            <button class="md:hidden flex items-center justify-center w-10 h-10 rounded-lg hover:bg-gray-200/50 transition-colors">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                </svg>
+            </button>
         </div>
-        <span class="logo-text">osome</span>
-    </a>
-
-    {{-- Nav --}}
-    <nav class="header-nav">
-        <a href="#">Incorporation</a>
-        <a href="#">Accounting</a>
-        <a href="#">Secretary</a>
-        <a href="#">Pricing</a>
-        <a href="#">Resources</a>
-        <a href="#">About</a>
-    </nav>
-
-    {{-- Right --}}
-    <div class="header-right">
-        <div class="header-region">
-            <svg viewBox="0 0 24 24" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                <circle cx="12" cy="12" r="10"/>
-                <line x1="2" y1="12" x2="22" y2="12"/>
-                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
-            </svg>
-            <span>SG</span>
-        </div>
-        <a href="/login" class="btn-login">Login</a>
     </div>
 </header>
 
-<main>
+<main class="min-h-screen">
     @yield('content')
 </main>
 
