@@ -189,33 +189,32 @@
 <body class="bg-[#f5f0eb] text-gray-900 antialiased">
 
 <header id="main-header" class="bg-transparent border-b border-transparent sticky top-0 z-50 backdrop-blur-md">
-    <div class="max-w-7xl mx-auto px-6 lg:px-8">
-        <div class="flex items-center justify-between h-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-16 sm:h-20">
 
             {{-- Logo --}}
             <a href="/" class="header-logo flex items-center gap-3 group">
-                <img src="{{ asset('image/logo1prueba.webp') }}" alt="{{ config('app.name') }}" class="h-14 w-auto object-contain">
+                <img src="{{ asset('image/logo1prueba.webp') }}" alt="{{ config('app.name') }}" class="h-10 sm:h-12 md:h-14 w-auto object-contain">
             </a>
 
             {{-- Navigation --}}
-            <nav class="hidden md:flex items-center space-x-10">
-                <a href="#" class="nav-link text-lg font-black text-gray-700 hover:text-blue-600">Inicio</a>
-                <a href="#" class="nav-link text-lg font-black text-gray-700 hover:text-blue-600">Capacitaciones</a>
-                <a href="#" class="nav-link text-lg font-black text-gray-700 hover:text-blue-600">Nosotros</a>
-                <a href="#" class="nav-link text-lg font-black text-gray-700 hover:text-blue-600">Desarrollo Web</a>
-                <a href="#" class="nav-link text-lg font-black text-gray-700 hover:text-blue-600">Contacto</a>
+            <nav class="hidden lg:flex items-center space-x-6 xl:space-x-10">
+                <a href="#" class="nav-link text-base lg:text-lg font-black text-gray-700 hover:text-blue-600">Inicio</a>
+                <a href="#" class="nav-link text-base lg:text-lg font-black text-gray-700 hover:text-blue-600">Capacitaciones</a>
+                <a href="#" class="nav-link text-base lg:text-lg font-black text-gray-700 hover:text-blue-600">Nosotros</a>
+                <a href="#" class="nav-link text-base lg:text-lg font-black text-gray-700 hover:text-blue-600">Desarrollo Web</a>
+                <a href="#" class="nav-link text-base lg:text-lg font-black text-gray-700 hover:text-blue-600">Contacto</a>
             </nav>
 
-            {{-- Right Side --}}
-            <div class="flex items-center gap-5">
-
-                <a href="/login" class="btn-login inline-flex items-center justify-center bg-gray-900 text-white px-6 py-2.5 rounded-full text-lg font-black hover:bg-gray-800">
+            {{-- Right Side Desktop --}}
+            <div class="hidden lg:flex items-center gap-5">
+                <a href="/login" class="btn-login inline-flex items-center justify-center bg-gray-900 text-white px-5 lg:px-6 py-2 lg:py-2.5 rounded-full text-base lg:text-lg font-black hover:bg-gray-800">
                     Ingresar
                 </a>
             </div>
 
             {{-- Mobile Menu Button --}}
-            <button id="mobile-menu-btn" class="mobile-menu-btn md:hidden flex items-center justify-center w-10 h-10 rounded-lg transition-colors">
+            <button id="mobile-menu-btn" class="mobile-menu-btn lg:hidden flex items-center justify-center w-10 h-10 rounded-lg transition-colors">
                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
                 </svg>
@@ -224,14 +223,14 @@
     </div>
 
     {{-- Mobile Menu --}}
-    <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-200 shadow-lg">
-        <nav class="px-6 py-4 space-y-3">
-            <a href="#" class="block py-3 px-4 text-lg font-black text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition-all">Inicio</a>
-            <a href="#" class="block py-3 px-4 text-lg font-black text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition-all">Capacitaciones</a>
-            <a href="#" class="block py-3 px-4 text-lg font-black text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition-all">Nosotros</a>
-            <a href="#" class="block py-3 px-4 text-lg font-black text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition-all">Desarrollo Web</a>
-            <a href="#" class="block py-3 px-4 text-lg font-black text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition-all">Contacto</a>
-            <a href="/login" class="block py-3 px-4 text-center bg-gray-900 text-white rounded-full text-lg font-black hover:bg-gray-800 transition-all">Ingresar</a>
+    <div id="mobile-menu" class="hidden lg:hidden bg-white border-t border-gray-200 shadow-lg">
+        <nav class="px-4 sm:px-6 py-4 space-y-2">
+            <a href="#" class="block py-3 px-4 text-base sm:text-lg font-black text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition-all">Inicio</a>
+            <a href="#" class="block py-3 px-4 text-base sm:text-lg font-black text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition-all">Capacitaciones</a>
+            <a href="#" class="block py-3 px-4 text-base sm:text-lg font-black text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition-all">Nosotros</a>
+            <a href="#" class="block py-3 px-4 text-base sm:text-lg font-black text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition-all">Desarrollo Web</a>
+            <a href="#" class="block py-3 px-4 text-base sm:text-lg font-black text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition-all">Contacto</a>
+            <a href="/login" class="block py-3 px-4 text-center bg-gray-900 text-white rounded-full text-base sm:text-lg font-black hover:bg-gray-800 transition-all">Ingresar</a>
         </nav>
     </div>
 </header>
