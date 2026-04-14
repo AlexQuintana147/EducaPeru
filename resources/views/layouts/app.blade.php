@@ -28,6 +28,14 @@
             font-display: swap;
         }
 
+        @font-face {
+            font-family: 'HeaderFont';
+            src: url('/fonts/header.woff2') format('woff2');
+            font-weight: 100 900;
+            font-style: normal;
+            font-display: swap;
+        }
+
         * {
             margin: 0;
             padding: 0;
@@ -36,6 +44,12 @@
 
         body {
             font-family: 'EducaPeru', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        }
+
+        /* Header font */
+        header,
+        header * {
+            font-family: 'HeaderFont', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
         }
 
         /* Smooth hover transitions */
@@ -185,11 +199,11 @@
 
             {{-- Navigation --}}
             <nav class="hidden md:flex items-center space-x-10">
-                <a href="#" class="nav-link text-base font-bold text-gray-700 hover:text-blue-600">Inicio</a>
-                <a href="#" class="nav-link text-base font-bold text-gray-700 hover:text-blue-600">Capacitaciones</a>
-                <a href="#" class="nav-link text-base font-bold text-gray-700 hover:text-blue-600">Nosotros</a>
-                <a href="#" class="nav-link text-base font-bold text-gray-700 hover:text-blue-600">Desarrollo Web</a>
-                <a href="#" class="nav-link text-base font-bold text-gray-700 hover:text-blue-600">Contacto</a>
+                <a href="#" class="nav-link text-lg font-black text-gray-700 hover:text-blue-600">Inicio</a>
+                <a href="#" class="nav-link text-lg font-black text-gray-700 hover:text-blue-600">Capacitaciones</a>
+                <a href="#" class="nav-link text-lg font-black text-gray-700 hover:text-blue-600">Nosotros</a>
+                <a href="#" class="nav-link text-lg font-black text-gray-700 hover:text-blue-600">Desarrollo Web</a>
+                <a href="#" class="nav-link text-lg font-black text-gray-700 hover:text-blue-600">Contacto</a>
             </nav>
 
             {{-- Right Side --}}
