@@ -209,7 +209,7 @@
             {{-- Right Side --}}
             <div class="flex items-center gap-5">
 
-                <a href="/login" class="btn-login inline-flex items-center justify-center bg-gray-900 text-white px-5 py-2 rounded-full text-base font-semibold hover:bg-gray-800">
+                <a href="/login" class="btn-login inline-flex items-center justify-center bg-gray-900 text-white px-6 py-2.5 rounded-full text-lg font-black hover:bg-gray-800">
                     Ingresar
                 </a>
             </div>
@@ -226,12 +226,12 @@
     {{-- Mobile Menu --}}
     <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-200 shadow-lg">
         <nav class="px-6 py-4 space-y-3">
-            <a href="#" class="block py-3 px-4 text-base font-bold text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition-all">Inicio</a>
-            <a href="#" class="block py-3 px-4 text-base font-bold text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition-all">Capacitaciones</a>
-            <a href="#" class="block py-3 px-4 text-base font-bold text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition-all">Nosotros</a>
-            <a href="#" class="block py-3 px-4 text-base font-bold text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition-all">Desarrollo Web</a>
-            <a href="#" class="block py-3 px-4 text-base font-bold text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition-all">Contacto</a>
-            <a href="/login" class="block py-3 px-4 text-center bg-gray-900 text-white rounded-full font-semibold hover:bg-gray-800 transition-all">Ingresar</a>
+            <a href="#" class="block py-3 px-4 text-lg font-black text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition-all">Inicio</a>
+            <a href="#" class="block py-3 px-4 text-lg font-black text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition-all">Capacitaciones</a>
+            <a href="#" class="block py-3 px-4 text-lg font-black text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition-all">Nosotros</a>
+            <a href="#" class="block py-3 px-4 text-lg font-black text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition-all">Desarrollo Web</a>
+            <a href="#" class="block py-3 px-4 text-lg font-black text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition-all">Contacto</a>
+            <a href="/login" class="block py-3 px-4 text-center bg-gray-900 text-white rounded-full text-lg font-black hover:bg-gray-800 transition-all">Ingresar</a>
         </nav>
     </div>
 </header>
