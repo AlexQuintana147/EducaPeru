@@ -42,33 +42,84 @@
         /* Smooth hover transitions */
         .nav-link {
             position: relative;
-            transition: color 0.2s ease;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            padding: 8px 12px;
+            border-radius: 8px;
         }
 
         .nav-link::after {
             content: '';
             position: absolute;
-            bottom: -4px;
-            left: 0;
-            width: 0;
+            bottom: 4px;
+            left: 12px;
+            right: 12px;
             height: 2px;
-            background-color: #3b82f6;
-            transition: width 0.3s ease;
+            background: linear-gradient(90deg, #3b82f6, #8b5cf6);
+            transform: scaleX(0);
+            transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            border-radius: 2px;
+        }
+
+        .nav-link:hover {
+            color: #2563eb;
         }
 
         .nav-link:hover::after {
-            width: 100%;
+            transform: scaleX(1);
+        }
+
+        .nav-link:active {
+            transform: scale(0.97);
         }
 
         /* Button hover effect */
         .btn-login {
-            transition: all 0.3s ease;
-            box-shadow: 0 2px 8px rgba(26, 26, 26, 0.15);
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 4px 14px rgba(26, 26, 26, 0.2);
+        }
+
+        .btn-login::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.15);
+            transform: translate(-50%, -50%);
+            transition: width 0.6s, height 0.6s;
+        }
+
+        .btn-login:hover::before {
+            width: 300px;
+            height: 300px;
         }
 
         .btn-login:hover {
-            transform: translateY(-1px);
-            box-shadow: 0 4px 12px rgba(26, 26, 26, 0.25);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(26, 26, 26, 0.3);
+            background-color: #1f2937;
+        }
+
+        .btn-login:active {
+            transform: translateY(0);
+            box-shadow: 0 2px 8px rgba(26, 26, 26, 0.2);
+        }
+
+        /* Logo hover effect */
+        .header-logo {
+            transition: transform 0.3s ease;
+        }
+
+        .header-logo:hover {
+            transform: scale(1.05);
+        }
+
+        .header-logo:active {
+            transform: scale(0.98);
         }
 
         /* Region selector hover */
@@ -86,18 +137,45 @@
 
         /* Header scroll effect */
         header {
-            transition: background-color 0.3s ease, border-color 0.3s ease;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
         }
 
         header.scrolled {
-            background-color: rgba(255, 255, 255, 0.95) !important;
-            border-bottom-color: rgba(0, 0, 0, 0.1);
+            background-color: rgba(255, 255, 255, 0.98) !important;
+            border-bottom-color: rgba(0, 0, 0, 0.08);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+        }
+
+        /* Mobile menu button */
+        .mobile-menu-btn {
+            transition: all 0.3s ease;
+        }
+
+        .mobile-menu-btn:hover {
+            background-color: rgba(59, 130, 246, 0.1);
+            transform: scale(1.05);
+        }
+
+        .mobile-menu-btn:active {
+            transform: scale(0.95);
+        }
+
+        /* Smooth scroll */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Focus styles for accessibility */
+        .nav-link:focus-visible,
+        .btn-login:focus-visible {
+            outline: 2px solid #3b82f6;
+            outline-offset: 4px;
         }
     </style>
 </head>
 <body class="bg-[#f5f0eb] text-gray-900 antialiased">
 
-<header id="main-header" class="bg-transparent border-b border-transparent sticky top-0 z-50 backdrop-blur-sm">
+<header id="main-header" class="bg-transparent border-b border-transparent sticky top-0 z-50 backdrop-blur-md">
     <div class="max-w-7xl mx-auto px-6 lg:px-8">
         <div class="flex items-center justify-between h-20">
 
@@ -124,12 +202,24 @@
             </div>
 
             {{-- Mobile Menu Button --}}
-            <button class="md:hidden flex items-center justify-center w-10 h-10 rounded-lg hover:bg-gray-200/50 transition-colors">
+            <button id="mobile-menu-btn" class="mobile-menu-btn md:hidden flex items-center justify-center w-10 h-10 rounded-lg transition-colors">
                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
                 </svg>
             </button>
         </div>
+    </div>
+
+    {{-- Mobile Menu --}}
+    <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-200 shadow-lg">
+        <nav class="px-6 py-4 space-y-3">
+            <a href="#" class="block py-3 px-4 text-base font-bold text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition-all">Inicio</a>
+            <a href="#" class="block py-3 px-4 text-base font-bold text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition-all">Capacitaciones</a>
+            <a href="#" class="block py-3 px-4 text-base font-bold text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition-all">Nosotros</a>
+            <a href="#" class="block py-3 px-4 text-base font-bold text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition-all">Desarrollo Web</a>
+            <a href="#" class="block py-3 px-4 text-base font-bold text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition-all">Contacto</a>
+            <a href="/login" class="block py-3 px-4 text-center bg-gray-900 text-white rounded-full font-semibold hover:bg-gray-800 transition-all">Ingresar</a>
+        </nav>
     </div>
 </header>
 
@@ -147,6 +237,32 @@
         } else {
             header.classList.remove('scrolled');
         }
+    });
+
+    // Mobile menu toggle
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    mobileMenuBtn.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+    });
+
+    // Close mobile menu when clicking outside
+    document.addEventListener('click', (e) => {
+        if (!header.contains(e.target)) {
+            mobileMenu.classList.add('hidden');
+        }
+    });
+
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+        });
     });
 </script>
 
