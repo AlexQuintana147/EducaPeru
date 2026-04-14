@@ -107,17 +107,9 @@
 
             {{-- Right Side --}}
             <div class="flex items-center gap-5">
-                <button class="header-region flex items-center gap-2 text-base font-bold text-gray-700 hover:text-blue-600 cursor-pointer">
-                    <svg class="w-5 h-5 stroke-current" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <circle cx="12" cy="12" r="10"/>
-                        <line x1="2" y1="12" x2="22" y2="12"/>
-                        <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
-                    </svg>
-                    <span>SG</span>
-                </button>
 
-                <a href="/login" class="btn-login inline-flex items-center justify-center bg-gray-900 text-white px-6 py-2.5 rounded-lg text-base font-semibold hover:bg-gray-800">
-                    Login
+                <a href="/login" class="btn-login inline-flex items-center justify-center bg-gray-900 text-white px-5 py-2 rounded-full text-base font-semibold hover:bg-gray-800">
+                    Ingresar
                 </a>
             </div>
 
