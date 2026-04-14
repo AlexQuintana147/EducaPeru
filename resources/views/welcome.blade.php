@@ -8,11 +8,11 @@
         <div class="text-center">
 
             <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-gray-900 mb-6 sm:mb-8 md:mb-10 leading-tight tracking-tight">
-                Hassle-free
+                Capacitación profesional
                 <span class="relative inline-block">
-                    <span class="text-gray-900">incorporation</span>
+                    <span class="text-gray-900">en programación</span>
                 </span><br>
-                and expert accounting
+                y desarrollo web
                 <span class="relative inline-block ml-1 sm:ml-2">
                     <span class="hidden lg:flex absolute -top-2 -right-20 -space-x-2">
                         <div class="w-10 h-10 xl:w-12 xl:h-12 rounded-full bg-gray-300 border-2 border-white overflow-hidden">
@@ -26,15 +26,19 @@
                         </div>
                     </span>
                 </span><br>
-                for better businesses
+                para empresas
             </h1>
+
+            <p class="text-base sm:text-lg md:text-xl text-gray-600 mb-8 sm:mb-10 max-w-3xl mx-auto">
+                Formamos equipos de alto rendimiento con programas especializados en tecnologías modernas
+            </p>
 
             <div class="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center mb-6 sm:mb-8 md:mb-10">
                 <a href="#cursos" class="w-full sm:w-auto inline-flex items-center justify-center bg-blue-600 text-white px-6 sm:px-8 py-3 sm:py-3.5 rounded-full text-sm sm:text-base font-semibold hover:bg-blue-700 transition-all duration-200 shadow-sm hover:shadow-md">
-                    Get started
+                    Ver capacitaciones
                 </a>
                 <button type="button" class="w-full sm:w-auto inline-flex items-center justify-center bg-white text-gray-900 px-6 sm:px-8 py-3 sm:py-3.5 rounded-full text-sm sm:text-base font-semibold border border-gray-300 hover:border-gray-400 transition-all duration-200 shadow-sm hover:shadow-md">
-                    Schedule a call
+                    Solicitar información
                 </button>
             </div>
 
