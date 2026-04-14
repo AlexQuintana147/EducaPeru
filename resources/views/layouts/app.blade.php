@@ -174,30 +174,57 @@
         }
 
         /* Mobile menu animations */
+        #mobile-menu-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0);
+            visibility: hidden;
+            transition: background-color 0.3s ease, visibility 0.3s ease;
+            z-index: 998;
+        }
+
+        #mobile-menu-overlay.show {
+            background-color: rgba(0, 0, 0, 0.5);
+            visibility: visible;
+        }
+
         #mobile-menu {
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            position: fixed;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            width: 85%;
+            max-width: 400px;
+            transform: translateX(100%);
+            transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            z-index: 999;
+            overflow-y: auto;
         }
 
         #mobile-menu.show {
-            max-height: 600px;
+            transform: translateX(0);
         }
 
         .mobile-menu-link {
             opacity: 0;
-            transform: translateX(-20px);
-            animation: slideIn 0.3s ease forwards;
+            transform: translateX(30px);
         }
 
-        .mobile-menu-link:nth-child(1) { animation-delay: 0.05s; }
-        .mobile-menu-link:nth-child(2) { animation-delay: 0.1s; }
-        .mobile-menu-link:nth-child(3) { animation-delay: 0.15s; }
-        .mobile-menu-link:nth-child(4) { animation-delay: 0.2s; }
-        .mobile-menu-link:nth-child(5) { animation-delay: 0.25s; }
-        .mobile-menu-link:nth-child(6) { animation-delay: 0.3s; }
+        #mobile-menu.show .mobile-menu-link {
+            animation: slideInFromRight 0.4s ease forwards;
+        }
 
-        @keyframes slideIn {
+        #mobile-menu.show .mobile-menu-link:nth-child(1) { animation-delay: 0.1s; }
+        #mobile-menu.show .mobile-menu-link:nth-child(2) { animation-delay: 0.15s; }
+        #mobile-menu.show .mobile-menu-link:nth-child(3) { animation-delay: 0.2s; }
+        #mobile-menu.show .mobile-menu-link:nth-child(4) { animation-delay: 0.25s; }
+        #mobile-menu.show .mobile-menu-link:nth-child(5) { animation-delay: 0.3s; }
+        #mobile-menu.show .mobile-menu-link:nth-child(6) { animation-delay: 0.35s; }
+
+        @keyframes slideInFromRight {
             to {
                 opacity: 1;
                 transform: translateX(0);
@@ -269,51 +296,62 @@
             </button>
         </div>
     </div>
-
-    {{-- Mobile Menu --}}
-    <div id="mobile-menu" class="lg:hidden bg-gradient-to-b from-white to-gray-50">
-        <nav class="px-4 sm:px-6 py-6 space-y-1">
-            <a href="#" class="mobile-menu-link group flex items-center gap-3 py-4 px-5 text-base sm:text-lg font-black text-gray-800 bg-white hover:bg-gradient-to-r hover:from-blue-50 hover:to-purple-50 hover:text-blue-600 rounded-2xl transition-all shadow-sm hover:shadow-md border border-gray-100">
-                <svg class="w-5 h-5 text-blue-500 group-hover:scale-110 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/>
-                </svg>
-                Inicio
-            </a>
-            <a href="#" class="mobile-menu-link group flex items-center gap-3 py-4 px-5 text-base sm:text-lg font-black text-gray-800 bg-white hover:bg-gradient-to-r hover:from-blue-50 hover:to-purple-50 hover:text-blue-600 rounded-2xl transition-all shadow-sm hover:shadow-md border border-gray-100">
-                <svg class="w-5 h-5 text-purple-500 group-hover:scale-110 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
-                </svg>
-                Capacitaciones
-            </a>
-            <a href="#" class="mobile-menu-link group flex items-center gap-3 py-4 px-5 text-base sm:text-lg font-black text-gray-800 bg-white hover:bg-gradient-to-r hover:from-blue-50 hover:to-purple-50 hover:text-blue-600 rounded-2xl transition-all shadow-sm hover:shadow-md border border-gray-100">
-                <svg class="w-5 h-5 text-green-500 group-hover:scale-110 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/>
-                </svg>
-                Nosotros
-            </a>
-            <a href="#" class="mobile-menu-link group flex items-center gap-3 py-4 px-5 text-base sm:text-lg font-black text-gray-800 bg-white hover:bg-gradient-to-r hover:from-blue-50 hover:to-purple-50 hover:text-blue-600 rounded-2xl transition-all shadow-sm hover:shadow-md border border-gray-100">
-                <svg class="w-5 h-5 text-orange-500 group-hover:scale-110 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/>
-                </svg>
-                Desarrollo Web
-            </a>
-            <a href="#" class="mobile-menu-link group flex items-center gap-3 py-4 px-5 text-base sm:text-lg font-black text-gray-800 bg-white hover:bg-gradient-to-r hover:from-blue-50 hover:to-purple-50 hover:text-blue-600 rounded-2xl transition-all shadow-sm hover:shadow-md border border-gray-100">
-                <svg class="w-5 h-5 text-pink-500 group-hover:scale-110 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
-                </svg>
-                Contacto
-            </a>
-            <div class="pt-3">
-                <a href="/login" class="mobile-menu-link flex items-center justify-center gap-2 py-4 px-5 text-center bg-gradient-to-r from-gray-900 to-gray-800 text-white rounded-2xl text-base sm:text-lg font-black hover:from-gray-800 hover:to-gray-700 transition-all shadow-lg hover:shadow-xl">
-                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 16l-4-4m0 0l4-4m-4 4h14m-5 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h7a3 3 0 013 3v1"/>
-                    </svg>
-                    Ingresar
-                </a>
-            </div>
-        </nav>
-    </div>
 </header>
+
+{{-- Mobile Menu Overlay --}}
+<div id="mobile-menu-overlay" class="lg:hidden"></div>
+
+{{-- Mobile Menu Drawer --}}
+<div id="mobile-menu" class="lg:hidden bg-gradient-to-b from-white to-gray-50 shadow-2xl">
+    <div class="flex items-center justify-between p-6 border-b border-gray-200">
+        <img src="{{ asset('image/logo1prueba.webp') }}" alt="{{ config('app.name') }}" class="h-10 w-auto object-contain">
+        <button id="close-menu-btn" class="flex items-center justify-center w-10 h-10 rounded-full bg-gray-100 hover:bg-gray-200 transition-colors">
+            <svg class="w-6 h-6 text-gray-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+            </svg>
+        </button>
+    </div>
+    <nav class="px-6 py-8 space-y-2">
+        <a href="#" class="mobile-menu-link group flex items-center gap-3 py-4 px-5 text-base sm:text-lg font-black text-gray-800 bg-white hover:bg-gradient-to-r hover:from-blue-50 hover:to-purple-50 hover:text-blue-600 rounded-2xl transition-all shadow-sm hover:shadow-md border border-gray-100">
+            <svg class="w-5 h-5 text-blue-500 group-hover:scale-110 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/>
+            </svg>
+            Inicio
+        </a>
+        <a href="#" class="mobile-menu-link group flex items-center gap-3 py-4 px-5 text-base sm:text-lg font-black text-gray-800 bg-white hover:bg-gradient-to-r hover:from-blue-50 hover:to-purple-50 hover:text-blue-600 rounded-2xl transition-all shadow-sm hover:shadow-md border border-gray-100">
+            <svg class="w-5 h-5 text-purple-500 group-hover:scale-110 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
+            </svg>
+            Capacitaciones
+        </a>
+        <a href="#" class="mobile-menu-link group flex items-center gap-3 py-4 px-5 text-base sm:text-lg font-black text-gray-800 bg-white hover:bg-gradient-to-r hover:from-blue-50 hover:to-purple-50 hover:text-blue-600 rounded-2xl transition-all shadow-sm hover:shadow-md border border-gray-100">
+            <svg class="w-5 h-5 text-green-500 group-hover:scale-110 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/>
+            </svg>
+            Nosotros
+        </a>
+        <a href="#" class="mobile-menu-link group flex items-center gap-3 py-4 px-5 text-base sm:text-lg font-black text-gray-800 bg-white hover:bg-gradient-to-r hover:from-blue-50 hover:to-purple-50 hover:text-blue-600 rounded-2xl transition-all shadow-sm hover:shadow-md border border-gray-100">
+            <svg class="w-5 h-5 text-orange-500 group-hover:scale-110 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/>
+            </svg>
+            Desarrollo Web
+        </a>
+        <a href="#" class="mobile-menu-link group flex items-center gap-3 py-4 px-5 text-base sm:text-lg font-black text-gray-800 bg-white hover:bg-gradient-to-r hover:from-blue-50 hover:to-purple-50 hover:text-blue-600 rounded-2xl transition-all shadow-sm hover:shadow-md border border-gray-100">
+            <svg class="w-5 h-5 text-pink-500 group-hover:scale-110 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+            </svg>
+            Contacto
+        </a>
+        <div class="pt-4">
+            <a href="/login" class="mobile-menu-link flex items-center justify-center gap-2 py-4 px-5 text-center bg-gradient-to-r from-gray-900 to-gray-800 text-white rounded-2xl text-base sm:text-lg font-black hover:from-gray-800 hover:to-gray-700 transition-all shadow-lg hover:shadow-xl">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 16l-4-4m0 0l4-4m-4 4h14m-5 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h7a3 3 0 013 3v1"/>
+                </svg>
+                Ingresar
+            </a>
+        </div>
+    </nav>
+</div>
 
 <main class="min-h-screen">
     @yield('content')
@@ -334,27 +372,34 @@
     // Mobile menu toggle
     const mobileMenuBtn = document.getElementById('mobile-menu-btn');
     const mobileMenu = document.getElementById('mobile-menu');
+    const mobileMenuOverlay = document.getElementById('mobile-menu-overlay');
+    const closeMenuBtn = document.getElementById('close-menu-btn');
+
+    function openMenu() {
+        mobileMenuBtn.classList.add('active');
+        mobileMenu.classList.add('show');
+        mobileMenuOverlay.classList.add('show');
+        document.body.style.overflow = 'hidden';
+    }
+
+    function closeMenu() {
+        mobileMenuBtn.classList.remove('active');
+        mobileMenu.classList.remove('show');
+        mobileMenuOverlay.classList.remove('show');
+        document.body.style.overflow = '';
+    }
 
     mobileMenuBtn.addEventListener('click', (e) => {
         e.stopPropagation();
-        mobileMenuBtn.classList.toggle('active');
-        mobileMenu.classList.toggle('show');
+        openMenu();
     });
+
+    closeMenuBtn.addEventListener('click', closeMenu);
+    mobileMenuOverlay.addEventListener('click', closeMenu);
 
     // Close mobile menu when clicking a link
     document.querySelectorAll('.mobile-menu-link').forEach(link => {
-        link.addEventListener('click', () => {
-            mobileMenuBtn.classList.remove('active');
-            mobileMenu.classList.remove('show');
-        });
-    });
-
-    // Close mobile menu when clicking outside
-    document.addEventListener('click', (e) => {
-        if (!header.contains(e.target)) {
-            mobileMenuBtn.classList.remove('active');
-            mobileMenu.classList.remove('show');
-        }
+        link.addEventListener('click', closeMenu);
     });
 
     // Smooth scroll for anchor links
