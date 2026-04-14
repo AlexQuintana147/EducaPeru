@@ -108,17 +108,16 @@
 
             {{-- Navigation --}}
             <nav class="hidden md:flex items-center space-x-10">
-                <a href="#" class="nav-link text-base font-medium text-gray-700 hover:text-blue-600">Incorporation</a>
-                <a href="#" class="nav-link text-base font-medium text-gray-700 hover:text-blue-600">Accounting</a>
-                <a href="#" class="nav-link text-base font-medium text-gray-700 hover:text-blue-600">Secretary</a>
-                <a href="#" class="nav-link text-base font-medium text-gray-700 hover:text-blue-600">Pricing</a>
-                <a href="#" class="nav-link text-base font-medium text-gray-700 hover:text-blue-600">Resources</a>
-                <a href="#" class="nav-link text-base font-medium text-gray-700 hover:text-blue-600">About</a>
+                <a href="#" class="nav-link text-base font-bold text-gray-700 hover:text-blue-600">Inicio</a>
+                <a href="#" class="nav-link text-base font-bold text-gray-700 hover:text-blue-600">Capacitaciones</a>
+                <a href="#" class="nav-link text-base font-bold text-gray-700 hover:text-blue-600">Nosotros</a>
+                <a href="#" class="nav-link text-base font-bold text-gray-700 hover:text-blue-600">Desarrollo Web</a>
+                <a href="#" class="nav-link text-base font-bold text-gray-700 hover:text-blue-600">Contacto</a>
             </nav>
 
             {{-- Right Side --}}
             <div class="flex items-center gap-5">
-                <button class="header-region flex items-center gap-2 text-base font-medium text-gray-700 hover:text-blue-600 cursor-pointer">
+                <button class="header-region flex items-center gap-2 text-base font-bold text-gray-700 hover:text-blue-600 cursor-pointer">
                     <svg class="w-5 h-5 stroke-current" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                         <circle cx="12" cy="12" r="10"/>
                         <line x1="2" y1="12" x2="22" y2="12"/>
