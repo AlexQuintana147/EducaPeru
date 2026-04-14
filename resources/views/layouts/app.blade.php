@@ -302,51 +302,33 @@
 <div id="mobile-menu-overlay" class="lg:hidden"></div>
 
 {{-- Mobile Menu Drawer --}}
-<div id="mobile-menu" class="lg:hidden bg-gradient-to-b from-white to-gray-50 shadow-2xl">
-    <div class="flex items-center justify-between p-6 border-b border-gray-200">
+<div id="mobile-menu" class="lg:hidden bg-white shadow-2xl">
+    <div class="flex items-center justify-between px-8 py-6">
         <img src="{{ asset('image/logo1prueba.webp') }}" alt="{{ config('app.name') }}" class="h-10 w-auto object-contain">
-        <button id="close-menu-btn" class="flex items-center justify-center w-10 h-10 rounded-full bg-gray-100 hover:bg-gray-200 transition-colors">
-            <svg class="w-6 h-6 text-gray-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+        <button id="close-menu-btn" class="text-gray-400 hover:text-gray-900 transition-colors">
+            <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M6 18L18 6M6 6l12 12"/>
             </svg>
         </button>
     </div>
-    <nav class="px-6 py-8 space-y-2">
-        <a href="#" class="mobile-menu-link group flex items-center gap-3 py-4 px-5 text-base sm:text-lg font-black text-gray-800 bg-white hover:bg-gradient-to-r hover:from-blue-50 hover:to-purple-50 hover:text-blue-600 rounded-2xl transition-all shadow-sm hover:shadow-md border border-gray-100">
-            <svg class="w-5 h-5 text-blue-500 group-hover:scale-110 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/>
-            </svg>
+    <nav class="px-8 py-12 space-y-1">
+        <a href="#" class="mobile-menu-link block py-5 text-xl font-black text-gray-900 hover:text-gray-400 transition-colors">
             Inicio
         </a>
-        <a href="#" class="mobile-menu-link group flex items-center gap-3 py-4 px-5 text-base sm:text-lg font-black text-gray-800 bg-white hover:bg-gradient-to-r hover:from-blue-50 hover:to-purple-50 hover:text-blue-600 rounded-2xl transition-all shadow-sm hover:shadow-md border border-gray-100">
-            <svg class="w-5 h-5 text-purple-500 group-hover:scale-110 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
-            </svg>
+        <a href="#" class="mobile-menu-link block py-5 text-xl font-black text-gray-900 hover:text-gray-400 transition-colors">
             Capacitaciones
         </a>
-        <a href="#" class="mobile-menu-link group flex items-center gap-3 py-4 px-5 text-base sm:text-lg font-black text-gray-800 bg-white hover:bg-gradient-to-r hover:from-blue-50 hover:to-purple-50 hover:text-blue-600 rounded-2xl transition-all shadow-sm hover:shadow-md border border-gray-100">
-            <svg class="w-5 h-5 text-green-500 group-hover:scale-110 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/>
-            </svg>
+        <a href="#" class="mobile-menu-link block py-5 text-xl font-black text-gray-900 hover:text-gray-400 transition-colors">
             Nosotros
         </a>
-        <a href="#" class="mobile-menu-link group flex items-center gap-3 py-4 px-5 text-base sm:text-lg font-black text-gray-800 bg-white hover:bg-gradient-to-r hover:from-blue-50 hover:to-purple-50 hover:text-blue-600 rounded-2xl transition-all shadow-sm hover:shadow-md border border-gray-100">
-            <svg class="w-5 h-5 text-orange-500 group-hover:scale-110 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/>
-            </svg>
+        <a href="#" class="mobile-menu-link block py-5 text-xl font-black text-gray-900 hover:text-gray-400 transition-colors">
             Desarrollo Web
         </a>
-        <a href="#" class="mobile-menu-link group flex items-center gap-3 py-4 px-5 text-base sm:text-lg font-black text-gray-800 bg-white hover:bg-gradient-to-r hover:from-blue-50 hover:to-purple-50 hover:text-blue-600 rounded-2xl transition-all shadow-sm hover:shadow-md border border-gray-100">
-            <svg class="w-5 h-5 text-pink-500 group-hover:scale-110 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
-            </svg>
+        <a href="#" class="mobile-menu-link block py-5 text-xl font-black text-gray-900 hover:text-gray-400 transition-colors">
             Contacto
         </a>
-        <div class="pt-4">
-            <a href="/login" class="mobile-menu-link flex items-center justify-center gap-2 py-4 px-5 text-center bg-gradient-to-r from-gray-900 to-gray-800 text-white rounded-2xl text-base sm:text-lg font-black hover:from-gray-800 hover:to-gray-700 transition-all shadow-lg hover:shadow-xl">
-                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 16l-4-4m0 0l4-4m-4 4h14m-5 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h7a3 3 0 013 3v1"/>
-                </svg>
+        <div class="pt-8">
+            <a href="/login" class="mobile-menu-link block py-5 text-center bg-gray-900 text-white text-xl font-black hover:bg-gray-700 transition-all">
                 Ingresar
             </a>
         </div>
