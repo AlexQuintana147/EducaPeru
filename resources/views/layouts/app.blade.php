@@ -99,27 +99,27 @@
 
 <header class="bg-[#f5f0eb] border-b border-gray-200/60 sticky top-0 z-50 backdrop-blur-sm bg-opacity-95">
     <div class="max-w-7xl mx-auto px-6 lg:px-8">
-        <div class="flex items-center justify-between h-16">
+        <div class="flex items-center justify-between h-20">
 
             {{-- Logo --}}
             <a href="/" class="header-logo flex items-center gap-3 group">
-                <img src="{{ asset('image/logo1prueba.webp') }}" alt="{{ config('app.name') }}" class="logo-icon h-10 w-auto object-contain">
+                <img src="{{ asset('image/logo1prueba.webp') }}" alt="{{ config('app.name') }}" class="logo-icon h-14 w-auto object-contain">
             </a>
 
             {{-- Navigation --}}
-            <nav class="hidden md:flex items-center space-x-8">
-                <a href="#" class="nav-link text-sm font-medium text-gray-700 hover:text-blue-600">Incorporation</a>
-                <a href="#" class="nav-link text-sm font-medium text-gray-700 hover:text-blue-600">Accounting</a>
-                <a href="#" class="nav-link text-sm font-medium text-gray-700 hover:text-blue-600">Secretary</a>
-                <a href="#" class="nav-link text-sm font-medium text-gray-700 hover:text-blue-600">Pricing</a>
-                <a href="#" class="nav-link text-sm font-medium text-gray-700 hover:text-blue-600">Resources</a>
-                <a href="#" class="nav-link text-sm font-medium text-gray-700 hover:text-blue-600">About</a>
+            <nav class="hidden md:flex items-center space-x-10">
+                <a href="#" class="nav-link text-base font-medium text-gray-700 hover:text-blue-600">Incorporation</a>
+                <a href="#" class="nav-link text-base font-medium text-gray-700 hover:text-blue-600">Accounting</a>
+                <a href="#" class="nav-link text-base font-medium text-gray-700 hover:text-blue-600">Secretary</a>
+                <a href="#" class="nav-link text-base font-medium text-gray-700 hover:text-blue-600">Pricing</a>
+                <a href="#" class="nav-link text-base font-medium text-gray-700 hover:text-blue-600">Resources</a>
+                <a href="#" class="nav-link text-base font-medium text-gray-700 hover:text-blue-600">About</a>
             </nav>
 
             {{-- Right Side --}}
-            <div class="flex items-center gap-4">
-                <button class="header-region flex items-center gap-1.5 text-sm font-medium text-gray-700 hover:text-blue-600 cursor-pointer">
-                    <svg class="w-4 h-4 stroke-current" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <div class="flex items-center gap-5">
+                <button class="header-region flex items-center gap-2 text-base font-medium text-gray-700 hover:text-blue-600 cursor-pointer">
+                    <svg class="w-5 h-5 stroke-current" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                         <circle cx="12" cy="12" r="10"/>
                         <line x1="2" y1="12" x2="22" y2="12"/>
                         <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
@@ -127,7 +127,7 @@
                     <span>SG</span>
                 </button>
 
-                <a href="/login" class="btn-login inline-flex items-center justify-center bg-gray-900 text-white px-5 py-2 rounded-lg text-sm font-semibold hover:bg-gray-800">
+                <a href="/login" class="btn-login inline-flex items-center justify-center bg-gray-900 text-white px-6 py-2.5 rounded-lg text-base font-semibold hover:bg-gray-800">
                     Login
                 </a>
             </div>
