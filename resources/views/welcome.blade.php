@@ -13,18 +13,16 @@
                     <span class="text-gray-900">en programación</span>
                 </span><br>
                 y desarrollo web
-                <span class="relative inline-block ml-1 sm:ml-2">
-                    <span class="hidden lg:flex absolute -top-2 -right-20 -space-x-2">
-                        <div class="w-10 h-10 xl:w-12 xl:h-12 rounded-full bg-gray-300 border-2 border-white overflow-hidden">
-                            <img src="https://i.pravatar.cc/150?img=1" alt="User 1" class="w-full h-full object-cover">
-                        </div>
-                        <div class="w-10 h-10 xl:w-12 xl:h-12 rounded-full bg-gray-300 border-2 border-white overflow-hidden">
-                            <img src="https://i.pravatar.cc/150?img=2" alt="User 2" class="w-full h-full object-cover">
-                        </div>
-                        <div class="w-10 h-10 xl:w-12 xl:h-12 rounded-full bg-gray-300 border-2 border-white overflow-hidden">
-                            <img src="https://i.pravatar.cc/150?img=3" alt="User 3" class="w-full h-full object-cover">
-                        </div>
-                    </span>
+                <span class="inline-flex items-center ml-2 sm:ml-3 -space-x-2 sm:-space-x-3 align-middle">
+                    <div class="w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 lg:w-16 lg:h-16 xl:w-20 xl:h-20 rounded-full bg-gray-300 border-2 sm:border-3 border-white overflow-hidden">
+                        <img src="https://i.pravatar.cc/150?img=1" alt="User 1" class="w-full h-full object-cover">
+                    </div>
+                    <div class="w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 lg:w-16 lg:h-16 xl:w-20 xl:h-20 rounded-full bg-gray-300 border-2 sm:border-3 border-white overflow-hidden">
+                        <img src="https://i.pravatar.cc/150?img=2" alt="User 2" class="w-full h-full object-cover">
+                    </div>
+                    <div class="w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 lg:w-16 lg:h-16 xl:w-20 xl:h-20 rounded-full bg-gray-300 border-2 sm:border-3 border-white overflow-hidden">
+                        <img src="https://i.pravatar.cc/150?img=3" alt="User 3" class="w-full h-full object-cover">
+                    </div>
                 </span><br>
                 para empresas
             </h1>
