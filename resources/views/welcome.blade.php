@@ -28,10 +28,10 @@
             </p>
 
             <div class="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center mb-6 sm:mb-8 md:mb-10 px-4">
-                <a href="#cursos" class="w-full sm:w-auto inline-flex items-center justify-center bg-blue-600 text-white px-6 sm:px-8 py-3 sm:py-3.5 rounded-full text-sm sm:text-base font-semibold hover:bg-blue-700 transition-all duration-200 shadow-sm hover:shadow-md">
+                <a href="#cursos" class="w-full sm:w-auto inline-flex items-center justify-center bg-blue-600 text-white px-8 sm:px-10 md:px-12 py-3.5 sm:py-4 rounded-full text-sm sm:text-base md:text-lg font-medium hover:bg-blue-700 transition-all duration-200">
                     Ver capacitaciones
                 </a>
-                <button type="button" class="w-full sm:w-auto inline-flex items-center justify-center bg-white text-gray-900 px-6 sm:px-8 py-3 sm:py-3.5 rounded-full text-sm sm:text-base font-semibold border border-gray-300 hover:border-gray-400 transition-all duration-200 shadow-sm hover:shadow-md">
+                <button type="button" class="w-full sm:w-auto inline-flex items-center justify-center bg-transparent text-blue-600 px-8 sm:px-10 md:px-12 py-3.5 sm:py-4 rounded-full text-sm sm:text-base md:text-lg font-medium border-2 border-blue-600 hover:bg-blue-50 transition-all duration-200">
                     Solicitar información
                 </button>
             </div>
