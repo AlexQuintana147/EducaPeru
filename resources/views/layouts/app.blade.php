@@ -164,11 +164,6 @@
             transition: all 0.3s ease;
         }
 
-        .mobile-menu-btn:hover {
-            background-color: rgba(59, 130, 246, 0.1);
-            transform: scale(1.05);
-        }
-
         .mobile-menu-btn:active {
             transform: scale(0.95);
         }
@@ -289,7 +284,7 @@
             </div>
 
             {{-- Mobile Menu Button --}}
-            <button id="mobile-menu-btn" class="mobile-menu-btn lg:hidden flex flex-col items-center justify-center w-11 h-11 rounded-xl bg-gray-100 hover:bg-gray-200 transition-colors gap-1.5">
+            <button id="mobile-menu-btn" class="mobile-menu-btn lg:hidden flex flex-col items-center justify-center w-11 h-11 transition-colors gap-1.5">
                 <span class="hamburger-line w-6 h-0.5 bg-gray-900 rounded-full"></span>
                 <span class="hamburger-line w-6 h-0.5 bg-gray-900 rounded-full"></span>
                 <span class="hamburger-line w-6 h-0.5 bg-gray-900 rounded-full"></span>
