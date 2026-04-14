@@ -7,24 +7,23 @@
 
     {{-- Tailwind CSS CDN --}}
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['EducaPeru', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
 
     <style>
         @font-face {
             font-family: 'EducaPeru';
-            src: url('/fonts/educaperu.woff2') format('woff2'),
-                 url('/fonts/educaperu.woff') format('woff'),
-                 url('/fonts/educaperu.ttf') format('truetype');
-            font-weight: normal;
-            font-style: normal;
-            font-display: swap;
-        }
-
-        @font-face {
-            font-family: 'EducaPeru';
-            src: url('/fonts/educaperu-bold.woff2') format('woff2'),
-                 url('/fonts/educaperu-bold.woff') format('woff'),
-                 url('/fonts/educaperu-bold.ttf') format('truetype');
-            font-weight: 700;
+            src: url('/fonts/educaperu.woff2') format('woff2');
+            font-weight: 100 900;
             font-style: normal;
             font-display: swap;
         }
