@@ -83,11 +83,21 @@
         .header-region:hover svg {
             stroke: #3b82f6;
         }
+
+        /* Header scroll effect */
+        header {
+            transition: background-color 0.3s ease, border-color 0.3s ease;
+        }
+
+        header.scrolled {
+            background-color: rgba(255, 255, 255, 0.95) !important;
+            border-bottom-color: rgba(0, 0, 0, 0.1);
+        }
     </style>
 </head>
 <body class="bg-[#f5f0eb] text-gray-900 antialiased">
 
-<header class="bg-[#f5f0eb] border-b border-gray-200/60 sticky top-0 z-50 backdrop-blur-sm bg-opacity-95">
+<header id="main-header" class="bg-transparent border-b border-transparent sticky top-0 z-50 backdrop-blur-sm">
     <div class="max-w-7xl mx-auto px-6 lg:px-8">
         <div class="flex items-center justify-between h-20">
 
@@ -126,6 +136,19 @@
 <main class="min-h-screen">
     @yield('content')
 </main>
+
+<script>
+    // Header scroll effect
+    const header = document.getElementById('main-header');
+
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 20) {
+            header.classList.add('scrolled');
+        } else {
+            header.classList.remove('scrolled');
+        }
+    });
+</script>
 
 </body>
 </html>
