@@ -60,16 +60,6 @@
             width: 100%;
         }
 
-        /* Logo animation */
-        .logo-icon {
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .header-logo:hover .logo-icon {
-            transform: rotate(360deg) scale(1.05);
-            box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
-        }
-
         /* Button hover effect */
         .btn-login {
             transition: all 0.3s ease;
@@ -103,7 +93,7 @@
 
             {{-- Logo --}}
             <a href="/" class="header-logo flex items-center gap-3 group">
-                <img src="{{ asset('image/logo1prueba.webp') }}" alt="{{ config('app.name') }}" class="logo-icon h-14 w-auto object-contain">
+                <img src="{{ asset('image/logo1prueba.webp') }}" alt="{{ config('app.name') }}" class="h-14 w-auto object-contain">
             </a>
 
             {{-- Navigation --}}
