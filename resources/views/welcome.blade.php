@@ -11,13 +11,13 @@
                 Capacitación profesional<br class="sm:hidden"> en programación
                 <span class="inline-flex items-center ml-1 sm:ml-2 md:ml-3 -space-x-1 sm:-space-x-2 md:-space-x-3 align-middle">
                     <div class="w-8 h-8 xs:w-10 xs:h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 lg:w-16 lg:h-16 xl:w-20 xl:h-20 rounded-full bg-gray-300 border-2 border-[#f5f0eb] overflow-hidden">
-                        <img src="https://i.pravatar.cc/150?img=1" alt="User 1" class="w-full h-full object-cover">
+                        <img src="https://cdn-icons-png.flaticon.com/512/7022/7022937.png" alt="User 1" class="w-full h-full object-cover">
                     </div>
                     <div class="w-8 h-8 xs:w-10 xs:h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 lg:w-16 lg:h-16 xl:w-20 xl:h-20 rounded-full bg-gray-300 border-2 border-[#f5f0eb] overflow-hidden">
-                        <img src="https://i.pravatar.cc/150?img=2" alt="User 2" class="w-full h-full object-cover">
+                        <img src="https://cdn-icons-png.flaticon.com/512/7022/7022937.png" alt="User 2" class="w-full h-full object-cover">
                     </div>
                     <div class="w-8 h-8 xs:w-10 xs:h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 lg:w-16 lg:h-16 xl:w-20 xl:h-20 rounded-full bg-gray-300 border-2 border-[#f5f0eb] overflow-hidden">
-                        <img src="https://i.pravatar.cc/150?img=3" alt="User 3" class="w-full h-full object-cover">
+                        <img src="https://cdn-icons-png.flaticon.com/512/7022/7022937.png" alt="User 3" class="w-full h-full object-cover">
                     </div>
                 </span><br>
                 y desarrollo web para empresas
