@@ -53,7 +53,7 @@
                 <h3 class="text-2xl sm:text-3xl font-bold text-gray-900 mb-4">
                     <span class="text-blue-600">Explora</span> nuestros cursos
                 </h3>
-                <p class="text-gray-600 text-sm sm:text-base mb-8 sm:mb-12">
+                <p class="text-gray-600 text-sm sm:text-base mb-4">
                     Capacita a tu equipo con cursos especializados en las tecnologías más demandadas del mercado.
                 </p>
 
@@ -73,7 +73,7 @@
                 <h3 class="text-2xl sm:text-3xl font-bold text-gray-900 mb-4">
                     <span class="text-blue-600">Desarrolla</span> tu sitio web
                 </h3>
-                <p class="text-gray-600 text-sm sm:text-base mb-8 sm:mb-12">
+                <p class="text-gray-600 text-sm sm:text-base mb-4">
                     Obtén un desarrollo web profesional con tecnologías modernas y diseño personalizado para tu empresa.
                 </p>
 
