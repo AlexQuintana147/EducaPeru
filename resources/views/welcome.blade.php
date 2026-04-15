@@ -57,9 +57,9 @@
                     Capacita a tu equipo con cursos especializados en las tecnologías más demandadas del mercado.
                 </p>
 
-                <div class="relative flex justify-end">
-                    <img src="{{ asset('image/clases1.webp') }}" alt="Cursos de programación" class="w-full max-w-sm h-auto object-contain">
-                    <a href="#cursos" class="absolute bottom-8 left-0 inline-flex items-center justify-center gap-2 bg-white text-blue-600 px-8 py-3 rounded-full text-base font-semibold border-2 border-blue-600 hover:bg-blue-50 transition-all duration-200">
+                <div class="flex flex-col sm:relative sm:flex-row sm:justify-end">
+                    <img src="{{ asset('image/clases1.webp') }}" alt="Cursos de programación" class="w-full max-w-sm h-auto object-contain mx-auto sm:mx-0 mb-6 sm:mb-0">
+                    <a href="#cursos" class="w-full sm:w-auto sm:absolute sm:bottom-8 sm:left-0 inline-flex items-center justify-center gap-2 bg-white text-blue-600 px-8 py-3 rounded-full text-base font-semibold border-2 border-blue-600 hover:bg-blue-50 transition-all duration-200">
                         Ver cursos
                         <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
@@ -77,9 +77,9 @@
                     Obtén un desarrollo web profesional con tecnologías modernas y diseño personalizado para tu empresa.
                 </p>
 
-                <div class="relative flex justify-end">
-                    <img src="{{ asset('image/desarrollo2.webp') }}" alt="Desarrollo web" class="w-full max-w-sm h-auto object-contain">
-                    <button type="button" class="absolute bottom-8 left-0 inline-flex items-center justify-center gap-2 bg-white text-blue-600 px-8 py-3 rounded-full text-base font-semibold border-2 border-blue-600 hover:bg-blue-50 transition-all duration-200">
+                <div class="flex flex-col sm:relative sm:flex-row sm:justify-end">
+                    <img src="{{ asset('image/desarrollo2.webp') }}" alt="Desarrollo web" class="w-full max-w-sm h-auto object-contain mx-auto sm:mx-0 mb-6 sm:mb-0">
+                    <button type="button" class="w-full sm:w-auto sm:absolute sm:bottom-8 sm:left-0 inline-flex items-center justify-center gap-2 bg-white text-blue-600 px-8 py-3 rounded-full text-base font-semibold border-2 border-blue-600 hover:bg-blue-50 transition-all duration-200">
                         Cotizar web
                         <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
