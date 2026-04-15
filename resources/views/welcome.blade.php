@@ -40,5 +40,85 @@
     </div>
 </section>
 
+<!-- Sección de Servicios -->
+<section class="py-12 sm:py-16 md:py-20 lg:py-24 px-4 sm:px-6 lg:px-8 bg-[#f5f0eb]">
+    <div class="max-w-7xl mx-auto">
+        <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 text-center mb-8 sm:mb-12 md:mb-16">
+            Servicios flexibles para cada<br class="hidden sm:block"> etapa de tu negocio
+        </h2>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-8">
+            <!-- Tarjeta Izquierda: Cursos Disponibles -->
+            <div class="bg-white rounded-3xl p-6 sm:p-8 md:p-10 shadow-sm hover:shadow-md transition-shadow duration-300">
+                <h3 class="text-2xl sm:text-3xl font-bold text-gray-900 mb-4">
+                    <span class="text-blue-600">Explora</span> nuestros cursos
+                </h3>
+                <p class="text-gray-600 text-sm sm:text-base mb-8 sm:mb-12">
+                    Capacita a tu equipo con cursos especializados en las tecnologías más demandadas del mercado.
+                </p>
+
+                <div class="flex flex-col gap-3 mb-8 sm:mb-12">
+                    <a href="#cursos-empresas" class="inline-flex items-center justify-center bg-transparent text-blue-600 px-6 py-3 rounded-full text-sm sm:text-base font-medium border-2 border-blue-600 hover:bg-blue-50 transition-all duration-200">
+                        Para empresas
+                        <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                        </svg>
+                    </a>
+                    <a href="#cursos-individuales" class="inline-flex items-center justify-center bg-transparent text-blue-600 px-6 py-3 rounded-full text-sm sm:text-base font-medium border-2 border-blue-600 hover:bg-blue-50 transition-all duration-200">
+                        Para individuos
+                        <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                        </svg>
+                    </a>
+                </div>
+
+                <div class="flex justify-center">
+                    <svg class="w-48 h-48 sm:w-56 sm:h-56" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="100" cy="60" r="25" fill="#E5E7EB"/>
+                        <path d="M100 90 L100 140 M100 110 L80 130 M100 110 L120 130" stroke="#1F2937" stroke-width="4" stroke-linecap="round"/>
+                        <rect x="60" y="100" width="30" height="40" rx="5" fill="#2563EB"/>
+                        <rect x="50" y="140" width="100" height="8" rx="4" fill="#E5E7EB"/>
+                    </svg>
+                </div>
+            </div>
+
+            <!-- Tarjeta Derecha: Cotizar Web -->
+            <div class="bg-white rounded-3xl p-6 sm:p-8 md:p-10 shadow-sm hover:shadow-md transition-shadow duration-300">
+                <h3 class="text-2xl sm:text-3xl font-bold text-gray-900 mb-4">
+                    <span class="text-blue-600">Desarrolla</span> tu sitio web
+                </h3>
+                <p class="text-gray-600 text-sm sm:text-base mb-8 sm:mb-12">
+                    Obtén un desarrollo web profesional con tecnologías modernas y diseño personalizado para tu empresa.
+                </p>
+
+                <div class="flex flex-col gap-3 mb-8 sm:mb-12">
+                    <a href="#cotizar" class="inline-flex items-center justify-center bg-transparent text-blue-600 px-6 py-3 rounded-full text-sm sm:text-base font-medium border-2 border-blue-600 hover:bg-blue-50 transition-all duration-200">
+                        Cotizar proyecto
+                        <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                        </svg>
+                    </a>
+                    <a href="#portafolio" class="inline-flex items-center justify-center bg-transparent text-blue-600 px-6 py-3 rounded-full text-sm sm:text-base font-medium border-2 border-blue-600 hover:bg-blue-50 transition-all duration-200">
+                        Ver portafolio
+                        <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                        </svg>
+                    </a>
+                </div>
+
+                <div class="flex justify-center">
+                    <svg class="w-48 h-48 sm:w-56 sm:h-56" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="100" cy="60" r="25" fill="#E5E7EB"/>
+                        <path d="M100 90 L100 140 M100 110 L80 130 M100 110 L120 130" stroke="#1F2937" stroke-width="4" stroke-linecap="round"/>
+                        <rect x="110" y="80" width="35" height="35" rx="5" fill="#2563EB"/>
+                        <circle cx="127" cy="97" r="8" fill="white"/>
+                        <rect x="50" y="140" width="100" height="8" rx="4" fill="#E5E7EB"/>
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
 @endsection
 
