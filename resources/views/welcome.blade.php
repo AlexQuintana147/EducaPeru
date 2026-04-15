@@ -57,8 +57,13 @@
                     Capacita a tu equipo con cursos especializados en las tecnologías más demandadas del mercado.
                 </p>
 
-                <div class="flex justify-end">
+                <div class="relative flex justify-end">
                     <img src="{{ asset('image/clases1.webp') }}" alt="Cursos de programación" class="w-full max-w-sm h-auto object-contain">
+                    <div class="absolute bottom-8 left-8">
+                        <a href="#cursos" class="inline-flex items-center justify-center bg-blue-600 text-white px-8 py-3 rounded-full text-base font-medium hover:bg-blue-700 transition-all duration-200 shadow-lg">
+                            Ver cursos
+                        </a>
+                    </div>
                 </div>
             </div>
 
@@ -71,8 +76,13 @@
                     Obtén un desarrollo web profesional con tecnologías modernas y diseño personalizado para tu empresa.
                 </p>
 
-                <div class="flex justify-start">
+                <div class="relative flex justify-start">
                     <img src="{{ asset('image/desarrollo2.webp') }}" alt="Desarrollo web" class="w-full max-w-sm h-auto object-contain">
+                    <div class="absolute bottom-8 right-8">
+                        <button type="button" class="inline-flex items-center justify-center bg-blue-600 text-white px-8 py-3 rounded-full text-base font-medium hover:bg-blue-700 transition-all duration-200 shadow-lg">
+                            Cotizar web
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>
