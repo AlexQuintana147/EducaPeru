@@ -59,8 +59,11 @@
 
                 <div class="relative flex justify-end">
                     <img src="{{ asset('image/clases1.webp') }}" alt="Cursos de programación" class="w-full max-w-sm h-auto object-contain">
-                    <a href="#cursos" class="absolute bottom-8 left-0 inline-flex items-center justify-center bg-blue-600 text-white px-8 py-3 rounded-full text-base font-medium hover:bg-blue-700 transition-all duration-200 shadow-lg">
+                    <a href="#cursos" class="absolute bottom-8 left-0 inline-flex items-center justify-center gap-2 bg-white text-blue-600 px-8 py-3 rounded-full text-base font-semibold border-2 border-blue-600 hover:bg-blue-50 transition-all duration-200">
                         Ver cursos
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                        </svg>
                     </a>
                 </div>
             </div>
@@ -76,8 +79,11 @@
 
                 <div class="relative flex justify-start">
                     <img src="{{ asset('image/desarrollo2.webp') }}" alt="Desarrollo web" class="w-full max-w-sm h-auto object-contain">
-                    <button type="button" class="absolute bottom-8 right-0 inline-flex items-center justify-center bg-blue-600 text-white px-8 py-3 rounded-full text-base font-medium hover:bg-blue-700 transition-all duration-200 shadow-lg">
+                    <button type="button" class="absolute bottom-8 right-0 inline-flex items-center justify-center gap-2 bg-white text-blue-600 px-8 py-3 rounded-full text-base font-semibold border-2 border-blue-600 hover:bg-blue-50 transition-all duration-200">
                         Cotizar web
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                        </svg>
                     </button>
                 </div>
             </div>
