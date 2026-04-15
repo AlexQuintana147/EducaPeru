@@ -49,7 +49,7 @@
 
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-8">
             <!-- Tarjeta Izquierda: Cursos Disponibles -->
-            <div class="bg-white rounded-3xl p-6 sm:p-8 md:p-10 shadow-sm hover:shadow-md transition-shadow duration-300">
+            <div class="bg-white rounded-3xl p-6 sm:p-8 md:p-10 shadow-sm">
                 <h3 class="text-2xl sm:text-3xl font-bold text-gray-900 mb-4">
                     <span class="text-blue-600">Explora</span> nuestros cursos
                 </h3>
@@ -78,7 +78,7 @@
             </div>
 
             <!-- Tarjeta Derecha: Cotizar Web -->
-            <div class="bg-white rounded-3xl p-6 sm:p-8 md:p-10 shadow-sm hover:shadow-md transition-shadow duration-300">
+            <div class="bg-white rounded-3xl p-6 sm:p-8 md:p-10 shadow-sm">
                 <h3 class="text-2xl sm:text-3xl font-bold text-gray-900 mb-4">
                     <span class="text-blue-600">Desarrolla</span> tu sitio web
                 </h3>
