@@ -57,21 +57,6 @@
                     Capacita a tu equipo con cursos especializados en las tecnologías más demandadas del mercado.
                 </p>
 
-                <div class="flex flex-col gap-3 mb-8 sm:mb-12">
-                    <a href="#cursos-empresas" class="inline-flex items-center justify-center bg-transparent text-blue-600 px-6 py-3 rounded-full text-sm sm:text-base font-medium border-2 border-blue-600 hover:bg-blue-50 transition-all duration-200">
-                        Para empresas
-                        <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
-                        </svg>
-                    </a>
-                    <a href="#cursos-individuales" class="inline-flex items-center justify-center bg-transparent text-blue-600 px-6 py-3 rounded-full text-sm sm:text-base font-medium border-2 border-blue-600 hover:bg-blue-50 transition-all duration-200">
-                        Para individuos
-                        <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
-                        </svg>
-                    </a>
-                </div>
-
                 <div class="flex justify-center">
                     <img src="{{ asset('image/clases1.webp') }}" alt="Cursos de programación" class="w-full max-w-sm h-auto object-contain">
                 </div>
@@ -85,21 +70,6 @@
                 <p class="text-gray-600 text-sm sm:text-base mb-8 sm:mb-12">
                     Obtén un desarrollo web profesional con tecnologías modernas y diseño personalizado para tu empresa.
                 </p>
-
-                <div class="flex flex-col gap-3 mb-8 sm:mb-12">
-                    <a href="#cotizar" class="inline-flex items-center justify-center bg-transparent text-blue-600 px-6 py-3 rounded-full text-sm sm:text-base font-medium border-2 border-blue-600 hover:bg-blue-50 transition-all duration-200">
-                        Cotizar proyecto
-                        <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
-                        </svg>
-                    </a>
-                    <a href="#portafolio" class="inline-flex items-center justify-center bg-transparent text-blue-600 px-6 py-3 rounded-full text-sm sm:text-base font-medium border-2 border-blue-600 hover:bg-blue-50 transition-all duration-200">
-                        Ver portafolio
-                        <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
-                        </svg>
-                    </a>
-                </div>
 
                 <div class="flex justify-center">
                     <img src="{{ asset('image/desarrollo2.webp') }}" alt="Desarrollo web" class="w-full max-w-sm h-auto object-contain">
