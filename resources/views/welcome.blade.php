@@ -57,7 +57,7 @@
                     Capacita a tu equipo con cursos especializados en las tecnologías más demandadas del mercado.
                 </p>
 
-                <div class="flex justify-center">
+                <div class="flex justify-end">
                     <img src="{{ asset('image/clases1.webp') }}" alt="Cursos de programación" class="w-full max-w-sm h-auto object-contain">
                 </div>
             </div>
@@ -71,7 +71,7 @@
                     Obtén un desarrollo web profesional con tecnologías modernas y diseño personalizado para tu empresa.
                 </p>
 
-                <div class="flex justify-center">
+                <div class="flex justify-start">
                     <img src="{{ asset('image/desarrollo2.webp') }}" alt="Desarrollo web" class="w-full max-w-sm h-auto object-contain">
                 </div>
             </div>
