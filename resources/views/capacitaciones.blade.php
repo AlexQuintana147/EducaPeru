@@ -31,7 +31,7 @@
         border-radius: 16px;
         overflow: hidden;
         cursor: pointer;
-        aspect-ratio: 5/4;
+        aspect-ratio: 4/3;
         background: #0d0d0f;
         border: 2px solid rgba(255,255,255,0.22);
         transition: border-color .25s ease, box-shadow .25s ease;
@@ -45,7 +45,7 @@
     .c-thumb-img {
         position: absolute; inset: 0;
         width: 100%; height: 100%;
-        object-fit: cover;
+        object-fit: contain;
         display: block;
     }
 
@@ -279,7 +279,7 @@
 
     {{-- COURSES --}}
     <section id="cursos" class="py-12 sm:py-16 px-4 sm:px-6">
-        <div class="max-w-6xl mx-auto">
+        <div class="max-w-7xl mx-auto">
 
             {{-- Header --}}
             <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-8">
