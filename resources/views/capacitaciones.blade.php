@@ -245,18 +245,13 @@
     {{-- HERO --}}
     <section class="hero-wrap py-16 sm:py-20 md:py-24 px-4 sm:px-6 text-center">
         <div class="max-w-2xl mx-auto">
-            <span class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-indigo-400 mb-5">
-                <span class="w-5 h-px bg-indigo-500/60"></span>
-                Capacitaciones
-                <span class="w-5 h-px bg-indigo-500/60"></span>
-            </span>
             <h1 class="text-4xl sm:text-5xl md:text-[56px] font-black text-white leading-[1.1] tracking-tight mb-5">
                 Aprende las tecnologías<br>
-                <span class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 via-violet-400 to-fuchsia-400">
+                <span style="-webkit-text-stroke: 1px white; color: transparent;">
                     más demandadas
                 </span>
             </h1>
-            <p class="text-zinc-500 text-sm sm:text-base max-w-lg mx-auto mb-8">
+            <p class="text-zinc-500">
                 Cursos prácticos con instructores expertos. Desde cero hasta nivel profesional.
             </p>
         </div>
