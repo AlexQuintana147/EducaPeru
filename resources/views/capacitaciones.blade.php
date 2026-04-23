@@ -16,27 +16,29 @@
     /* Stats */
     .stat-sep { width:1px; height:16px; background:rgba(255,255,255,0.08); }
 
-    /* Grid */
+    /* Grid — 3 columnas fijas */
     .courses-grid {
         display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-        gap: 20px;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 24px;
     }
+    @media (max-width: 900px) { .courses-grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 560px) { .courses-grid { grid-template-columns: 1fr; } }
 
-    /* Card — solo imagen por defecto */
+    /* Card */
     .c-card {
         position: relative;
-        border-radius: 14px;
+        border-radius: 16px;
         overflow: hidden;
         cursor: pointer;
-        aspect-ratio: 16/9;
+        aspect-ratio: 4/3;
         background: #0d0d0f;
-        border: 1px solid rgba(255,255,255,0.07);
+        border: 2px solid rgba(255,255,255,0.22);
         transition: border-color .25s ease, box-shadow .25s ease;
     }
     .c-card:hover {
-        border-color: rgba(255,255,255,0.18);
-        box-shadow: 0 16px 40px rgba(0,0,0,0.7);
+        border-color: rgba(255,255,255,0.55);
+        box-shadow: 0 0 0 1px rgba(255,255,255,0.1), 0 20px 50px rgba(0,0,0,0.7);
     }
 
     /* Imagen de fondo */
@@ -282,7 +284,7 @@
 
     {{-- COURSES --}}
     <section id="cursos" class="py-12 sm:py-16 px-4 sm:px-6">
-        <div class="max-w-5xl mx-auto">
+        <div class="max-w-6xl mx-auto">
 
             {{-- Header --}}
             <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-8">
@@ -364,6 +366,48 @@
                             </div>
                         </div>
                         <div class="btn-disabled">Próximamente</div>
+                    </div>
+                </div>
+
+                {{-- Python --}}
+                <div class="c-card">
+                    <div class="cpp-thumb" style="background: linear-gradient(135deg, #0c1a0c 0%, #071a07 100%);">
+                        <div class="cpp-grid" style="background-image: linear-gradient(rgba(34,197,94,0.07) 1px, transparent 1px), linear-gradient(90deg, rgba(34,197,94,0.07) 1px, transparent 1px); background-size: 28px 28px;"></div>
+                        <div class="cpp-orb" style="background: radial-gradient(circle, rgba(34,197,94,0.28) 0%, transparent 70%);"></div>
+                        <div class="cpp-code" aria-hidden="true">
+                            def saludar(nombre):<br>
+                            &nbsp;&nbsp;return f"Hola, {nombre}"<br><br>
+                            class Curso:<br>
+                            &nbsp;&nbsp;def __init__(self):<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;self.nombre = "Python"<br><br>
+                            &nbsp;&nbsp;def iniciar(self):<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;print("Aprendiendo")<br><br>
+                            curso = Curso()<br>
+                            curso.iniciar()
+                        </div>
+                        <div class="cpp-label">
+                            <div class="cpp-text" style="font-size:44px; text-shadow: 0 0 28px rgba(34,197,94,.9), 0 0 56px rgba(34,197,94,.4);">Python</div>
+                            <div class="cpp-sub-label" style="color:#22c55e;">Programación</div>
+                        </div>
+                    </div>
+                    <span class="c-badge badge-soon" style="z-index:3;">✦ Próximamente</span>
+                    <div class="c-overlay">
+                        <div class="c-cat" style="color:#4ade80;">Programación · Básico</div>
+                        <div class="c-title">Programación en Python</div>
+                        <div class="c-desc">Fundamentos de Python, automatización y análisis de datos desde cero.</div>
+                        <div class="c-meta">
+                            <div>
+                                <div class="c-price-old">Precio por confirmar</div>
+                                <div class="c-price" style="color:#4ade80;">Muy pronto</div>
+                            </div>
+                            <div class="c-dur">
+                                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                                </svg>
+                                02 meses
+                            </div>
+                        </div>
+                        <div class="btn-disabled" style="color:#22c55e; border-color:rgba(34,197,94,.25); background:rgba(34,197,94,.08);">Próximamente</div>
                     </div>
                 </div>
 
