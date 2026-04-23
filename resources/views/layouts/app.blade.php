@@ -302,8 +302,7 @@
 
             {{-- Navigation --}}
             <nav class="hidden lg:flex items-center space-x-6 xl:space-x-10">
-                <a href="#" class="nav-link text-base lg:text-lg font-black text-gray-700 hover:text-blue-600">Inicio</a>
-                <a href="#" class="nav-link text-base lg:text-lg font-black text-gray-700 hover:text-blue-600">Capacitaciones</a>
+                <a href="/capacitaciones" class="nav-link text-base lg:text-lg font-black text-gray-700 hover:text-blue-600">Capacitaciones</a>
                 <a href="#" class="nav-link text-base lg:text-lg font-black text-gray-700 hover:text-blue-600">Nosotros</a>
                 <a href="#" class="nav-link text-base lg:text-lg font-black text-gray-700 hover:text-blue-600">Desarrollo Web</a>
                 <a href="#" class="nav-link text-base lg:text-lg font-black text-gray-700 hover:text-blue-600">Contacto</a>
@@ -343,7 +342,7 @@
         <a href="#" class="mobile-menu-link block py-5 text-xl font-black text-gray-900 hover:text-gray-400 transition-colors">
             Inicio
         </a>
-        <a href="#" class="mobile-menu-link block py-5 text-xl font-black text-gray-900 hover:text-gray-400 transition-colors">
+        <a href="/capacitaciones" class="mobile-menu-link block py-5 text-xl font-black text-gray-900 hover:text-gray-400 transition-colors">
             Capacitaciones
         </a>
         <a href="#" class="mobile-menu-link block py-5 text-xl font-black text-gray-900 hover:text-gray-400 transition-colors">
