@@ -352,18 +352,18 @@
                 <div class="dw-side-card-desc">Cada proyecto es único. Creamos interfaces que reflejan la identidad de tu marca.</div>
             </div>
             <div class="dw-side-card">
-                <div class="dw-side-card-icon">
-                    <svg width="16" height="16" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+                <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:10px;">
+                    <div class="dw-side-card-title" style="margin-bottom:0;">Entrega puntual</div>
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="#fff" xmlns="http://www.w3.org/2000/svg" style="flex-shrink:0;opacity:0.7;"><path d="M10.4608 12.7593C10.0415 13.1187 9.41017 13.0701 9.05074 12.6508C8.69132 12.2315 8.73988 11.6002 9.15921 11.2408L12.6592 8.24076C13.0785 7.88134 13.7098 7.9299 14.0693 8.34923C14.4287 8.76855 14.3801 9.39985 13.9608 9.75927L10.4608 12.7593Z"/><path d="M8.81 6C8.81 5.44772 9.25772 5 9.81 5C10.3623 5 10.81 5.44772 10.81 6V12C10.81 12.5523 10.3623 13 9.81 13C9.25772 13 8.81 12.5523 8.81 12V6Z"/><path fill-rule="evenodd" clip-rule="evenodd" d="M2 10C2 14.4183 5.58172 18 10 18C14.4183 18 18 14.4183 18 10C18 5.58172 14.4183 2 10 2C5.58172 2 2 5.58172 2 10ZM16 10C16 13.3137 13.3137 16 10 16C6.68629 16 4 13.3137 4 10C4 6.68629 6.68629 4 10 4C13.3137 4 16 6.68629 16 10Z"/></svg>
                 </div>
-                <div class="dw-side-card-title">Entrega puntual</div>
                 <div class="dw-side-card-desc">Cumplimos plazos sin sacrificar calidad. Tu tiempo es nuestra prioridad.</div>
             </div>
 
             <div class="dw-side-card">
-                <div class="dw-side-card-icon">
-                    <svg width="16" height="16" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:10px;">
+                    <div class="dw-side-card-title" style="margin-bottom:0;">Seguridad garantizada</div>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="#fff" xmlns="http://www.w3.org/2000/svg" style="flex-shrink:0;opacity:0.7;"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm0 10.99h7c-.53 4.12-3.28 7.79-7 8.94V12H5V6.3l7-3.11v8.8z"/></svg>
                 </div>
-                <div class="dw-side-card-title">Seguridad garantizada</div>
                 <div class="dw-side-card-desc">Código limpio, buenas prácticas y protección desde el primer día.</div>
             </div>
 
