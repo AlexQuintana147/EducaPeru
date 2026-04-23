@@ -172,61 +172,6 @@
         box-shadow: 0 3px 10px rgba(249,115,22,.45);
     }
 
-    /* Body */
-    .c-body { padding: 16px 18px 18px; }
-
-    .c-cat {
-        font-size: 10.5px; font-weight: 700;
-        text-transform: uppercase; letter-spacing: .1em;
-        color: #6366f1; margin-bottom: 5px;
-    }
-    .c-title {
-        font-size: 15px; font-weight: 800;
-        color: #f1f5f9; line-height: 1.3;
-        margin-bottom: 5px;
-    }
-    .c-desc {
-        font-size: 12.5px; color: #52525b;
-        line-height: 1.55; margin-bottom: 14px;
-    }
-
-    .c-meta {
-        display: flex; align-items: center;
-        justify-content: space-between;
-        border-top: 1px solid rgba(255,255,255,0.05);
-        padding-top: 12px; margin-bottom: 13px;
-    }
-    .c-price-old { font-size: 11.5px; color: #3f3f46; text-decoration: line-through; }
-    .c-price     { font-size: 19px; font-weight: 900; color: #f97316; }
-    .c-dur {
-        display: flex; align-items: center; gap: 4px;
-        font-size: 11.5px; color: #3f3f46;
-    }
-
-    /* Buttons */
-    .btn-primary {
-        display: block; width: 100%; text-align: center;
-        padding: 10px 0; border-radius: 9px;
-        font-size: 13px; font-weight: 800;
-        background: linear-gradient(135deg,#f97316,#ea580c);
-        color: #fff; text-decoration: none;
-        box-shadow: 0 4px 14px rgba(249,115,22,.3);
-        transition: box-shadow .25s, transform .25s;
-    }
-    .btn-primary:hover {
-        box-shadow: 0 8px 22px rgba(249,115,22,.5);
-        transform: translateY(-1px);
-    }
-    .btn-disabled {
-        display: block; width: 100%; text-align: center;
-        padding: 10px 0; border-radius: 9px;
-        font-size: 13px; font-weight: 800;
-        background: rgba(99,102,241,.08);
-        color: #4f46e5;
-        border: 1px solid rgba(99,102,241,.2);
-        cursor: not-allowed; letter-spacing: .04em;
-    }
-
     /* Pills */
     .pill {
         font-size: 12.5px; font-weight: 700;
