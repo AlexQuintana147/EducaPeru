@@ -52,11 +52,11 @@
     /* Overlay de detalles — oculto por defecto */
     .c-overlay {
         position: absolute; inset: 0;
-        background: linear-gradient(180deg, rgba(9,9,11,0.15) 0%, rgba(9,9,11,0.97) 38%);
+        background: linear-gradient(180deg, rgba(9,9,11,0.05) 0%, rgba(9,9,11,0.96) 45%);
         display: flex; flex-direction: column; justify-content: flex-end;
-        padding: 20px;
+        padding: 18px;
         opacity: 0;
-        transform: translateY(8px);
+        transform: translateY(6px);
         transition: opacity .3s ease, transform .3s ease;
     }
     .c-card:hover .c-overlay {
@@ -300,20 +300,13 @@
                 {{-- Ofimática --}}
                 <div class="c-card">
                     <img class="c-thumb-img" src="{{ asset('image/clases1.webp') }}" alt="Ofimática Profesional">
-                    <span class="c-badge badge-soon" style="z-index:3;">✦ Próximamente</span>
                     <div class="c-overlay">
                         <div class="c-cat">Ofimática · Básico</div>
                         <div class="c-title">Ofimática Profesional</div>
-                        <div class="c-desc">Word, PowerPoint y Excel desde cero hasta nivel avanzado.</div>
                         <div class="c-meta">
-                            <div>
-                                <div class="c-price-old">S/ 100.00</div>
-                                <div class="c-price">S/ 49.90</div>
-                            </div>
+                            <div class="c-price">S/ 49.90</div>
                             <div class="c-dur">
-                                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
-                                </svg>
+                                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
                                 02 meses
                             </div>
                         </div>
@@ -352,16 +345,10 @@
                     <div class="c-overlay">
                         <div class="c-cat" style="color:#818cf8;">Programación · Básico</div>
                         <div class="c-title">Programación en C++</div>
-                        <div class="c-desc">Fundamentos, POO y estructuras de datos con C++ moderno.</div>
                         <div class="c-meta">
-                            <div>
-                                <div class="c-price-old">Precio por confirmar</div>
-                                <div class="c-price" style="color:#818cf8;">Muy pronto</div>
-                            </div>
+                            <div class="c-price" style="color:#818cf8;">Muy pronto</div>
                             <div class="c-dur">
-                                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
-                                </svg>
+                                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
                                 02 meses
                             </div>
                         </div>
@@ -394,16 +381,10 @@
                     <div class="c-overlay">
                         <div class="c-cat" style="color:#4ade80;">Programación · Básico</div>
                         <div class="c-title">Programación en Python</div>
-                        <div class="c-desc">Fundamentos de Python, automatización y análisis de datos desde cero.</div>
                         <div class="c-meta">
-                            <div>
-                                <div class="c-price-old">Precio por confirmar</div>
-                                <div class="c-price" style="color:#4ade80;">Muy pronto</div>
-                            </div>
+                            <div class="c-price" style="color:#4ade80;">Muy pronto</div>
                             <div class="c-dur">
-                                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
-                                </svg>
+                                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
                                 02 meses
                             </div>
                         </div>
