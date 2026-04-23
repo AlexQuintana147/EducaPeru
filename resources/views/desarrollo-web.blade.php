@@ -351,15 +351,6 @@
                 </div>
                 <div class="dw-side-card-desc">Cada proyecto es único. Creamos interfaces que reflejan la identidad de tu marca.</div>
             </div>
-
-            <div class="dw-side-card">
-                <div class="dw-side-card-icon">
-                    <svg width="16" height="16" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
-                </div>
-                <div class="dw-side-card-stat">100%</div>
-                <div class="dw-side-card-stat-label">Clientes Potenciales</div>
-            </div>
-
             <div class="dw-side-card">
                 <div class="dw-side-card-icon">
                     <svg width="16" height="16" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
@@ -437,15 +428,6 @@
 
         {{-- ── Panel derecho ── --}}
         <div class="dw-side">
-
-            <div class="dw-side-card">
-                <div class="dw-side-card-icon">
-                    <svg width="16" height="16" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
-                </div>
-                <div class="dw-side-card-stat">100%</div>
-                <div class="dw-side-card-stat-label">Clientes satisfechos</div>
-            </div>
-
             <div class="dw-side-card">
                 <div class="dw-side-card-icon">
                     <svg width="16" height="16" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14M4.93 4.93a10 10 0 0 0 0 14.14"/></svg>
