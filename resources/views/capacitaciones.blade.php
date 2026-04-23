@@ -294,7 +294,7 @@
 
                 {{-- Ofimática --}}
                 <div class="c-card">
-                    <img class="c-thumb-img" src="{{ asset('image/clases1.webp') }}" alt="Ofimática Profesional">
+                    <img class="c-thumb-img" src="https://x02.me/i/RD47.png" alt="Ofimática Profesional">
                     <div class="c-overlay">
                         <div class="c-cat">Ofimática · Básico</div>
                         <div class="c-title">Ofimática Profesional</div>
