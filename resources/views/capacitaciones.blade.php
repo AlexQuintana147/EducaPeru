@@ -31,7 +31,6 @@
         border-radius: 16px;
         overflow: hidden;
         cursor: pointer;
-        aspect-ratio: 4/3;
         background: #0d0d0f;
         border: 2px solid rgba(255,255,255,0.22);
         transition: border-color .25s ease, box-shadow .25s ease;
@@ -43,9 +42,8 @@
 
     /* Imagen de fondo */
     .c-thumb-img {
-        position: absolute; inset: 0;
-        width: 100%; height: 100%;
-        object-fit: contain;
+        width: 100%;
+        height: auto;
         display: block;
     }
 
