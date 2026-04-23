@@ -13,3 +13,7 @@ Route::get('/capacitaciones', function () {
 Route::get('/nosotros', function () {
     return view('nosotros');
 });
+
+Route::get('/desarrollo-web', function () {
+    return view('desarrollo-web');
+});
