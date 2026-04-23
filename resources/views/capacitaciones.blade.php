@@ -50,16 +50,55 @@
     /* Overlay de detalles — oculto por defecto */
     .c-overlay {
         position: absolute; inset: 0;
-        background: linear-gradient(180deg, rgba(9,9,11,0.05) 0%, rgba(9,9,11,0.96) 45%);
+        background: linear-gradient(180deg, transparent 30%, rgba(9,9,11,0.97) 100%);
         display: flex; flex-direction: column; justify-content: flex-end;
-        padding: 18px;
+        padding: 14px 16px;
         opacity: 0;
-        transform: translateY(6px);
+        transform: translateY(4px);
         transition: opacity .3s ease, transform .3s ease;
     }
     .c-card:hover .c-overlay {
         opacity: 1;
         transform: translateY(0);
+    }
+    .c-overlay-title {
+        font-size: 14px; font-weight: 800;
+        color: #f1f5f9; margin-bottom: 10px;
+        line-height: 1.3;
+    }
+    .c-overlay-row {
+        display: flex; align-items: center;
+        justify-content: space-between; gap: 10px;
+    }
+    .c-overlay-info {
+        display: flex; align-items: center; gap: 7px;
+        font-size: 12.5px; color: #cbd5e1;
+    }
+    .c-overlay-info-icon {
+        width: 26px; height: 26px; border-radius: 50%;
+        background: rgba(255,255,255,0.1);
+        display: flex; align-items: center; justify-content: center;
+        flex-shrink: 0;
+    }
+    .btn-go {
+        display: inline-flex; align-items: center; gap: 7px;
+        padding: 8px 16px; border-radius: 10px;
+        font-size: 13px; font-weight: 800;
+        background: #fff; color: #09090b;
+        text-decoration: none; white-space: nowrap;
+        border: 1px solid rgba(255,255,255,0.15);
+        transition: background .2s, transform .2s;
+        flex-shrink: 0;
+    }
+    .btn-go:hover { background: #e4e4e7; transform: translateY(-1px); }
+    .btn-go-disabled {
+        display: inline-flex; align-items: center; gap: 7px;
+        padding: 8px 16px; border-radius: 10px;
+        font-size: 13px; font-weight: 800;
+        background: rgba(255,255,255,0.07); color: #71717a;
+        white-space: nowrap; cursor: not-allowed;
+        border: 1px solid rgba(255,255,255,0.08);
+        flex-shrink: 0;
     }
 
     /* C++ thumb — ocupa todo el card */
@@ -294,16 +333,19 @@
                 <div class="c-card">
                     <img class="c-thumb-img" src="https://x02.me/i/RD47.png" alt="Ofimática Profesional">
                     <div class="c-overlay">
-                        <div class="c-cat">Ofimática · Básico</div>
-                        <div class="c-title">Ofimática Profesional</div>
-                        <div class="c-meta">
-                            <div class="c-price">S/ 49.90</div>
-                            <div class="c-dur">
-                                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-                                02 meses
+                        <div class="c-overlay-title">Ofimática Profesional</div>
+                        <div class="c-overlay-row">
+                            <div class="c-overlay-info">
+                                <div class="c-overlay-info-icon">
+                                    <svg width="13" height="13" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                                </div>
+                                4 horas a la semana
                             </div>
+                            <a href="#" class="btn-go">
+                                <svg width="12" height="12" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                                Ir al curso
+                            </a>
                         </div>
-                        <a href="#" class="btn-primary">Ver detalle</a>
                     </div>
                 </div>
 
@@ -336,16 +378,19 @@
                     </div>
                     <span class="c-badge badge-soon" style="z-index:3;">✦ Próximamente</span>
                     <div class="c-overlay">
-                        <div class="c-cat" style="color:#818cf8;">Programación · Básico</div>
-                        <div class="c-title">Programación en C++</div>
-                        <div class="c-meta">
-                            <div class="c-price" style="color:#818cf8;">Muy pronto</div>
-                            <div class="c-dur">
-                                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-                                02 meses
+                        <div class="c-overlay-title">Programación en C++</div>
+                        <div class="c-overlay-row">
+                            <div class="c-overlay-info">
+                                <div class="c-overlay-info-icon">
+                                    <svg width="13" height="13" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                                </div>
+                                4 horas a la semana
+                            </div>
+                            <div class="btn-go-disabled">
+                                <svg width="12" height="12" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                                Próximamente
                             </div>
                         </div>
-                        <div class="btn-disabled">Próximamente</div>
                     </div>
                 </div>
 
@@ -372,16 +417,19 @@
                     </div>
                     <span class="c-badge badge-soon" style="z-index:3;">✦ Próximamente</span>
                     <div class="c-overlay">
-                        <div class="c-cat" style="color:#4ade80;">Programación · Básico</div>
-                        <div class="c-title">Programación en Python</div>
-                        <div class="c-meta">
-                            <div class="c-price" style="color:#4ade80;">Muy pronto</div>
-                            <div class="c-dur">
-                                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-                                02 meses
+                        <div class="c-overlay-title">Programación en Python</div>
+                        <div class="c-overlay-row">
+                            <div class="c-overlay-info">
+                                <div class="c-overlay-info-icon">
+                                    <svg width="13" height="13" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                                </div>
+                                4 horas a la semana
+                            </div>
+                            <div class="btn-go-disabled">
+                                <svg width="12" height="12" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                                Próximamente
                             </div>
                         </div>
-                        <div class="btn-disabled" style="color:#22c55e; border-color:rgba(34,197,94,.25); background:rgba(34,197,94,.08);">Próximamente</div>
                     </div>
                 </div>
 
