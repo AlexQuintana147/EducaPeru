@@ -435,8 +435,8 @@
                     <div style="font-size:11px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:#fff;margin-bottom:18px;">Cursos</div>
                     <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:12px;">
                         <li><a href="#" class="footer-link">Ofimática</a></li>
-                        <li><a href="#" class="footer-link" style="display:flex;align-items:center;gap:6px;">C++ <span style="font-size:10px;background:rgba(249,115,22,0.15);color:#f97316;padding:1px 7px;border-radius:20px;font-weight:700;">Pronto</span></a></li>
-                        <li><a href="#" class="footer-link" style="display:flex;align-items:center;gap:6px;">Python <span style="font-size:10px;background:rgba(249,115,22,0.15);color:#f97316;padding:1px 7px;border-radius:20px;font-weight:700;">Pronto</span></a></li>
+                        <li><a href="#" class="footer-link" style="display:flex;align-items:center;gap:6px;">C++ <span style="font-size:10px;color:#f97316">Pronto</span></a></li>
+                        <li><a href="#" class="footer-link" style="display:flex;align-items:center;gap:6px;">Python <span style="font-size:10px;color:#f97316">Pronto</span></a></li>
                     </ul>
                 </div>
                 <div>
