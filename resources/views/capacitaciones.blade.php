@@ -23,44 +23,48 @@
         gap: 20px;
     }
 
-    /* Card */
+    /* Card — solo imagen por defecto */
     .c-card {
-        background: #111113;
-        border: 1px solid rgba(255,255,255,0.07);
+        position: relative;
         border-radius: 14px;
         overflow: hidden;
-        transition: border-color .25s ease, box-shadow .25s ease, transform .25s ease;
+        cursor: pointer;
+        aspect-ratio: 16/9;
+        background: #0d0d0f;
+        border: 1px solid rgba(255,255,255,0.07);
+        transition: border-color .25s ease, box-shadow .25s ease;
     }
     .c-card:hover {
-        border-color: rgba(255,255,255,0.14);
-        box-shadow: 0 16px 40px rgba(0,0,0,0.6);
+        border-color: rgba(255,255,255,0.18);
+        box-shadow: 0 16px 40px rgba(0,0,0,0.7);
     }
 
-    /* Thumb */
-    .c-thumb {
-        position: relative;
-        width: 100%;
-        aspect-ratio: 16/9;
-        overflow: hidden;
-        background: #0d0d0f;
-    }
-    .c-thumb img {
+    /* Imagen de fondo */
+    .c-thumb-img {
+        position: absolute; inset: 0;
         width: 100%; height: 100%;
         object-fit: cover;
-        transition: transform .4s ease;
         display: block;
     }
-    .c-card:hover .c-thumb img { transform: none; }
-    .c-thumb-dim {
+
+    /* Overlay de detalles — oculto por defecto */
+    .c-overlay {
         position: absolute; inset: 0;
-        background: linear-gradient(180deg, transparent 50%, rgba(0,0,0,0.55) 100%);
+        background: linear-gradient(180deg, rgba(9,9,11,0.15) 0%, rgba(9,9,11,0.97) 38%);
+        display: flex; flex-direction: column; justify-content: flex-end;
+        padding: 20px;
+        opacity: 0;
+        transform: translateY(8px);
+        transition: opacity .3s ease, transform .3s ease;
+    }
+    .c-card:hover .c-overlay {
+        opacity: 1;
+        transform: translateY(0);
     }
 
-    /* C++ thumb */
+    /* C++ thumb — ocupa todo el card */
     .cpp-thumb {
-        position: relative;
-        width: 100%;
-        aspect-ratio: 16/9;
+        position: absolute; inset: 0;
         overflow: hidden;
         background: #05050a;
     }
@@ -293,11 +297,9 @@
 
                 {{-- Ofimática --}}
                 <div class="c-card">
-                    <div class="c-thumb">
-                        <img src="{{ asset('image/clases1.webp') }}" alt="Ofimática Profesional">
-                        <div class="c-thumb-dim"></div>
-                    </div>
-                    <div class="c-body">
+                    <img class="c-thumb-img" src="{{ asset('image/clases1.webp') }}" alt="Ofimática Profesional">
+                    <span class="c-badge badge-soon" style="z-index:3;">✦ Próximamente</span>
+                    <div class="c-overlay">
                         <div class="c-cat">Ofimática · Básico</div>
                         <div class="c-title">Ofimática Profesional</div>
                         <div class="c-desc">Word, PowerPoint y Excel desde cero hasta nivel avanzado.</div>
@@ -319,7 +321,8 @@
 
                 {{-- C++ --}}
                 <div class="c-card">
-                    <div class="cpp-thumb">
+                    {{-- Thumb C++ --}}
+                    <div class="cpp-thumb" style="position:absolute;inset:0;width:100%;height:100%;aspect-ratio:unset;">
                         <div class="cpp-grid"></div>
                         <div class="cpp-orb"></div>
                         <div class="cpp-code" aria-hidden="true">
@@ -342,9 +345,9 @@
                             <div class="cpp-text">C++</div>
                             <div class="cpp-sub-label">Programación</div>
                         </div>
-                        <span class="c-badge badge-soon">✦ Próximamente</span>
                     </div>
-                    <div class="c-body">
+                    <span class="c-badge badge-soon" style="z-index:3;">✦ Próximamente</span>
+                    <div class="c-overlay">
                         <div class="c-cat" style="color:#818cf8;">Programación · Básico</div>
                         <div class="c-title">Programación en C++</div>
                         <div class="c-desc">Fundamentos, POO y estructuras de datos con C++ moderno.</div>
