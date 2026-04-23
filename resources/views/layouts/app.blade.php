@@ -291,7 +291,7 @@
 </head>
 <body class="bg-[#f5f0eb] text-gray-900 antialiased">
 
-<header id="main-header" class="bg-transparent border-b border-transparent sticky top-0 z-50 backdrop-blur-md">
+<header id="main-header" class="bg-white/95 border-b border-gray-100 fixed top-0 left-0 right-0 z-50 backdrop-blur-md shadow-sm">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex items-center justify-between h-16 sm:h-20">
 
@@ -362,21 +362,12 @@
     </nav>
 </div>
 
-<main class="min-h-screen">
+<main class="min-h-screen pt-16 sm:pt-20">
     @yield('content')
 </main>
 
 <script>
-    // Header scroll effect
-    const header = document.getElementById('main-header');
-
-    window.addEventListener('scroll', () => {
-        if (window.scrollY > 20) {
-            header.classList.add('scrolled');
-        } else {
-            header.classList.remove('scrolled');
-        }
-    });
+    // Header scroll effect removed (header is now fixed)
 
     // Mobile menu toggle
     const mobileMenuBtn = document.getElementById('mobile-menu-btn');

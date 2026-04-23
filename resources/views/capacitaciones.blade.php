@@ -5,295 +5,495 @@
 @section('content')
 
 <style>
+    .cap-body {
+        background: #0a0e1a;
+        min-height: 100vh;
+    }
+
+    /* Hero */
+    .cap-hero {
+        background: linear-gradient(180deg, #0d1224 0%, #0a0e1a 100%);
+        border-bottom: 1px solid rgba(255,255,255,0.06);
+    }
+
+    /* Stats bar */
+    .stats-bar {
+        background: rgba(255,255,255,0.03);
+        border-top: 1px solid rgba(255,255,255,0.06);
+        border-bottom: 1px solid rgba(255,255,255,0.06);
+    }
+
+    /* Card */
     .course-card {
-        transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s ease;
+        background: #111827;
+        border-radius: 16px;
+        overflow: hidden;
+        border: 1px solid rgba(255,255,255,0.07);
+        transition: transform 0.3s cubic-bezier(0.4,0,0.2,1), border-color 0.3s ease, box-shadow 0.3s ease;
+        cursor: pointer;
     }
     .course-card:hover {
-        transform: translateY(-6px);
-        box-shadow: 0 20px 40px rgba(0,0,0,0.12);
+        transform: translateY(-4px) scale(1.01);
+        border-color: rgba(255,255,255,0.18);
+        box-shadow: 0 24px 48px rgba(0,0,0,0.5);
     }
-    .badge-coming-soon {
+
+    .card-thumb {
+        position: relative;
+        aspect-ratio: 16/9;
+        overflow: hidden;
+    }
+    .card-thumb img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.4s ease;
+    }
+    .course-card:hover .card-thumb img {
+        transform: scale(1.05);
+    }
+    .card-thumb-overlay {
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(180deg, transparent 40%, rgba(0,0,0,0.7) 100%);
+    }
+
+    /* Badge */
+    .badge {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        font-size: 11px;
+        font-weight: 800;
+        padding: 4px 10px;
+        border-radius: 20px;
+        letter-spacing: 0.03em;
+    }
+    .badge-soon {
         background: linear-gradient(135deg, #f59e0b, #f97316);
-        animation: pulse-badge 2s infinite;
+        color: #fff;
+        box-shadow: 0 4px 12px rgba(249,115,22,0.5);
     }
-    @keyframes pulse-badge {
-        0%, 100% { box-shadow: 0 0 0 0 rgba(249, 115, 22, 0.4); }
-        50% { box-shadow: 0 0 0 8px rgba(249, 115, 22, 0); }
+    .badge-free {
+        background: linear-gradient(135deg, #10b981, #059669);
+        color: #fff;
+        box-shadow: 0 4px 12px rgba(16,185,129,0.5);
+    }
+    .badge-new {
+        background: linear-gradient(135deg, #6366f1, #8b5cf6);
+        color: #fff;
+        box-shadow: 0 4px 12px rgba(99,102,241,0.5);
+    }
+
+    /* Card body */
+    .card-body {
+        padding: 16px 18px 18px;
+    }
+    .card-level {
+        font-size: 11px;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        color: #6366f1;
+        margin-bottom: 6px;
+    }
+    .card-title {
+        font-size: 15px;
+        font-weight: 800;
+        color: #f1f5f9;
+        line-height: 1.35;
+        margin-bottom: 6px;
+    }
+    .card-desc {
+        font-size: 12.5px;
+        color: #64748b;
+        line-height: 1.5;
+        margin-bottom: 14px;
+    }
+    .card-footer {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-top: 1px solid rgba(255,255,255,0.06);
+        padding-top: 12px;
+    }
+    .card-price-old {
+        font-size: 12px;
+        color: #475569;
+        text-decoration: line-through;
+    }
+    .card-price {
+        font-size: 18px;
+        font-weight: 900;
+        color: #f97316;
+    }
+    .card-duration {
+        display: flex;
+        align-items: center;
+        gap: 4px;
+        font-size: 12px;
+        color: #475569;
+    }
+
+    /* C++ card special */
+    .cpp-thumb {
+        aspect-ratio: 16/9;
+        position: relative;
+        overflow: hidden;
+        background: #020617;
+    }
+    .cpp-code-bg {
+        position: absolute;
+        inset: 0;
+        font-family: 'Courier New', monospace;
+        font-size: 11px;
+        line-height: 1.6;
+        padding: 14px;
+        color: rgba(148,163,184,0.15);
+        overflow: hidden;
+        user-select: none;
+    }
+    .cpp-center {
+        position: absolute;
+        inset: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        z-index: 2;
+    }
+    .cpp-logo {
+        font-size: 52px;
+        font-weight: 900;
+        color: #fff;
+        letter-spacing: -2px;
+        line-height: 1;
+        text-shadow: 0 0 30px rgba(99,102,241,0.8), 0 0 60px rgba(99,102,241,0.4);
+        animation: cpp-pulse 3s ease-in-out infinite;
+    }
+    @keyframes cpp-pulse {
+        0%,100% { text-shadow: 0 0 30px rgba(99,102,241,0.8), 0 0 60px rgba(99,102,241,0.4); }
+        50% { text-shadow: 0 0 50px rgba(139,92,246,1), 0 0 100px rgba(99,102,241,0.6); }
+    }
+    .cpp-sub {
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        color: #6366f1;
+        margin-top: 4px;
+    }
+    .cpp-grid-bg {
+        position: absolute;
+        inset: 0;
+        background-image:
+            linear-gradient(rgba(99,102,241,0.06) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(99,102,241,0.06) 1px, transparent 1px);
+        background-size: 30px 30px;
+    }
+    .cpp-glow-orb {
+        position: absolute;
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        background: radial-gradient(circle, rgba(99,102,241,0.3) 0%, transparent 70%);
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        animation: orb-pulse 3s ease-in-out infinite;
+    }
+    @keyframes orb-pulse {
+        0%,100% { transform: translate(-50%,-50%) scale(1); opacity: 0.6; }
+        50% { transform: translate(-50%,-50%) scale(1.3); opacity: 1; }
+    }
+
+    /* Disabled btn */
+    .btn-soon {
+        width: 100%;
+        padding: 10px;
+        border-radius: 10px;
+        font-size: 13px;
+        font-weight: 800;
+        text-align: center;
+        background: rgba(99,102,241,0.1);
+        color: #6366f1;
+        border: 1px solid rgba(99,102,241,0.25);
+        cursor: not-allowed;
+        letter-spacing: 0.05em;
     }
     .btn-detail {
+        width: 100%;
+        padding: 10px;
+        border-radius: 10px;
+        font-size: 13px;
+        font-weight: 800;
+        text-align: center;
         background: linear-gradient(135deg, #f97316, #ea580c);
-        transition: all 0.3s ease;
+        color: #fff;
+        border: none;
+        cursor: pointer;
+        transition: all 0.25s ease;
+        display: block;
+        text-decoration: none;
+        box-shadow: 0 4px 14px rgba(249,115,22,0.35);
     }
     .btn-detail:hover {
         background: linear-gradient(135deg, #ea580c, #c2410c);
+        box-shadow: 0 8px 24px rgba(249,115,22,0.5);
         transform: translateY(-1px);
-        box-shadow: 0 8px 20px rgba(249, 115, 22, 0.4);
     }
-    .btn-detail:active {
-        transform: translateY(0);
+
+    /* Section title */
+    .section-title {
+        font-size: clamp(22px, 4vw, 32px);
+        font-weight: 900;
+        color: #f1f5f9;
+        letter-spacing: -0.02em;
     }
-    .filter-btn {
-        transition: all 0.25s ease;
+    .section-sub {
+        font-size: 14px;
+        color: #475569;
+        margin-top: 4px;
     }
-    .filter-btn.active {
-        background-color: #1e3a8a;
-        color: white;
-        box-shadow: 0 4px 12px rgba(30, 58, 138, 0.3);
+
+    /* Filter pills */
+    .pill {
+        font-size: 13px;
+        font-weight: 700;
+        padding: 6px 16px;
+        border-radius: 20px;
+        border: 1px solid rgba(255,255,255,0.1);
+        color: #64748b;
+        background: transparent;
+        cursor: pointer;
+        transition: all 0.2s ease;
     }
-    .hero-gradient {
-        background: linear-gradient(135deg, #1e3a8a 0%, #1d4ed8 50%, #2563eb 100%);
+    .pill:hover {
+        border-color: rgba(99,102,241,0.5);
+        color: #a5b4fc;
     }
-    .cpp-card {
-        background: linear-gradient(135deg, #0f172a 0%, #1e293b 60%, #1e3a8a 100%);
+    .pill.active {
+        background: #6366f1;
+        border-color: #6366f1;
+        color: #fff;
+        box-shadow: 0 4px 12px rgba(99,102,241,0.4);
     }
-    .cpp-glow {
-        animation: cpp-glow 3s ease-in-out infinite;
+
+    /* CTA */
+    .cta-section {
+        background: linear-gradient(135deg, #0d1224 0%, #111827 100%);
+        border-top: 1px solid rgba(255,255,255,0.06);
     }
-    @keyframes cpp-glow {
-        0%, 100% { text-shadow: 0 0 20px rgba(96, 165, 250, 0.5); }
-        50% { text-shadow: 0 0 40px rgba(96, 165, 250, 0.9), 0 0 60px rgba(59, 130, 246, 0.4); }
+    .cta-card {
+        background: linear-gradient(135deg, rgba(99,102,241,0.12), rgba(139,92,246,0.08));
+        border: 1px solid rgba(99,102,241,0.2);
+        border-radius: 24px;
+        padding: 48px 32px;
     }
-    .tag-blue {
-        background-color: #dbeafe;
-        color: #1d4ed8;
+
+    /* Notify input */
+    .notify-input {
+        background: rgba(255,255,255,0.05);
+        border: 1px solid rgba(255,255,255,0.1);
+        border-radius: 10px;
+        padding: 12px 16px;
+        color: #f1f5f9;
+        font-size: 14px;
+        outline: none;
+        transition: border-color 0.2s;
+        width: 100%;
     }
-    .tag-purple {
-        background-color: #ede9fe;
-        color: #7c3aed;
-    }
-    .price-original {
-        text-decoration: line-through;
-        color: #9ca3af;
-    }
-    .price-current {
-        color: #f97316;
+    .notify-input::placeholder { color: #475569; }
+    .notify-input:focus { border-color: rgba(99,102,241,0.5); }
+    .notify-btn {
+        background: linear-gradient(135deg, #6366f1, #8b5cf6);
+        color: #fff;
         font-weight: 800;
+        font-size: 14px;
+        padding: 12px 24px;
+        border-radius: 10px;
+        border: none;
+        cursor: pointer;
+        white-space: nowrap;
+        transition: all 0.25s ease;
+        box-shadow: 0 4px 14px rgba(99,102,241,0.4);
     }
-    .section-divider {
-        height: 3px;
-        background: linear-gradient(90deg, #1d4ed8, #7c3aed, #f97316);
-        border-radius: 2px;
-    }
-    .stats-card {
-        background: linear-gradient(135deg, #1e3a8a, #1d4ed8);
+    .notify-btn:hover {
+        box-shadow: 0 8px 24px rgba(99,102,241,0.6);
+        transform: translateY(-1px);
     }
 </style>
 
-{{-- Hero Section --}}
-<section class="hero-gradient py-16 sm:py-20 md:py-24 px-4 sm:px-6 relative overflow-hidden">
-    {{-- Background decorations --}}
-    <div class="absolute inset-0 overflow-hidden pointer-events-none">
-        <div class="absolute -top-20 -right-20 w-96 h-96 bg-white opacity-5 rounded-full"></div>
-        <div class="absolute -bottom-32 -left-20 w-80 h-80 bg-blue-300 opacity-10 rounded-full"></div>
-        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-blue-400 opacity-5 rounded-full"></div>
-    </div>
+<div class="cap-body">
 
-    <div class="max-w-7xl mx-auto relative z-10">
-        <div class="text-center">
-            <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-white mb-4 sm:mb-6 leading-tight">
-                Aprende las tecnologías<br class="hidden sm:block"> más demandadas
+    {{-- ===== HERO ===== --}}
+    <section class="cap-hero py-16 sm:py-20 md:py-24 px-4 sm:px-6 text-center">
+        <div class="max-w-3xl mx-auto">
+            <span class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-indigo-400 mb-5">
+                <span class="w-6 h-px bg-indigo-500"></span>
+                Plataforma de capacitación
+                <span class="w-6 h-px bg-indigo-500"></span>
+            </span>
+            <h1 class="text-4xl sm:text-5xl md:text-6xl font-black text-white leading-tight tracking-tight mb-5">
+                Aprende las tecnologías<br>
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400">
+                    más demandadas
+                </span>
             </h1>
-            <p class="text-blue-100 text-base sm:text-lg md:text-xl max-w-2xl mx-auto mb-8 sm:mb-10">
-                Cursos prácticos y profesionales diseñados para llevarte del nivel básico al avanzado con instructores expertos.
+            <p class="text-slate-400 text-base sm:text-lg max-w-xl mx-auto mb-8">
+                Cursos prácticos con instructores expertos. Desde cero hasta nivel profesional.
             </p>
+            <div class="flex flex-col sm:flex-row gap-3 justify-center">
+                <a href="#cursos" class="inline-flex items-center justify-center gap-2 bg-indigo-600 hover:bg-indigo-500 text-white font-bold px-7 py-3.5 rounded-full transition-all duration-200 shadow-lg shadow-indigo-900/50 text-sm">
+                    Acceder a los cursos
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+                </a>
+                <a href="#" class="inline-flex items-center justify-center gap-2 bg-white/5 hover:bg-white/10 text-white font-bold px-7 py-3.5 rounded-full border border-white/10 transition-all duration-200 text-sm">
+                    Solicitar información
+                </a>
+            </div>
+        </div>
+    </section>
 
-            {{-- Stats --}}
-            <div class="flex flex-wrap justify-center gap-6 sm:gap-10 md:gap-16">
-                <div class="text-center">
-                    <div class="text-3xl sm:text-4xl font-black text-white">+500</div>
-                    <div class="text-blue-200 text-sm mt-1">Estudiantes</div>
-                </div>
-                <div class="text-center">
-                    <div class="text-3xl sm:text-4xl font-black text-white">98%</div>
-                    <div class="text-blue-200 text-sm mt-1">Satisfacción</div>
-                </div>
-                <div class="text-center">
-                    <div class="text-3xl sm:text-4xl font-black text-white">10+</div>
-                    <div class="text-blue-200 text-sm mt-1">Cursos</div>
-                </div>
-                <div class="text-center">
-                    <div class="text-3xl sm:text-4xl font-black text-white">2</div>
-                    <div class="text-blue-200 text-sm mt-1">Meses promedio</div>
-                </div>
+    {{-- ===== STATS BAR ===== --}}
+    <div class="stats-bar py-4 px-4">
+        <div class="max-w-3xl mx-auto flex flex-wrap items-center justify-center gap-6 sm:gap-12">
+            <div class="flex items-center gap-2">
+                <span class="text-xl font-black text-white">+10</span>
+                <span class="text-slate-500 text-sm">cursos en planeación</span>
+            </div>
+            <div class="w-px h-4 bg-white/10 hidden sm:block"></div>
+            <div class="flex items-center gap-2">
+                <span class="text-xl font-black text-white">+200h</span>
+                <span class="text-slate-500 text-sm">de aprendimiento</span>
+            </div>
+            <div class="w-px h-4 bg-white/10 hidden sm:block"></div>
+            <div class="flex items-center gap-2">
+                <span class="text-xl font-black text-white">+50</span>
+                <span class="text-slate-500 text-sm">estudiantes</span>
             </div>
         </div>
     </div>
-</section>
 
-{{-- Main Content --}}
-<section class="py-12 sm:py-16 md:py-20 px-4 sm:px-6 bg-[#f5f0eb]">
-    <div class="max-w-7xl mx-auto">
+    {{-- ===== COURSES SECTION ===== --}}
+    <section id="cursos" class="py-12 sm:py-16 px-4 sm:px-6">
+        <div class="max-w-7xl mx-auto">
 
-        {{-- Section Header --}}
-        <div class="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 mb-8 sm:mb-12">
-            <div>
-                <h2 class="text-2xl sm:text-3xl md:text-4xl font-black text-gray-900 mb-2">
-                    Cursos disponibles
-                </h2>
-                <div class="section-divider w-16"></div>
+            {{-- Header + filters --}}
+            <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-8">
+                <div>
+                    <h2 class="section-title">Todos los cursos</h2>
+                    <p class="section-sub">Elige tu próximo aprendizaje</p>
+                </div>
+                <div class="flex flex-wrap gap-2">
+                    <button class="pill active">Todos</button>
+                    <button class="pill">Básico</button>
+                    <button class="pill">Intermedio</button>
+                    <button class="pill">Próximamente</button>
+                </div>
             </div>
-            {{-- Filter buttons --}}
-            <div class="flex flex-wrap gap-2">
-                <button class="filter-btn active text-sm font-semibold px-4 py-2 rounded-full border-2 border-blue-900">
-                    Todos
-                </button>
-                <button class="filter-btn text-sm font-semibold px-4 py-2 rounded-full border-2 border-gray-300 text-gray-600 hover:border-blue-900 hover:text-blue-900">
-                    Básico
-                </button>
-                <button class="filter-btn text-sm font-semibold px-4 py-2 rounded-full border-2 border-gray-300 text-gray-600 hover:border-blue-900 hover:text-blue-900">
-                    Próximamente
-                </button>
-            </div>
-        </div>
 
-        {{-- Cards Grid --}}
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+            {{-- Grid --}}
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
 
-            {{-- Card: Ofimática Profesional --}}
-            <div class="course-card bg-white rounded-2xl overflow-hidden shadow-md flex flex-col">
-                {{-- Image --}}
-                <div class="relative">
-                    <img
-                        src="{{ asset('image/clases1.webp') }}"
-                        alt="Ofimática Profesional"
-                        class="w-full h-48 object-cover"
-                    >
-                    {{-- Overlay gradient --}}
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
-                    {{-- Badge: Próximamente --}}
-                    <span class="badge-coming-soon absolute top-3 right-3 text-white text-xs font-black px-3 py-1.5 rounded-full shadow-lg">
-                        Próximamente
-                    </span>
+                {{-- ---- Card: Ofimática ---- --}}
+                <div class="course-card">
+                    <div class="card-thumb">
+                        <img src="{{ asset('image/clases1.webp') }}" alt="Ofimática Profesional">
+                        <div class="card-thumb-overlay"></div>
+                        <span class="badge badge-soon">✦ Próximamente</span>
+                    </div>
+                    <div class="card-body">
+                        <div class="card-level">Ofimática · Básico</div>
+                        <div class="card-title">Ofimática Profesional</div>
+                        <div class="card-desc">Word, PowerPoint y Excel desde cero hasta nivel avanzado.</div>
+                        <div class="card-footer mb-3">
+                            <div>
+                                <div class="card-price-old">S/ 100.00</div>
+                                <div class="card-price">S/ 49.90</div>
+                            </div>
+                            <div class="card-duration">
+                                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                                02 meses
+                            </div>
+                        </div>
+                        <a href="#" class="btn-detail">Ver detalle</a>
+                    </div>
                 </div>
 
-                {{-- Body --}}
-                <div class="p-5 flex flex-col flex-1">
-                    {{-- Tags --}}
-                    <div class="flex flex-wrap gap-2 mb-3">
-                        <span class="tag-blue text-xs font-semibold px-3 py-1 rounded-lg">
-                            Ofimática Profesional: Word, PowerPoint y Excel
-                        </span>
-                        <span class="tag-purple text-xs font-semibold px-3 py-1 rounded-lg">
-                            Básico
-                        </span>
+                {{-- ---- Card: C++ (Próximamente) ---- --}}
+                <div class="course-card">
+                    <div class="cpp-thumb">
+                        <div class="cpp-grid-bg"></div>
+                        <div class="cpp-glow-orb"></div>
+                        <div class="cpp-code-bg" aria-hidden="true">
+                            #include &lt;iostream&gt;<br>
+                            #include &lt;vector&gt;<br>
+                            using namespace std;<br><br>
+                            class Programa {<br>
+                            &nbsp;&nbsp;public:<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;void ejecutar() {<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cout &lt;&lt; "C++";<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;}<br>
+                            };<br><br>
+                            int main() {<br>
+                            &nbsp;&nbsp;Programa p;<br>
+                            &nbsp;&nbsp;p.ejecutar();<br>
+                            &nbsp;&nbsp;return 0;<br>
+                            }
+                        </div>
+                        <div class="cpp-center">
+                            <div class="cpp-logo">C++</div>
+                            <div class="cpp-sub">Programación</div>
+                        </div>
+                        <span class="badge badge-soon">✦ Próximamente</span>
                     </div>
+                    <div class="card-body">
+                        <div class="card-level" style="color:#818cf8;">Programación · Intermedio</div>
+                        <div class="card-title">Programación en C++</div>
+                        <div class="card-desc">Fundamentos, POO y estructuras de datos con C++ moderno.</div>
+                        <div class="card-footer mb-3">
+                            <div>
+                                <div class="card-price-old">Precio por confirmar</div>
+                                <div class="card-price" style="color:#818cf8;">Muy pronto</div>
+                            </div>
+                            <div class="card-duration">
+                                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                                02 meses
+                            </div>
+                        </div>
+                        <div class="btn-soon">Próximamente</div>
+                    </div>
+                </div>
 
-                    {{-- Title --}}
-                    <h3 class="text-base font-black text-gray-900 uppercase tracking-wide mb-1">
-                        Ofimática Profesional
-                    </h3>
-                    <p class="text-sm text-gray-500 mb-4 flex-1">
-                        Ofimática Profesional
-                    </p>
-
-                    {{-- Price & Duration --}}
-                    <div class="flex items-center gap-3 mb-4">
-                        <span class="price-original text-sm">S/ 100.00</span>
-                        <span class="price-current text-xl">S/ 49.90</span>
-                        <span class="flex items-center gap-1 text-gray-500 text-sm ml-auto">
-                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                {{-- ---- Placeholder cards (coming soon) ---- --}}
+                @for ($i = 0; $i < 2; $i++)
+                <div class="course-card opacity-40">
+                    <div class="cpp-thumb" style="background:#0d1117;">
+                        <div class="cpp-grid-bg"></div>
+                        <div class="cpp-center">
+                            <svg class="w-10 h-10 text-slate-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 6v6m0 0v6m0-6h6m-6 0H6"/>
                             </svg>
-                            02 meses
-                        </span>
+                            <div class="text-slate-600 text-xs font-bold mt-2 tracking-widest uppercase">Próximamente</div>
+                        </div>
                     </div>
-
-                    {{-- Button --}}
-                    <a href="#" class="btn-detail w-full text-center text-white font-black py-3 rounded-xl text-sm">
-                        Ver detalle
-                    </a>
+                    <div class="card-body">
+                        <div class="card-level" style="color:#334155;">Nuevo curso</div>
+                        <div class="card-title" style="color:#334155;">En preparación...</div>
+                        <div class="card-desc">Estamos preparando contenido de calidad para ti.</div>
+                        <div class="card-footer mb-3">
+                            <div class="card-price" style="color:#334155;">—</div>
+                        </div>
+                        <div class="btn-soon" style="color:#334155; border-color:rgba(51,65,85,0.3);">Próximamente</div>
+                    </div>
                 </div>
+                @endfor
+
             </div>
-
-            {{-- Card: C++ (Próximamente) --}}
-            <div class="course-card cpp-card rounded-2xl overflow-hidden shadow-md flex flex-col">
-                {{-- Image placeholder --}}
-                <div class="relative h-48 flex items-center justify-center overflow-hidden">
-                    {{-- Animated background --}}
-                    <div class="absolute inset-0 bg-gradient-to-br from-slate-900 via-blue-950 to-slate-800"></div>
-                    <div class="absolute inset-0 opacity-20">
-                        <div class="absolute top-4 left-4 text-blue-400 text-xs font-mono opacity-60">#include &lt;iostream&gt;</div>
-                        <div class="absolute top-10 left-4 text-blue-300 text-xs font-mono opacity-40">int main() {</div>
-                        <div class="absolute top-16 left-8 text-green-400 text-xs font-mono opacity-50">cout &lt;&lt; "Hello";</div>
-                        <div class="absolute top-22 left-4 text-blue-300 text-xs font-mono opacity-40">return 0;</div>
-                        <div class="absolute bottom-8 right-4 text-yellow-400 text-xs font-mono opacity-40">}</div>
-                        <div class="absolute bottom-4 right-6 text-blue-400 text-xs font-mono opacity-30">// C++</div>
-                    </div>
-                    {{-- C++ Logo text --}}
-                    <div class="relative z-10 text-center">
-                        <div class="cpp-glow text-5xl font-black text-white tracking-tight">C++</div>
-                        <div class="text-blue-300 text-xs font-semibold mt-1 tracking-widest uppercase">Programación</div>
-                    </div>
-                    {{-- Badge --}}
-                    <span class="badge-coming-soon absolute top-3 right-3 text-white text-xs font-black px-3 py-1.5 rounded-full shadow-lg">
-                        Próximamente
-                    </span>
-                </div>
-
-                {{-- Body --}}
-                <div class="p-5 flex flex-col flex-1">
-                    {{-- Tags --}}
-                    <div class="flex flex-wrap gap-2 mb-3">
-                        <span class="bg-blue-900/40 text-blue-300 text-xs font-semibold px-3 py-1 rounded-lg border border-blue-700/30">
-                            Programación C++
-                        </span>
-                        <span class="bg-purple-900/40 text-purple-300 text-xs font-semibold px-3 py-1 rounded-lg border border-purple-700/30">
-                            Intermedio
-                        </span>
-                    </div>
-
-                    {{-- Title --}}
-                    <h3 class="text-base font-black text-white uppercase tracking-wide mb-1">
-                        Programación C++
-                    </h3>
-                    <p class="text-sm text-blue-300 mb-4 flex-1">
-                        Fundamentos y programación orientada a objetos con C++
-                    </p>
-
-                    {{-- Price placeholder --}}
-                    <div class="flex items-center gap-3 mb-4">
-                        <span class="text-gray-500 text-sm italic">Precio por confirmar</span>
-                        <span class="flex items-center gap-1 text-gray-500 text-sm ml-auto">
-                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
-                            </svg>
-                            02 meses
-                        </span>
-                    </div>
-
-                    {{-- Button disabled --}}
-                    <button disabled class="w-full text-center text-gray-400 font-black py-3 rounded-xl text-sm bg-white/10 border border-white/10 cursor-not-allowed">
-                        Próximamente
-                    </button>
-                </div>
-            </div>
-
         </div>
+    </section>
 
-    </div>
-</section>
-
-{{-- CTA Section --}}
-<section class="py-12 sm:py-16 px-4 sm:px-6 bg-white">
-    <div class="max-w-4xl mx-auto text-center">
-        <h2 class="text-2xl sm:text-3xl md:text-4xl font-black text-gray-900 mb-4">
-            ¿No encuentras lo que buscas?
-        </h2>
-        <p class="text-gray-500 text-base sm:text-lg mb-8 max-w-xl mx-auto">
-            Contáctanos y cuéntanos qué tecnología quieres aprender. Estamos ampliando nuestra oferta constantemente.
-        </p>
-        <div class="flex flex-col sm:flex-row gap-3 justify-center">
-            <a href="#" class="inline-flex items-center justify-center gap-2 bg-blue-700 text-white px-8 py-3.5 rounded-full text-base font-bold hover:bg-blue-800 transition-all duration-200 shadow-lg shadow-blue-200">
-                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/>
-                </svg>
-                Contactar ahora
-            </a>
-            <a href="/" class="inline-flex items-center justify-center gap-2 bg-transparent text-blue-700 px-8 py-3.5 rounded-full text-base font-bold border-2 border-blue-700 hover:bg-blue-50 transition-all duration-200">
-                Volver al inicio
-            </a>
-        </div>
-    </div>
-</section>
+</div>
 
 @endsection
