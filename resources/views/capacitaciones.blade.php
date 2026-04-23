@@ -31,7 +31,7 @@
         border-radius: 16px;
         overflow: hidden;
         cursor: pointer;
-        aspect-ratio: 4/3;
+        aspect-ratio: 5/4;
         background: #0d0d0f;
         border: 2px solid rgba(255,255,255,0.22);
         transition: border-color .25s ease, box-shadow .25s ease;
