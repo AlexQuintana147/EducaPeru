@@ -34,7 +34,6 @@
     .c-card:hover {
         border-color: rgba(255,255,255,0.14);
         box-shadow: 0 16px 40px rgba(0,0,0,0.6);
-        transform: translateY(-3px);
     }
 
     /* Thumb */
@@ -51,7 +50,7 @@
         transition: transform .4s ease;
         display: block;
     }
-    .c-card:hover .c-thumb img { transform: scale(1.04); }
+    .c-card:hover .c-thumb img { transform: none; }
     .c-thumb-dim {
         position: absolute; inset: 0;
         background: linear-gradient(180deg, transparent 50%, rgba(0,0,0,0.55) 100%);
@@ -254,19 +253,6 @@
             <p class="text-zinc-500 text-sm sm:text-base max-w-lg mx-auto mb-8">
                 Cursos prácticos con instructores expertos. Desde cero hasta nivel profesional.
             </p>
-            <div class="flex flex-col sm:flex-row gap-3 justify-center">
-                <a href="#cursos"
-                   class="inline-flex items-center justify-center gap-2 bg-indigo-600 hover:bg-indigo-500 text-white font-bold px-7 py-3 rounded-full text-sm transition-all shadow-lg shadow-indigo-950">
-                    Ver cursos
-                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
-                    </svg>
-                </a>
-                <a href="#"
-                   class="inline-flex items-center justify-center gap-2 bg-white/5 hover:bg-white/8 text-white font-bold px-7 py-3 rounded-full border border-white/8 text-sm transition-all">
-                    Solicitar información
-                </a>
-            </div>
         </div>
     </section>
 
@@ -299,11 +285,6 @@
                 <div>
                     <h2 class="text-2xl sm:text-3xl font-black text-white tracking-tight">Todos los cursos</h2>
                     <p class="text-zinc-600 text-sm mt-1">Elige tu próximo aprendizaje</p>
-                </div>
-                <div class="flex flex-wrap gap-2">
-                    <button class="pill active">Todos</button>
-                    <button class="pill">Básico</button>
-                    <button class="pill">Próximamente</button>
                 </div>
             </div>
 
