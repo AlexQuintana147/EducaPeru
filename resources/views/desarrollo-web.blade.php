@@ -356,8 +356,8 @@
                 <div class="dw-side-card-icon">
                     <svg width="16" height="16" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
                 </div>
-                <div class="dw-side-card-stat">+40</div>
-                <div class="dw-side-card-stat-label">Proyectos entregados</div>
+                <div class="dw-side-card-stat">100%</div>
+                <div class="dw-side-card-stat-label">Clientes Potenciales</div>
             </div>
 
             <div class="dw-side-card">
