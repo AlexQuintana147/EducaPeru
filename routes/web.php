@@ -9,3 +9,7 @@ Route::get('/', function () {
 Route::get('/capacitaciones', function () {
     return view('capacitaciones');
 });
+
+Route::get('/nosotros', function () {
+    return view('nosotros');
+});
