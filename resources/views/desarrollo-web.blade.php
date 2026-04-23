@@ -549,8 +549,7 @@
     resize(); initBubbles(); tick();
 
     /* ── Countdown ── */
-    const target = new Date();
-    target.setDate(target.getDate() + 30);
+    const target = new Date('2026-06-01T00:00:00');
 
     function pad(n) { return String(n).padStart(2, '0'); }
 
