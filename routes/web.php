@@ -17,3 +17,7 @@ Route::get('/nosotros', function () {
 Route::get('/desarrollo-web', function () {
     return view('desarrollo-web');
 });
+
+Route::get('/contactanos', function () {
+    return view('contactanos');
+});

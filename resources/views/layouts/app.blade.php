@@ -305,7 +305,7 @@
                 <a href="/capacitaciones" class="nav-link text-base lg:text-lg font-black text-gray-700 hover:text-blue-600">Capacitaciones</a>
                 <a href="/nosotros" class="nav-link text-base lg:text-lg font-black text-gray-700 hover:text-blue-600">Nosotros</a>
                 <a href="/desarrollo-web" class="nav-link text-base lg:text-lg font-black text-gray-700 hover:text-blue-600">Desarrollo Web</a>
-                <a href="#" class="nav-link text-base lg:text-lg font-black text-gray-700 hover:text-blue-600">Contacto</a>
+                <a href="/contactanos" class="nav-link text-base lg:text-lg font-black text-gray-700 hover:text-blue-600">Contacto</a>
             </nav>
 
             {{-- Right Side Desktop --}}
@@ -351,7 +351,7 @@
         <a href="/desarrollo-web" class="mobile-menu-link block py-5 text-xl font-black text-gray-900 hover:text-gray-400 transition-colors">
             Desarrollo Web
         </a>
-        <a href="#" class="mobile-menu-link block py-5 text-xl font-black text-gray-900 hover:text-gray-400 transition-colors">
+        <a href="/contactanos" class="mobile-menu-link block py-5 text-xl font-black text-gray-900 hover:text-gray-400 transition-colors">
             Contacto
         </a>
         <div class="pt-8">
@@ -428,7 +428,7 @@
                         <li><a href="/capacitaciones" class="footer-link">Capacitaciones</a></li>
                         <li><a href="/nosotros" class="footer-link">Nosotros</a></li>
                         <li><a href="/desarrollo-web" class="footer-link">Desarrollo Web</a></li>
-                        <li><a href="#" class="footer-link">Contacto</a></li>
+                        <li><a href="/contactanos" class="footer-link">Contacto</a></li>
                     </ul>
                 </div>
                 <div>

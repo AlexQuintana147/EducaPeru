@@ -75,10 +75,10 @@
         transition: border-color 0.3s, background 0.3s;
         animation: fadeUp 0.8s cubic-bezier(0.22,1,0.36,1) both;
     }
-    .dw-side-card:hover {
+    /* .dw-side-card:hover {
         border-color: rgba(255,255,255,0.18);
         background: rgba(255,255,255,0.05);
-    }
+    } */
     .dw-side-card-icon {
         width: 36px; height: 36px;
         border-radius: 10px;
