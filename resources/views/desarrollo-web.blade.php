@@ -409,20 +409,12 @@
                 </div>
             </div>
 
-            <form class="dw-form" id="dw-form" onsubmit="handleNotify(event)">
-                <input type="email" class="dw-input" placeholder="tu@correo.com" required aria-label="Correo electrónico">
-                <button type="submit" class="dw-btn">
-                    <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
-                    Notificarme
-                </button>
-            </form>
+            <a href="/capacitaciones" class="dw-btn" style="text-decoration: none; display: inline-flex;">
+                <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M13 5H3v14h10m0-4h8v-8h-8"/></svg>
+                Ir al curso
+            </a>
 
-            <div class="dw-success" id="dw-success">
-                <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
-                Te avisaremos cuando esté disponible.
-            </div>
 
-            <p class="dw-note">Sin spam. Solo te avisamos cuando lancemos.</p>
 
         </div>
 
@@ -554,13 +546,6 @@
     }
     updateCountdown();
     setInterval(updateCountdown, 1000);
-
-    /* ── Form ── */
-    window.handleNotify = function(e) {
-        e.preventDefault();
-        document.getElementById('dw-form').style.display = 'none';
-        document.getElementById('dw-success').classList.add('show');
-    };
 
     /* ── Altura ── */
     function setHeight() {

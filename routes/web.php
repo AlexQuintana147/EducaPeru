@@ -7,7 +7,7 @@ Route::get('/', function () {
 });
 
 Route::get('/capacitaciones', function () {
-    return view('capacitaciones');
+    return view('capacitaciones.index');
 });
 
 Route::get('/nosotros', function () {
