@@ -124,7 +124,7 @@
     <section class="about-hero py-20 sm:py-28 px-4 sm:px-6 text-center">
         <div class="max-w-3xl mx-auto">
             <h1 style="font-size:clamp(36px,6vw,64px);font-weight:900;color:#fff;line-height:1.1;letter-spacing:-1.5px;margin-top:8px;">
-                Formamos <span style="color:#6366f1;">desarrolladores</span><br>
+                Formamos <span style="color:#fff;">desarrolladores</span><br>
                 <span style="-webkit-text-stroke:1px rgba(255,255,255,0.5);color:transparent;">
                     para el mundo digital
                 </span>

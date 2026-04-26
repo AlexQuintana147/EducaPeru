@@ -286,7 +286,7 @@
                                 </div>
                                 4 horas a la semana
                             </div>
-                            <a href="#" class="btn-go">
+                            <a href="/capacitaciones1" class="btn-go">
                                 <svg width="12" height="12" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
                                 Ir al curso
                             </a>

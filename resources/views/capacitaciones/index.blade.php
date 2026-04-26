@@ -3,532 +3,82 @@
 @section('title', 'Capacitación - EducaPerú')
 
 @section('content')
-<style>
-    .pg { background: #09090b; min-height: 100vh; }
 
-    /* ── Hero Section ── */
-    .hero-section {
-        background: radial-gradient(ellipse 80% 50% at 50% -10%, rgba(99,102,241,0.18) 0%, transparent 70%), #09090b;
-        border-bottom: 1px solid rgba(255,255,255,0.05);
-        padding: 60px 0;
-    }
-
-    .hero-content {
-        max-width: 5xl;
-        margin: 0 auto;
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 40px;
-        align-items: center;
-    }
-
-    .hero-text h1 {
-        font-size: clamp(32px, 5vw, 48px);
-        font-weight: 900;
-        color: #f1f5f9;
-        line-height: 1.2;
-        margin-bottom: 20px;
-    }
-
-    .hero-text p {
-        font-size: 16px;
-        color: #a1a1aa;
-        line-height: 1.8;
-        margin-bottom: 24px;
-    }
-
-    .btn-inscribirse {
-        display: inline-flex;
-        align-items: center;
-        gap: 8px;
-        padding: 13px 28px;
-        border-radius: 12px;
-        font-size: 14px;
-        font-weight: 800;
-        background: linear-gradient(135deg, #6366f1, #8b5cf6);
-        color: #fff;
-        text-decoration: none;
-        box-shadow: 0 4px 20px rgba(99,102,241,.4);
-        transition: box-shadow .25s, transform .25s;
-        border: none;
-        cursor: pointer;
-    }
-
-    .btn-inscribirse:hover {
-        box-shadow: 0 8px 28px rgba(99,102,241,.6);
-        transform: translateY(-2px);
-    }
-
-    .hero-image {
-        position: relative;
-    }
-
-    .hero-image img {
-        width: 100%;
-        border-radius: 20px;
-        border: 1px solid rgba(255,255,255,0.08);
-    }
-
-    /* ── Features Cards ── */
-    .features-section {
-        padding: 60px 0;
-        border-bottom: 1px solid rgba(255,255,255,0.05);
-    }
-
-    .features-grid {
-        max-width: 5xl;
-        margin: 0 auto;
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-        gap: 20px;
-        padding: 0 20px;
-    }
-
-    .feature-card {
-        background: rgba(255,255,255,0.03);
-        border: 1px solid rgba(255,255,255,0.08);
-        border-radius: 16px;
-        padding: 24px;
-        text-align: center;
-        transition: border-color .25s ease, transform .25s ease;
-    }
-
-    .feature-card:hover {
-        border-color: rgba(99,102,241,0.3);
-        transform: translateY(-3px);
-    }
-
-    .feature-card2 {
-        background: rgba(255,255,255,0.03);
-        border: 1px solid rgba(255,255,255,0.08);
-        border-radius: 16px;
-        padding: 24px;
-        text-align: center;
-        transition: border-color .25s ease, transform .25s ease;
-    }
-
-    .feature-icon {
-        font-size: 32px;
-        margin-bottom: 12px;
-    }
-
-    .feature-value {
-        font-size: 20px;
-        font-weight: 800;
-        color: #f1f5f9;
-        margin-bottom: 6px;
-    }
-
-    .feature-label {
-        font-size: 12px;
-        color: #71717a;
-        font-weight: 600;
-    }
-
-    /* ── About Section ── */
-    .about-section {
-        padding: 60px 0;
-        background: rgba(99,102,241,0.05);
-        border-bottom: 1px solid rgba(255,255,255,0.05);
-    }
-
-    .about-content {
-        max-width: 5xl;
-        margin: 0 auto;
-        padding: 0 20px;
-    }
-
-    .section-label {
-        font-size: 11px;
-        font-weight: 800;
-        letter-spacing: .18em;
-        text-transform: uppercase;
-        color: #6366f1;
-        margin-bottom: 12px;
-        display: flex;
-        align-items: center;
-        gap: 10px;
-    }
-
-    .section-label::before {
-        content: '';
-        display: block;
-        width: 28px;
-        height: 2px;
-        background: #6366f1;
-        border-radius: 2px;
-        flex-shrink: 0;
-    }
-
-    .section-title {
-        font-size: clamp(26px, 4vw, 40px);
-        font-weight: 900;
-        color: #f1f5f9;
-        line-height: 1.15;
-        letter-spacing: -.5px;
-        margin-bottom: 24px;
-    }
-
-    .about-text {
-        font-size: 14.5px;
-        color: #a1a1aa;
-        line-height: 1.85;
-        margin-bottom: 16px;
-    }
-
-    .cta-button-section {
-        text-align: center;
-        margin-top: 32px;
-    }
-
-    /* ── Curriculum Section ── */
-    .curriculum-section {
-        padding: 60px 0;
-        border-bottom: 1px solid rgba(255,255,255,0.05);
-    }
-
-    .curriculum-content {
-        max-width: 5xl;
-        margin: 0 auto;
-        padding: 0 20px;
-    }
-
-    .accordion-item {
-        background: rgba(255,255,255,0.03);
-        border: 1px solid rgba(255,255,255,0.08);
-        border-radius: 12px;
-        margin-bottom: 12px;
-        overflow: hidden;
-        transition: border-color .25s ease;
-    }
-
-    .accordion-item:hover {
-        border-color: rgba(99,102,241,0.3);
-    }
-
-    .accordion-header {
-        background: rgba(255,255,255,0.03);
-        padding: 18px 24px;
-        cursor: pointer;
-        display: flex;
-        align-items: center;
-        gap: 12px;
-        transition: background .25s ease;
-    }
-
-    .accordion-header:hover {
-        background: rgba(255,255,255,0.05);
-    }
-
-    .accordion-icon {
-        width: 24px;
-        height: 24px;
-        border-radius: 50%;
-        background: #6366f1;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color: white;
-        font-size: 12px;
-        flex-shrink: 0;
-        transition: transform .25s ease;
-    }
-
-    .accordion-item.active .accordion-icon {
-        transform: rotate(180deg);
-    }
-
-    .accordion-title {
-        font-size: 15px;
-        font-weight: 700;
-        color: #f1f5f9;
-        flex: 1;
-    }
-
-    .accordion-content {
-        background: rgba(255,255,255,0.01);
-        padding: 0 24px;
-        max-height: 0;
-        overflow: hidden;
-        transition: max-height .3s ease, padding .3s ease;
-    }
-
-    .accordion-item.active .accordion-content {
-        max-height: 500px;
-        padding: 24px;
-    }
-
-    .accordion-text {
-        font-size: 13px;
-        color: #a1a1aa;
-        line-height: 1.8;
-    }
-
-    /* ── Docentes Section ── */
-    .docentes-section {
-        padding: 60px 0;
-        background: linear-gradient(135deg, #1e3a8a 0%, #1e1b4b 100%);
-        border-bottom: 1px solid rgba(255,255,255,0.05);
-    }
-
-    .docentes-content {
-        max-width: 5xl;
-        margin: 0 auto;
-        padding: 0 20px;
-    }
-
-    .docentes-title {
-        font-size: clamp(26px, 4vw, 40px);
-        font-weight: 900;
-        color: #f1f5f9;
-        margin-bottom: 32px;
-    }
-
-    .docentes-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-        gap: 24px;
-    }
-
-    .docente-card {
-        background: rgba(255,255,255,0.05);
-        border: 1px solid rgba(255,255,255,0.08);
-        border-radius: 16px;
-        padding: 24px;
-        transition: border-color .25s ease;
-    }
-
-    .docente-card:hover {
-        border-color: rgba(99,102,241,0.3);
-    }
-
-    .docente-header {
-        display: flex;
-        gap: 16px;
-        margin-bottom: 16px;
-        align-items: center;
-    }
-
-    .docente-avatar {
-        width: 60px;
-        height: 60px;
-        border-radius: 50%;
-        background: linear-gradient(135deg, #6366f1, #8b5cf6);
-        flex-shrink: 0;
-    }
-
-    .docente-info h3 {
-        font-size: 14px;
-        font-weight: 800;
-        color: #f1f5f9;
-        margin-bottom: 4px;
-    }
-
-    .docente-info p {
-        font-size: 12px;
-        color: #a1a1aa;
-    }
-
-    .docente-buttons {
-        display: flex;
-        gap: 8px;
-    }
-
-    .btn-small {
-        flex: 1;
-        padding: 8px 12px;
-        border-radius: 8px;
-        font-size: 12px;
-        font-weight: 700;
-        border: none;
-        cursor: pointer;
-        transition: transform .25s ease;
-    }
-
-    .btn-small:hover {
-        transform: translateY(-2px);
-    }
-
-    .btn-cv {
-        background: #6366f1;
-        color: white;
-    }
-
-    .btn-descargar {
-        background: #10b981;
-        color: white;
-    }
-
-    /* ── Other Courses Section ── */
-    .other-courses-section {
-        padding: 60px 0;
-        border-bottom: 1px solid rgba(255,255,255,0.05);
-    }
-
-    .other-courses-content {
-        max-width: 5xl;
-        margin: 0 auto;
-        padding: 0 20px;
-    }
-
-    .courses-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        gap: 24px;
-        margin-top: 32px;
-    }
-
-    .course-card {
-        background: rgba(255,255,255,0.03);
-        border: 1px solid rgba(255,255,255,0.08);
-        border-radius: 16px;
-        overflow: hidden;
-        transition: border-color .25s ease, transform .25s ease;
-    }
-
-    .course-card:hover {
-        border-color: rgba(99,102,241,0.3);
-        transform: translateY(-3px);
-    }
-
-    .course-image {
-        width: 100%;
-        height: 160px;
-        background: linear-gradient(135deg, #6366f1, #8b5cf6);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 48px;
-    }
-
-    .course-info {
-        padding: 16px;
-    }
-
-    .course-title {
-        font-size: 14px;
-        font-weight: 800;
-        color: #f1f5f9;
-        margin-bottom: 8px;
-    }
-
-    .course-desc {
-        font-size: 12px;
-        color: #a1a1aa;
-        line-height: 1.6;
-    }
-
-    /* ── CTA Final Section ── */
-    .cta-final-section {
-        background: linear-gradient(135deg, #1e3a8a 0%, #1e1b4b 100%);
-        padding: 60px 0;
-        border-top: 1px solid rgba(255,255,255,0.05);
-    }
-
-    .cta-final-content {
-        max-width: 5xl;
-        margin: 0 auto;
-        padding: 0 20px;
-        text-align: center;
-    }
-
-    .cta-final-title {
-        font-size: clamp(24px, 4vw, 36px);
-        font-weight: 900;
-        color: #f1f5f9;
-        margin-bottom: 12px;
-    }
-
-    .cta-final-text {
-        font-size: 14px;
-        color: #cbd5e1;
-        margin-bottom: 32px;
-        max-width: 2xl;
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    @media (max-width: 768px) {
-        .hero-content {
-            grid-template-columns: 1fr;
-        }
-
-        .features-grid {
-            grid-template-columns: repeat(2, 1fr);
-        }
-
-        .docentes-grid {
-            grid-template-columns: 1fr;
-        }
-
-        .courses-grid {
-            grid-template-columns: 1fr;
-        }
-    }
-</style>
-
-<div class="pg">
+<div class="bg-zinc-950 min-h-screen">
 
     {{-- HERO SECTION --}}
-    <section class="hero-section">
-        <div class="hero-content">
-            <div class="hero-text">
-                <h1>OFIMÁTICA PROFESIONAL</h1>
-                <p>Domina las herramientas office más demandadas en el mercado laboral. Aprende a crear documentos, presentaciones y hojas de cálculo como un profesional.</p>
-                <button class="btn-inscribirse">
-                    Inscribirse
-                </button>
-            </div>
-            <div class="hero-image">
-                <img src="https://via.placeholder.com/400x300?text=Ofimática" alt="Ofimática Profesional">
+    <section class="bg-gradient-to-b from-zinc-900 to-zinc-950 border-b border-zinc-800 py-20 px-4 sm:py-28">
+        <div class="max-w-6xl mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h1 class="text-4xl md:text-5xl font-black text-white mb-6 leading-tight">
+                        OFIMÁTICA PROFESIONAL
+                    </h1>
+                    <p class="text-lg text-zinc-400 leading-relaxed mb-8">
+                        Domina las herramientas office más demandadas en el mercado laboral. Aprende a crear documentos, presentaciones y hojas de cálculo como un profesional.
+                    </p>
+                    <button class="bg-zinc-800 hover:bg-zinc-700 text-white px-8 py-3 rounded-lg font-bold transition-colors">
+                        Inscribirse
+                    </button>
+                </div>
+                <div>
+                    <img src="https://via.placeholder.com/400x300?text=Ofimática" alt="Ofimática Profesional" class="w-full rounded-2xl border border-zinc-700">
+                </div>
             </div>
         </div>
     </section>
 
     {{-- FEATURES SECTION --}}
-    <section class="features-section">
-        <div class="features-grid">
-            <div class="feature-card2">
-                <div class="feature-icon">⏱️</div>
-                <div class="feature-value">02 meses</div>
-                <div class="feature-label">Duración</div>
-            </div>
-            <div class="feature-card2">
-                <div class="feature-icon">💻</div>
-                <div class="feature-value">Virtual</div>
-                <div class="feature-label">Modalidad</div>
-            </div>
-            <div class="feature-card2">
-                <div class="feature-icon">💵</div>
-                <div class="feature-value">S/ 45.50</div>
-                <div class="feature-label">Inversión</div>
-            </div>
-            <div class="feature-card2">
-                <div class="feature-icon">📅</div>
-                <div class="feature-value">Del 21/04/2026</div>
-                <div class="feature-label">Fechas</div>
-            </div>
-            <div class="feature-card2">
-                <div class="feature-icon">👨‍🏫</div>
-                <div class="feature-value">3 instructores</div>
-                <div class="feature-label">Docentes</div>
+    <section class="border-b border-zinc-800 py-16 px-4">
+        <div class="max-width-6xl mx-auto">
+            <div class="grid grid-cols-2 md:grid-cols-5 gap-4">
+                <div class="bg-zinc-900 border border-zinc-800 rounded-xl p-6 text-center hover:border-zinc-600 transition-colors">
+                    <div class="text-3xl mb-3">⏱️</div>
+                    <div class="text-xl font-bold text-white mb-1">02 meses</div>
+                    <div class="text-xs text-zinc-500 font-semibold">Duración</div>
+                </div>
+                <div class="bg-zinc-900 border border-zinc-800 rounded-xl p-6 text-center hover:border-zinc-600 transition-colors">
+                    <div class="text-3xl mb-3">💻</div>
+                    <div class="text-xl font-bold text-white mb-1">Virtual</div>
+                    <div class="text-xs text-zinc-500 font-semibold">Modalidad</div>
+                </div>
+                <div class="bg-zinc-900 border border-zinc-800 rounded-xl p-6 text-center hover:border-zinc-600 transition-colors">
+                    <div class="text-3xl mb-3">💵</div>
+                    <div class="text-xl font-bold text-white mb-1">S/ 45.50</div>
+                    <div class="text-xs text-zinc-500 font-semibold">Inversión</div>
+                </div>
+                <div class="bg-zinc-900 border border-zinc-800 rounded-xl p-6 text-center hover:border-zinc-600 transition-colors">
+                    <div class="text-3xl mb-3">📅</div>
+                    <div class="text-xl font-bold text-white mb-1">Del 21/04/2026</div>
+                    <div class="text-xs text-zinc-500 font-semibold">Fechas</div>
+                </div>
+                <div class="bg-zinc-900 border border-zinc-800 rounded-xl p-6 text-center hover:border-zinc-600 transition-colors">
+                    <div class="text-3xl mb-3">👨‍🏫</div>
+                    <div class="text-xl font-bold text-white mb-1">3 instructores</div>
+                    <div class="text-xs text-zinc-500 font-semibold">Docentes</div>
+                </div>
             </div>
         </div>
     </section>
 
     {{-- ABOUT SECTION --}}
-    <section class="about-section">
-        <div class="about-content">
-            <div class="section-label">Sobre esta capacitación</div>
-            <h2 class="section-title">¿Qué aprenderás?</h2>
-            <p class="about-text">
-                El Curso de Especialización en Ofimática Profesional está diseñado para fortalecer las competencias en el uso eficiente de las principales herramientas ofimáticas: Microsoft Excel, Word y PowerPoint.
-            </p>
-            <p class="about-text">
-                A lo largo del curso, aprenderás a optimizar procesos administrativos, mejorar la presentación de documentos, analizar información de forma efectiva y desarrollar habilidades digitales esenciales para un mejor desempeño en tu institución y entorno laboral.
-            </p>
-            <div class="cta-button-section">
-                <button class="btn-inscribirse">
+    <section class="bg-zinc-900/50 border-b border-zinc-800 py-16 px-4">
+        <div class="max-w-6xl mx-auto">
+            {{-- <div class="flex items-center gap-3 mb-3">
+                <div class="w-7 h-0.5 bg-zinc-500"></div>
+                <p class="text-xs font-bold uppercase tracking-widest text-zinc-500">Sobre esta capacitación</p>
+            </div> --}}
+            <h2 class="text-3xl md:text-4xl font-black text-white mb-8">¿Qué aprenderás?</h2>
+            <div class="space-y-4 mb-8">
+                <p class="text-base text-zinc-400 leading-relaxed">
+                    El Curso de Especialización en Ofimática Profesional está diseñado para fortalecer las competencias en el uso eficiente de las principales herramientas ofimáticas: Microsoft Excel, Word y PowerPoint.
+                </p>
+                <p class="text-base text-zinc-400 leading-relaxed">
+                    A lo largo del curso, aprenderás a optimizar procesos administrativos, mejorar la presentación de documentos, analizar información de forma efectiva y desarrollar habilidades digitales esenciales para un mejor desempeño en tu institución y entorno laboral.
+                </p>
+            </div>
+            <div class="text-center">
+                <button class="bg-zinc-800 hover:bg-zinc-700 text-white px-8 py-3 rounded-lg font-bold transition-colors">
                     Ver temario
                 </button>
             </div>
@@ -536,42 +86,44 @@
     </section>
 
     {{-- CURRICULUM SECTION --}}
-    <section class="curriculum-section">
-        <div class="curriculum-content">
-            <h2 class="section-title">Temario</h2>
+    <section class="border-b border-zinc-800 py-16 px-4">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-3xl md:text-4xl font-black text-white mb-8">Temario</h2>
 
-            <div class="accordion-item active">
-                <div class="accordion-header">
-                    <div class="accordion-icon">1</div>
-                    <div class="accordion-title">Microsoft Word</div>
-                </div>
-                <div class="accordion-content">
-                    <div class="accordion-text">
-                        Introducción a Word, formato de documentos, creación de estilos, tablas, índices, referencias cruzadas, combinación de correspondencia y más.
+            <div class="space-y-3">
+                <div class="accordion-item bg-zinc-900 border border-zinc-800 rounded-xl overflow-hidden active">
+                    <div class="accordion-header bg-zinc-900 p-6 cursor-pointer flex items-center gap-3 hover:bg-zinc-800/50 transition-colors">
+                        <div class="accordion-icon w-6 h-6 rounded-full bg-zinc-700 flex items-center justify-center text-white text-xs font-bold flex-shrink-0 transition-transform">1</div>
+                        <div class="accordion-title text-base font-bold text-white flex-1">Microsoft Word</div>
+                    </div>
+                    <div class="accordion-content bg-zinc-800/30 px-6 max-h-0 overflow-hidden transition-all">
+                        <div class="accordion-text text-sm text-zinc-400 py-6">
+                            Introducción a Word, formato de documentos, creación de estilos, tablas, índices, referencias cruzadas, combinación de correspondencia y más.
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            <div class="accordion-item">
-                <div class="accordion-header">
-                    <div class="accordion-icon">2</div>
-                    <div class="accordion-title">Microsoft PowerPoint</div>
-                </div>
-                <div class="accordion-content">
-                    <div class="accordion-text">
-                        Diseño de presentaciones profesionales, animaciones, transiciones, manejo de multimedia, presentación efectiva y técnicas de impacto visual.
+                <div class="accordion-item bg-zinc-900 border border-zinc-800 rounded-xl overflow-hidden">
+                    <div class="accordion-header bg-zinc-900 p-6 cursor-pointer flex items-center gap-3 hover:bg-zinc-800/50 transition-colors">
+                        <div class="accordion-icon w-6 h-6 rounded-full bg-zinc-700 flex items-center justify-center text-white text-xs font-bold flex-shrink-0 transition-transform">2</div>
+                        <div class="accordion-title text-base font-bold text-white flex-1">Microsoft PowerPoint</div>
+                    </div>
+                    <div class="accordion-content bg-zinc-800/30 px-6 max-h-0 overflow-hidden transition-all">
+                        <div class="accordion-text text-sm text-zinc-400 py-6">
+                            Diseño de presentaciones profesionales, animaciones, transiciones, manejo de multimedia, presentación efectiva y técnicas de impacto visual.
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            <div class="accordion-item">
-                <div class="accordion-header">
-                    <div class="accordion-icon">3</div>
-                    <div class="accordion-title">Microsoft Excel</div>
-                </div>
-                <div class="accordion-content">
-                    <div class="accordion-text">
-                        Funciones básicas y avanzadas, análisis de datos, gráficos, tablas dinámicas, validación de datos, macros y reporting profesional.
+                <div class="accordion-item bg-zinc-900 border border-zinc-800 rounded-xl overflow-hidden">
+                    <div class="accordion-header bg-zinc-900 p-6 cursor-pointer flex items-center gap-3 hover:bg-zinc-800/50 transition-colors">
+                        <div class="accordion-icon w-6 h-6 rounded-full bg-zinc-700 flex items-center justify-center text-white text-xs font-bold flex-shrink-0 transition-transform">3</div>
+                        <div class="accordion-title text-base font-bold text-white flex-1">Microsoft Excel</div>
+                    </div>
+                    <div class="accordion-content bg-zinc-800/30 px-6 max-h-0 overflow-hidden transition-all">
+                        <div class="accordion-text text-sm text-zinc-400 py-6">
+                            Funciones básicas y avanzadas, análisis de datos, gráficos, tablas dinámicas, validación de datos, macros y reporting profesional.
+                        </div>
                     </div>
                 </div>
             </div>
@@ -579,49 +131,49 @@
     </section>
 
     {{-- DOCENTES SECTION --}}
-    <section class="docentes-section">
-        <div class="docentes-content">
-            <h2 class="docentes-title">Docentes</h2>
-            <div class="docentes-grid">
-                <div class="docente-card">
-                    <div class="docente-header">
-                        <div class="docente-avatar"></div>
-                        <div class="docente-info">
-                            <h3>Deysi Alicia Flores Toledo</h3>
-                            <p>Docente con amplia experiencia.</p>
+    <section class="bg-zinc-900/50 border-b border-zinc-800 py-16 px-4">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-3xl md:text-4xl font-black text-white mb-12">Docentes</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="p-6 transition-colors">
+                    <div class="flex gap-4 mb-6">
+                        <div class="w-14 h-14 rounded-full bg-gradient-to-br from-zinc-600 to-zinc-800 flex-shrink-0"></div>
+                        <div>
+                            <h3 class="text-sm font-bold text-white">Deysi Alicia Flores Toledo</h3>
+                            <p class="text-xs text-zinc-400">Docente con amplia experiencia.</p>
                         </div>
                     </div>
-                    <div class="docente-buttons">
-                        <button class="btn-small btn-cv">📄 Ver CV</button>
-                        <button class="btn-small btn-descargar">⬇️ Descargar CV</button>
+                    <div class="flex gap-2">
+                        <button class="flex-1 bg-zinc-700 hover:bg-zinc-600 text-white px-3 py-2 rounded text-xs font-bold transition-colors">📄 Ver CV</button>
+                        <button class="flex-1 bg-emerald-700 hover:bg-emerald-600 text-white px-3 py-2 rounded text-xs font-bold transition-colors">⬇️ Descargar CV</button>
                     </div>
                 </div>
 
-                <div class="docente-card">
-                    <div class="docente-header">
-                        <div class="docente-avatar"></div>
-                        <div class="docente-info">
-                            <h3>Roxana Karina Diaz Zavala</h3>
-                            <p>Docente con amplia experiencia.</p>
+                <div class="p-6 transition-colors">
+                    <div class="flex gap-4 mb-6">
+                        <div class="w-14 h-14 rounded-full bg-gradient-to-br from-zinc-600 to-zinc-800 flex-shrink-0"></div>
+                        <div>
+                            <h3 class="text-sm font-bold text-white">Roxana Karina Diaz Zavala</h3>
+                            <p class="text-xs text-zinc-400">Docente con amplia experiencia.</p>
                         </div>
                     </div>
-                    <div class="docente-buttons">
-                        <button class="btn-small btn-cv">📄 Ver CV</button>
-                        <button class="btn-small btn-descargar">⬇️ Descargar CV</button>
+                    <div class="flex gap-2">
+                        <button class="flex-1 bg-zinc-700 hover:bg-zinc-600 text-white px-3 py-2 rounded text-xs font-bold transition-colors">📄 Ver CV</button>
+                        <button class="flex-1 bg-emerald-700 hover:bg-emerald-600 text-white px-3 py-2 rounded text-xs font-bold transition-colors">⬇️ Descargar CV</button>
                     </div>
                 </div>
 
-                <div class="docente-card">
-                    <div class="docente-header">
-                        <div class="docente-avatar"></div>
-                        <div class="docente-info">
-                            <h3>Madely Jhuleys Blas Bacilio</h3>
-                            <p>Docente con amplia experiencia.</p>
+                <div class="p-6 transition-colors">
+                    <div class="flex gap-4 mb-6">
+                        <div class="w-14 h-14 rounded-full bg-gradient-to-br from-zinc-600 to-zinc-800 flex-shrink-0"></div>
+                        <div>
+                            <h3 class="text-sm font-bold text-white">Madely Jhuleys Blas Bacilio</h3>
+                            <p class="text-xs text-zinc-400">Docente con amplia experiencia.</p>
                         </div>
                     </div>
-                    <div class="docente-buttons">
-                        <button class="btn-small btn-cv">📄 Ver CV</button>
-                        <button class="btn-small btn-descargar">⬇️ Descargar CV</button>
+                    <div class="flex gap-2">
+                        <button class="flex-1 bg-zinc-700 hover:bg-zinc-600 text-white px-3 py-2 rounded text-xs font-bold transition-colors">📄 Ver CV</button>
+                        <button class="flex-1 bg-emerald-700 hover:bg-emerald-600 text-white px-3 py-2 rounded text-xs font-bold transition-colors">⬇️ Descargar CV</button>
                     </div>
                 </div>
             </div>
@@ -629,31 +181,31 @@
     </section>
 
     {{-- OTHER COURSES SECTION --}}
-    <section class="other-courses-section">
-        <div class="other-courses-content">
-            <h2 class="section-title">Otras capacitaciones que te pueden interesar</h2>
-            <div class="courses-grid">
-                <div class="course-card">
-                    <div class="course-image">📱</div>
-                    <div class="course-info">
-                        <div class="course-title">MARKETING DIGITAL CON INTELIGENCIA ARTIFICIAL</div>
-                        <div class="course-desc">Aprende a impulsar tu negocio con estrategias digitales modernas.</div>
+    <section class="border-b border-zinc-800 py-16 px-4">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-3xl md:text-4xl font-black text-white mb-12">Otras capacitaciones que te pueden interesar</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="bg-zinc-900 border border-zinc-800 rounded-xl overflow-hidden hover:border-zinc-700">
+                    <div class="bg-gradient-to-br from-zinc-700 to-zinc-800 h-40 flex items-center justify-center text-5xl">📱</div>
+                    <div class="p-4">
+                        <h3 class="text-sm font-bold text-white mb-2">MARKETING DIGITAL CON INTELIGENCIA ARTIFICIAL</h3>
+                        <p class="text-xs text-zinc-400">Aprende a impulsar tu negocio con estrategias digitales modernas.</p>
                     </div>
                 </div>
 
-                <div class="course-card">
-                    <div class="course-image">💻</div>
-                    <div class="course-info">
-                        <div class="course-title">DESARROLLO WEB FULL STACK</div>
-                        <div class="course-desc">Conviértete en desarrollador web con tecnologías actuales.</div>
+                <div class="bg-zinc-900 border border-zinc-800 rounded-xl overflow-hidden hover:border-zinc-700">
+                    <div class="bg-gradient-to-br from-zinc-700 to-zinc-800 h-40 flex items-center justify-center text-5xl">💻</div>
+                    <div class="p-4">
+                        <h3 class="text-sm font-bold text-white mb-2">DESARROLLO WEB FULL STACK</h3>
+                        <p class="text-xs text-zinc-400">Conviértete en desarrollador web con tecnologías actuales.</p>
                     </div>
                 </div>
 
-                <div class="course-card">
-                    <div class="course-image">🎨</div>
-                    <div class="course-info">
-                        <div class="course-title">DISEÑO GRÁFICO PROFESIONAL</div>
-                        <div class="course-desc">Domina las herramientas de diseño más demandadas.</div>
+                <div class="bg-zinc-900 border border-zinc-800 rounded-xl overflow-hidden hover:border-zinc-700">
+                    <div class="bg-gradient-to-br from-zinc-700 to-zinc-800 h-40 flex items-center justify-center text-5xl">🎨</div>
+                    <div class="p-4">
+                        <h3 class="text-sm font-bold text-white mb-2">DISEÑO GRÁFICO PROFESIONAL</h3>
+                        <p class="text-xs text-zinc-400">Domina las herramientas de diseño más demandadas.</p>
                     </div>
                 </div>
             </div>
@@ -661,13 +213,13 @@
     </section>
 
     {{-- CTA FINAL SECTION --}}
-    <section class="cta-final-section">
-        <div class="cta-final-content">
-            <h2 class="cta-final-title">Da el siguiente paso en tu formación profesional</h2>
-            <p class="cta-final-text">
+    <section class="bg-zinc-900/50 border-b border-zinc-800 py-16 px-4">
+        <div class="max-w-6xl mx-auto text-center">
+            <h2 class="text-3xl md:text-4xl font-black text-white mb-4">Da el siguiente paso en tu formación profesional</h2>
+            <p class="text-base text-slate-300 mb-8 max-w-2xl mx-auto">
                 Inscríbete ahora y empieza a desarrollar habilidades en Ofimática Profesional con nuestra base sólida de enseñanza.
             </p>
-            <button class="btn-inscribirse">
+            <button class="bg-zinc-800 hover:bg-zinc-700 text-white px-8 py-3 rounded-lg font-bold transition-colors">
                 Inscribirse
             </button>
         </div>
@@ -676,13 +228,39 @@
 </div>
 
 <script>
-    // Accordion functionality
     document.querySelectorAll('.accordion-header').forEach(header => {
         header.addEventListener('click', function() {
             const item = this.parentElement;
+            const content = item.querySelector('.accordion-content');
+            const icon = item.querySelector('.accordion-icon');
+
+            // Cerrar otros acordeones
+            document.querySelectorAll('.accordion-item').forEach(otherItem => {
+                if (otherItem !== item && otherItem.classList.contains('active')) {
+                    otherItem.classList.remove('active');
+                    otherItem.querySelector('.accordion-content').style.maxHeight = '0';
+                    otherItem.querySelector('.accordion-icon').style.transform = 'rotate(0deg)';
+                }
+            });
+
             item.classList.toggle('active');
+
+            if (item.classList.contains('active')) {
+                content.style.maxHeight = content.scrollHeight + 'px';
+                icon.style.transform = 'rotate(180deg)';
+            } else {
+                content.style.maxHeight = '0';
+                icon.style.transform = 'rotate(0deg)';
+            }
         });
     });
+
+    // Inicializar el primer acordeón
+    const firstItem = document.querySelector('.accordion-item.active');
+    if (firstItem) {
+        const content = firstItem.querySelector('.accordion-content');
+        content.style.maxHeight = content.scrollHeight + 'px';
+    }
 </script>
 
 @endsection
