@@ -91,5 +91,76 @@
     </div>
 </section>
 
+<section class="py-12 sm:py-16 md:py-20 lg:py-24 px-4 sm:px-6 lg:px-8 bg-[#f5f0eb]">
+    <div class="max-w-7xl mx-auto">
+        <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 text-center mb-8 sm:mb-12 md:mb-16">
+            Docentes<br class="hidden sm:block">
+        </h2>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-8">
+            <!-- Docente 1: Roxana Karina Diaz Zavala -->
+            <div class="bg-white rounded-3xl p-6 sm:p-8 md:p-10 shadow-sm hover:shadow-md transition-shadow duration-200">
+                <div class="flex items-start gap-4 mb-6">
+                    <div class="w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-gradient-to-br from-blue-400 to-blue-600 flex-shrink-0"></div>
+                    <div>
+                        <h3 class="text-lg sm:text-xl font-bold text-gray-900">
+                            Roxana Karina<br class="hidden xs:block sm:hidden"> Diaz Zavala
+                        </h3>
+                        <p class="text-sm text-blue-600 font-semibold mt-1">Docente Especialista</p>
+                    </div>
+                </div>
+                <p class="text-gray-700 text-sm sm:text-base leading-relaxed text-justify">
+                    Técnica en Computación e Informática y Bachiller en Ingeniería de Sistemas, con amplia experiencia en soporte técnico, gestión administrativa y docencia. Especialista en mantenimiento de equipos, configuración de software y desarrollo básico web, destacando por su capacidad para transmitir conocimientos técnicos de forma clara y práctica.
+                </p>
+            </div>
+
+            <!-- Docente 2: Deysi Alicia Flores Toledo -->
+            <div class="bg-white rounded-3xl p-6 sm:p-8 md:p-10 shadow-sm hover:shadow-md transition-shadow duration-200">
+                <div class="flex items-start gap-4 mb-6">
+                    <div class="w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-gradient-to-br from-purple-400 to-purple-600 flex-shrink-0"></div>
+                    <div>
+                        <h3 class="text-lg sm:text-xl font-bold text-gray-900">
+                            Deysi Alicia<br class="hidden xs:block sm:hidden"> Flores Toledo
+                        </h3>
+                        <p class="text-sm text-blue-600 font-semibold mt-1">Docente Especialista</p>
+                    </div>
+                </div>
+                <p class="text-gray-700 text-sm sm:text-base leading-relaxed text-justify">
+                    Licenciada en Educación, egresada de Maestría en Docencia Universitaria, con sólida experiencia en formación académica en áreas tecnológicas y administrativas. Destaca por el uso de metodologías innovadoras, enfoque en competencias y compromiso con la calidad educativa y el desarrollo integral de sus estudiantes.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="py-12 sm:py-16 md:py-20 lg:py-24 px-4 sm:px-6 lg:px-8 bg-[#f5f0eb]">
+    <div class="max-w-7xl mx-auto">
+        <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 text-center mb-8 sm:mb-12 md:mb-16">
+            Nosotros<br class="hidden sm:block">
+        </h2>
+
+        <div class="grid grid-cols-1 lg:grid-cols-1 gap-6 md:gap-8">
+            <div class="bg-white rounded-3xl p-6 sm:p-8 md:p-10 shadow-sm">
+                <div class="space-y-6">
+                    <p class="text-base sm:text-lg text-gray-700 leading-relaxed text-justify">
+                        En <span class="font-bold text-gray-900">EDUCA PERÚ S.A.C.</span>, formamos profesionales preparados para destacar en un mercado competitivo, a través de programas de especialización prácticos, actualizados y orientados a resultados reales. Nuestro compromiso es desarrollar talento humano que se adapte a las exigencias del sector empresarial y tecnológico actual.
+                    </p>
+                    <p class="text-base sm:text-lg text-gray-700 leading-relaxed text-justify">
+                        Combinamos innovación, excelencia académica y acompañamiento constante para que cada aprendizaje se convierta en una oportunidad concreta de crecimiento. Creemos que la educación continua es el pilar fundamental para fortalecer competencias, potenciar el talento y generar nuevas oportunidades profesionales.
+                    </p>
+                    <p class="text-base sm:text-lg text-gray-700 leading-relaxed text-justify">
+                        Nuestro enfoque metodológico combina teoría y práctica, garantizando una experiencia formativa integral que trascienda lo teórico y se traduzca en resultados concretos en el desempeño laboral de nuestros participantes.
+                    </p>
+                    <div class="mt-8 pl-6 border-l-4 border-blue-600 bg-blue-50 py-4">
+                        <p class="text-lg sm:text-xl font-semibold text-gray-900 italic">
+                            "La preparación de hoy es el éxito de mañana."
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
 @endsection
 

@@ -186,7 +186,7 @@
             <h2 class="text-3xl md:text-4xl font-black text-white mb-12">Otras capacitaciones que te pueden interesar</h2>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
                 <div class="bg-zinc-900 border border-zinc-800 rounded-xl overflow-hidden hover:border-zinc-700">
-                    <div class="bg-gradient-to-br from-zinc-700 to-zinc-800 h-40 flex items-center justify-center text-5xl">📱</div>
+                    <div class="bg-gradient-to-br from-zinc-700 to-zinc-800 h-40 flex items-center justify-center text-5xl"></div>
                     <div class="p-4">
                         <h3 class="text-sm font-bold text-white mb-2">MARKETING DIGITAL CON INTELIGENCIA ARTIFICIAL</h3>
                         <p class="text-xs text-zinc-400">Aprende a impulsar tu negocio con estrategias digitales modernas.</p>
@@ -194,7 +194,7 @@
                 </div>
 
                 <div class="bg-zinc-900 border border-zinc-800 rounded-xl overflow-hidden hover:border-zinc-700">
-                    <div class="bg-gradient-to-br from-zinc-700 to-zinc-800 h-40 flex items-center justify-center text-5xl">💻</div>
+                    <div class="bg-gradient-to-br from-zinc-700 to-zinc-800 h-40 flex items-center justify-center text-5xl"></div>
                     <div class="p-4">
                         <h3 class="text-sm font-bold text-white mb-2">DESARROLLO WEB FULL STACK</h3>
                         <p class="text-xs text-zinc-400">Conviértete en desarrollador web con tecnologías actuales.</p>
@@ -202,7 +202,7 @@
                 </div>
 
                 <div class="bg-zinc-900 border border-zinc-800 rounded-xl overflow-hidden hover:border-zinc-700">
-                    <div class="bg-gradient-to-br from-zinc-700 to-zinc-800 h-40 flex items-center justify-center text-5xl">🎨</div>
+                    <div class="bg-gradient-to-br from-zinc-700 to-zinc-800 h-40 flex items-center justify-center text-5xl"></div>
                     <div class="p-4">
                         <h3 class="text-sm font-bold text-white mb-2">DISEÑO GRÁFICO PROFESIONAL</h3>
                         <p class="text-xs text-zinc-400">Domina las herramientas de diseño más demandadas.</p>
