@@ -22,6 +22,26 @@ Route::get('/contactanos', function () {
     return view('contactanos');
 });
 
-Route::get('/capacitaciones1', function () {
-    return view('capacitaciones.index');
+/*
+|--------------------------------------------------------------------------
+| CAPACITACIONES DINÁMICAS
+|--------------------------------------------------------------------------
+*/
+
+Route::get('/capacitaciones/{curso}', function ($curso) {
+
+    $cursosPermitidos = [
+        'ofimatica',
+        'marketing',
+        'python',
+        'cpp',
+    ];
+
+    if (!in_array($curso, $cursosPermitidos)) {
+        abort(404);
+    }
+
+    return view('capacitaciones.index', [
+        'curso' => $curso
+    ]);
 });

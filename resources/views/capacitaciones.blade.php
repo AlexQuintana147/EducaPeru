@@ -26,6 +26,15 @@
     @media (max-width: 560px) { .courses-grid { grid-template-columns: 1fr; } }
 
     /* Card */
+    /* .c-card {
+        position: relative;
+        border-radius: 16px;
+        overflow: hidden;
+        cursor: pointer;
+        background: #0d0d0f;
+        border: 2px solid rgba(255,255,255,0.22);
+        transition: border-color .25s ease, box-shadow .25s ease;
+    } */
     .c-card {
         position: relative;
         border-radius: 16px;
@@ -34,6 +43,9 @@
         background: #0d0d0f;
         border: 2px solid rgba(255,255,255,0.22);
         transition: border-color .25s ease, box-shadow .25s ease;
+
+        height: 230px; /* altura uniforme */
+        min-height: 230px;
     }
     .c-card:hover {
         border-color: rgba(255,255,255,0.55);
@@ -43,8 +55,16 @@
     /* Imagen de fondo */
     .c-thumb-img {
         width: 100%;
-        height: auto;
+        height: 100%;
+        object-fit: cover;
+        /* height: auto; */
         display: block;
+    }
+    .courses-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 24px;
+        align-items: stretch;
     }
 
     /* Overlay de detalles — oculto por defecto */
@@ -286,7 +306,27 @@
                                 </div>
                                 4 horas a la semana
                             </div>
-                            <a href="/capacitaciones1" class="btn-go">
+                            <a href="/capacitaciones/ofimatica" class="btn-go">
+                                <svg width="12" height="12" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                                Ir al curso
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                {{-- Marketing digital --}}
+                <div class="c-card">
+                    <img class="c-thumb-img" src="https://x02.me/i/RD47.png" alt="Ofimática Profesional">
+                    <div class="c-overlay">
+                        <div class="c-overlay-title">MARKETING DIGITAL CON INTELIGENCIA ARTIFICIAL APLICADA A LOS NEGOCIOS</div>
+                        <div class="c-overlay-row">
+                            <div class="c-overlay-info">
+                                <div class="c-overlay-info-icon">
+                                    <svg width="13" height="13" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                                </div>
+                                4 horas a la semana
+                            </div>
+                            <a href="/capacitaciones/marketing" class="btn-go">
                                 <svg width="12" height="12" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
                                 Ir al curso
                             </a>
