@@ -155,6 +155,17 @@
         ::-webkit-scrollbar-thumb:hover { background: rgba(255,255,255,0.25); }
         * { scrollbar-width: thin; scrollbar-color: rgba(255,255,255,0.15) var(--bg); }
 
+        /* ─── HERO ─── */
+        .hero-full {
+            min-height: calc(100vh - 4rem);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        @media (min-width: 640px) {
+            .hero-full { min-height: calc(100vh - 5rem); }
+        }
+
         /* ─── FOOTER ─── */
         .footer-link {
             font-size: 13px; color: rgba(255,255,255,0.35);

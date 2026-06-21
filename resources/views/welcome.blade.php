@@ -6,7 +6,7 @@
 <div class="relative w-full" style="background-color: var(--bg);">
 
   <!-- HERO -->
-  <section class="relative pt-32 pb-48 px-4 sm:px-10">
+  <section class="relative hero-full px-4 sm:px-10">
     <div class="max-w-5xl mx-auto text-center relative z-10">
       <h1 class="font-display text-4xl sm:text-6xl md:text-7xl lg:text-[100px] font-extrabold leading-[0.95] sm:leading-[0.9] tracking-tighter mb-8 text-white uppercase">
         FORMAMOS<br>DESARROLLADORES.
