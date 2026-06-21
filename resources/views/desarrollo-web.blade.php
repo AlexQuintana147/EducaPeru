@@ -6,7 +6,7 @@
 <style>
     /* ── Base ── */
     .dw-page {
-        background: #080808;
+        background: rgba(20, 18, 11);
         position: relative;
         overflow: hidden;
         display: flex;
@@ -275,7 +275,7 @@
         font-size: 13.5px;
         font-weight: 800;
         background: #fff;
-        color: #080808;
+        color: rgba(20, 18, 11);
         border: none;
         cursor: pointer;
         white-space: nowrap;

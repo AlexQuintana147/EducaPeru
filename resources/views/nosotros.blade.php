@@ -4,10 +4,10 @@
 
 @section('content')
 <style>
-    .pg { background: #09090b; min-height: 100vh; }
+    .pg { background: rgba(20, 18, 11); min-height: 100vh; }
 
     .about-hero {
-        background: radial-gradient(ellipse 80% 50% at 50% -10%, rgba(99,102,241,0.18) 0%, transparent 70%), #09090b;
+        background: radial-gradient(ellipse 80% 50% at 50% -10%, rgba(99,102,241,0.18) 0%, transparent 70%), rgba(20, 18, 11);
         border-bottom: 1px solid rgba(255,255,255,0.05);
     }
 
@@ -79,7 +79,7 @@
     .why-desc  { font-size: 13px; color: #a1a1aa; line-height: 1.6; }
 
     .cta-section {
-        background: radial-gradient(ellipse 60% 80% at 50% 100%, rgba(99,102,241,.1) 0%, transparent 70%), #09090b;
+        background: radial-gradient(ellipse 60% 80% at 50% 100%, rgba(99,102,241,.1) 0%, transparent 70%), rgba(20, 18, 11);
         border-top: 1px solid rgba(255,255,255,0.05);
     }
     .cta-box {

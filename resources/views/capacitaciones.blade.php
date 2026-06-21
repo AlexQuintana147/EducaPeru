@@ -4,12 +4,12 @@
 
 @section('content')
 <style>
-    .pg { background: #09090b; min-height: 100vh; }
+    .pg { background: rgba(20, 18, 11); min-height: 100vh; }
 
     /* Hero */
     .hero-wrap {
         background: radial-gradient(ellipse 80% 50% at 50% -10%, rgba(99,102,241,0.18) 0%, transparent 70%),
-                    #09090b;
+                    rgba(20, 18, 11);
         border-bottom: 1px solid rgba(255,255,255,0.05);
     }
 
@@ -31,7 +31,7 @@
         border-radius: 16px;
         overflow: hidden;
         cursor: pointer;
-        background: #0d0d0f;
+        background: rgba(27, 25, 19);
         border: 2px solid rgba(255,255,255,0.22);
         transition: border-color .25s ease, box-shadow .25s ease;
     }
@@ -50,7 +50,7 @@
     /* Overlay de detalles — oculto por defecto */
     .c-overlay {
         position: absolute; inset: 0;
-        background: linear-gradient(180deg, transparent 30%, rgba(9,9,11,0.97) 100%);
+        background: linear-gradient(180deg, transparent 30%, rgba(20, 18, 11, 0.97) 100%);
         display: flex; flex-direction: column; justify-content: flex-end;
         padding: 14px 16px;
         opacity: 0;
@@ -84,7 +84,7 @@
         display: inline-flex; align-items: center; gap: 7px;
         padding: 8px 16px; border-radius: 10px;
         font-size: 13px; font-weight: 800;
-        background: #fff; color: #09090b;
+        background: #fff; color: rgba(20, 18, 11);
         text-decoration: none; white-space: nowrap;
         border: 1px solid rgba(255,255,255,0.15);
         transition: background .2s, transform .2s;
@@ -105,7 +105,7 @@
     .cpp-thumb {
         position: absolute; inset: 0;
         overflow: hidden;
-        background: #05050a;
+        background: rgba(27, 25, 19);
     }
     .cpp-grid {
         position: absolute; inset: 0;
@@ -189,7 +189,7 @@
     /* CTA */
     .cta-wrap {
         background: radial-gradient(ellipse 60% 80% at 50% 100%, rgba(99,102,241,.1) 0%, transparent 70%),
-                    #09090b;
+                    rgba(20, 18, 11);
         border-top: 1px solid rgba(255,255,255,0.05);
     }
     .cta-box {
@@ -341,7 +341,7 @@
 
                 {{-- Python --}}
                 <div class="c-card">
-                    <div class="cpp-thumb" style="background: linear-gradient(135deg, #0c1a0c 0%, #071a07 100%);">
+                    <div class="cpp-thumb" style="background: linear-gradient(135deg, rgba(27, 25, 19) 0%, rgba(20, 18, 11) 100%);">
                         <div class="cpp-grid" style="background-image: linear-gradient(rgba(34,197,94,0.07) 1px, transparent 1px), linear-gradient(90deg, rgba(34,197,94,0.07) 1px, transparent 1px); background-size: 28px 28px;"></div>
                         <div class="cpp-orb" style="background: radial-gradient(circle, rgba(34,197,94,0.28) 0%, transparent 70%);"></div>
                         <div class="cpp-code" aria-hidden="true">

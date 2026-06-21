@@ -154,9 +154,9 @@
         }
 
         header.scrolled {
-            background-color: rgba(255, 255, 255, 0.98) !important;
-            border-bottom-color: rgba(0, 0, 0, 0.08);
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+            background-color: rgba(27, 25, 19, 0.98) !important;
+            border-bottom-color: rgba(255, 255, 255, 0.08);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
         }
 
         /* Mobile menu button */
@@ -255,20 +255,20 @@
         }
 
         ::-webkit-scrollbar-track {
-            background: #f5f0eb;
+            background: rgba(20, 18, 11);
             border-radius: 10px;
         }
 
         ::-webkit-scrollbar-thumb {
             background: linear-gradient(180deg, #3b82f6, #2563eb);
             border-radius: 10px;
-            border: 2px solid #f5f0eb;
+            border: 2px solid rgba(20, 18, 11);
             transition: all 0.3s ease;
         }
 
         ::-webkit-scrollbar-thumb:hover {
             background: linear-gradient(180deg, #2563eb, #1d4ed8);
-            border: 2px solid #e5e0db;
+            border: 2px solid rgba(27, 25, 19);
         }
 
         ::-webkit-scrollbar-thumb:active {
@@ -278,7 +278,7 @@
         /* Firefox scrollbar */
         * {
             scrollbar-width: thin;
-            scrollbar-color: #3b82f6 #f5f0eb;
+            scrollbar-color: #3b82f6 rgba(20, 18, 11);
         }
 
         /* Focus styles for accessibility */
@@ -289,37 +289,37 @@
         }
     </style>
 </head>
-<body class="bg-[#f5f0eb] text-gray-900 antialiased">
+<body class="bg-[rgba(20,18,11)] text-white antialiased">
 
-<header id="main-header" class="bg-white/95 border-b border-gray-100 fixed top-0 left-0 right-0 z-50 backdrop-blur-md shadow-sm">
+<header id="main-header" class="bg-[rgba(27,25,19)]/95 border-b border-white/10 fixed top-0 left-0 right-0 z-50 backdrop-blur-md shadow-sm">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex items-center justify-between h-16 sm:h-20">
 
             {{-- Logo --}}
             <a href="/" class="header-logo flex items-center gap-3 group">
-                <img src="{{ asset('image/logo1prueba.webp') }}" alt="{{ config('app.name') }}" class="h-10 sm:h-12 md:h-14 w-auto object-contain">
+                <img src="{{ asset('image/logo1prueba.webp') }}" alt="{{ config('app.name') }}" class="h-10 sm:h-12 md:h-14 w-auto object-contain" style="filter: brightness(0) invert(1);">
             </a>
 
             {{-- Navigation --}}
             <nav class="hidden lg:flex items-center space-x-6 xl:space-x-10">
-                <a href="/capacitaciones" class="nav-link text-base lg:text-lg font-black text-gray-700 hover:text-blue-600">Capacitaciones</a>
-                <a href="/nosotros" class="nav-link text-base lg:text-lg font-black text-gray-700 hover:text-blue-600">Nosotros</a>
-                <a href="/desarrollo-web" class="nav-link text-base lg:text-lg font-black text-gray-700 hover:text-blue-600">Desarrollo Web</a>
-                <a href="#" class="nav-link text-base lg:text-lg font-black text-gray-700 hover:text-blue-600">Contacto</a>
+                <a href="/capacitaciones" class="nav-link text-base lg:text-lg font-black text-gray-300 hover:text-blue-400">Capacitaciones</a>
+                <a href="/nosotros" class="nav-link text-base lg:text-lg font-black text-gray-300 hover:text-blue-400">Nosotros</a>
+                <a href="/desarrollo-web" class="nav-link text-base lg:text-lg font-black text-gray-300 hover:text-blue-400">Desarrollo Web</a>
+                <a href="#" class="nav-link text-base lg:text-lg font-black text-gray-300 hover:text-blue-400">Contacto</a>
             </nav>
 
             {{-- Right Side Desktop --}}
             <div class="hidden lg:flex items-center gap-5">
-                <a href="/login" class="btn-login inline-flex items-center justify-center bg-gray-900 text-white px-5 lg:px-6 py-2 lg:py-2.5 rounded-full text-base lg:text-lg font-black hover:bg-gray-800">
+                <a href="/login" class="btn-login inline-flex items-center justify-center bg-white text-gray-900 px-5 lg:px-6 py-2 lg:py-2.5 rounded-full text-base lg:text-lg font-black hover:bg-gray-200">
                     Ingresar
                 </a>
             </div>
 
             {{-- Mobile Menu Button --}}
             <button id="mobile-menu-btn" class="mobile-menu-btn lg:hidden flex flex-col items-center justify-center w-11 h-11 transition-colors gap-1.5">
-                <span class="hamburger-line w-6 h-0.5 bg-gray-900 rounded-full"></span>
-                <span class="hamburger-line w-6 h-0.5 bg-gray-900 rounded-full"></span>
-                <span class="hamburger-line w-6 h-0.5 bg-gray-900 rounded-full"></span>
+                <span class="hamburger-line w-6 h-0.5 bg-white rounded-full"></span>
+                <span class="hamburger-line w-6 h-0.5 bg-white rounded-full"></span>
+                <span class="hamburger-line w-6 h-0.5 bg-white rounded-full"></span>
             </button>
         </div>
     </div>
@@ -329,33 +329,33 @@
 <div id="mobile-menu-overlay" class="lg:hidden"></div>
 
 {{-- Mobile Menu Drawer --}}
-<div id="mobile-menu" class="lg:hidden bg-white shadow-2xl">
+<div id="mobile-menu" class="lg:hidden bg-[rgba(27,25,19)] shadow-2xl">
     <div class="flex items-center justify-between px-8 py-6">
-        <img src="{{ asset('image/logo1prueba.webp') }}" alt="{{ config('app.name') }}" class="h-10 w-auto object-contain">
-        <button id="close-menu-btn" class="text-gray-400 hover:text-gray-900 transition-colors">
+        <img src="{{ asset('image/logo1prueba.webp') }}" alt="{{ config('app.name') }}" class="h-10 w-auto object-contain" style="filter: brightness(0) invert(1);">
+        <button id="close-menu-btn" class="text-gray-400 hover:text-white transition-colors">
             <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M6 18L18 6M6 6l12 12"/>
             </svg>
         </button>
     </div>
     <nav class="px-8 py-12 space-y-1">
-        <a href="#" class="mobile-menu-link block py-5 text-xl font-black text-gray-900 hover:text-gray-400 transition-colors">
+        <a href="#" class="mobile-menu-link block py-5 text-xl font-black text-white hover:text-gray-400 transition-colors">
             Inicio
         </a>
-        <a href="/capacitaciones" class="mobile-menu-link block py-5 text-xl font-black text-gray-900 hover:text-gray-400 transition-colors">
+        <a href="/capacitaciones" class="mobile-menu-link block py-5 text-xl font-black text-white hover:text-gray-400 transition-colors">
             Capacitaciones
         </a>
-        <a href="/nosotros" class="mobile-menu-link block py-5 text-xl font-black text-gray-900 hover:text-gray-400 transition-colors">
+        <a href="/nosotros" class="mobile-menu-link block py-5 text-xl font-black text-white hover:text-gray-400 transition-colors">
             Nosotros
         </a>
-        <a href="/desarrollo-web" class="mobile-menu-link block py-5 text-xl font-black text-gray-900 hover:text-gray-400 transition-colors">
+        <a href="/desarrollo-web" class="mobile-menu-link block py-5 text-xl font-black text-white hover:text-gray-400 transition-colors">
             Desarrollo Web
         </a>
-        <a href="#" class="mobile-menu-link block py-5 text-xl font-black text-gray-900 hover:text-gray-400 transition-colors">
+        <a href="#" class="mobile-menu-link block py-5 text-xl font-black text-white hover:text-gray-400 transition-colors">
             Contacto
         </a>
         <div class="pt-8">
-            <a href="/login" class="mobile-menu-link block py-5 text-center bg-gray-900 text-white text-xl font-black hover:bg-gray-700 transition-all">
+            <a href="/login" class="mobile-menu-link block py-5 text-center bg-white text-gray-900 text-xl font-black hover:bg-gray-200 transition-all">
                 Ingresar
             </a>
         </div>
@@ -366,7 +366,7 @@
     @yield('content')
 </main>
 
-<footer style="background:#09090b; border-top: 1px solid rgba(255,255,255,0.07);">
+<footer style="background:rgba(20, 18, 11); border-top: 1px solid rgba(255,255,255,0.07);">
     <style>
         .footer-link {
             font-size: 13.5px;
