@@ -157,13 +157,14 @@
 
         /* ─── HERO ─── */
         .hero-full {
-            min-height: calc(100vh - 4rem);
+            min-height: 100vh;
+            padding-top: 4rem;
             display: flex;
             align-items: center;
             justify-content: center;
         }
         @media (min-width: 640px) {
-            .hero-full { min-height: calc(100vh - 5rem); }
+            .hero-full { padding-top: 5rem; }
         }
 
         /* ─── FOOTER ─── */
@@ -248,7 +249,7 @@
     </nav>
 </div>
 
-<main class="min-h-screen pt-16 sm:pt-20">
+<main class="min-h-screen">
     @yield('content')
 </main>
 
