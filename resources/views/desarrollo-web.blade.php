@@ -377,8 +377,12 @@
                 Próximamente
             </div>
 
-            <h1 class="dw-title">Desarrollo Web</h1>
-            <p class="dw-title-sub">profesional</p>
+            <h1 class="text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white leading-tight tracking-tight mb-2">
+                Desarrollo Web
+            </h1>
+            <p class="text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight tracking-tight mb-6" style="-webkit-text-stroke:1px rgba(255,255,255,0.25);color:transparent;">
+                profesional
+            </p>
 
             <div class="dw-rule"></div>
 

@@ -227,7 +227,7 @@
     {{-- HERO --}}
     <section class="hero-wrap py-16 sm:py-20 md:py-24 px-4 sm:px-6 text-center">
         <div class="max-w-2xl mx-auto">
-            <h1 class="text-4xl sm:text-5xl md:text-[56px] font-black text-white leading-[1.1] tracking-tight mb-5">
+            <h1 class="text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white leading-tight tracking-tight mb-5">
                 Aprende las tecnologías<br>
                 <span style="-webkit-text-stroke: 1px white; color: transparent;">
                     más demandadas
@@ -266,7 +266,7 @@
             {{-- Header --}}
             <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-8">
                 <div>
-                    <h2 class="text-2xl sm:text-3xl font-black text-white tracking-tight">Todos los cursos</h2>
+                    <h2 class="text-2xl xs:text-3xl sm:text-4xl md:text-5xl font-bold text-white leading-tight tracking-tight">Todos los cursos</h2>
                     <p class="text-zinc-600 text-sm mt-1">Elige tu próximo aprendizaje</p>
                 </div>
             </div>

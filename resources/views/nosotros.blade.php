@@ -112,8 +112,8 @@
         background: #6366f1; border-radius: 2px; flex-shrink: 0;
     }
     .section-title {
-        font-size: clamp(26px, 4vw, 40px); font-weight: 900;
-        color: #f1f5f9; line-height: 1.15; letter-spacing: -.5px;
+        font-size: clamp(26px, 4vw, 40px); font-weight: 700;
+        color: #fff; line-height: 1.25; letter-spacing: -0.025em;
     }
     .sec-divider { border: none; border-top: 1px solid rgba(255,255,255,0.05); margin: 0; }
 </style>
@@ -123,7 +123,7 @@
     {{-- HERO --}}
     <section class="about-hero py-20 sm:py-28 px-4 sm:px-6 text-center">
         <div class="max-w-3xl mx-auto">
-            <h1 style="font-size:clamp(36px,6vw,64px);font-weight:900;color:#fff;line-height:1.1;letter-spacing:-1.5px;margin-top:8px;">
+            <h1 class="text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white leading-tight tracking-tight mb-5">
                 Formamos <span style="color:#6366f1;">desarrolladores</span><br>
                 <span style="-webkit-text-stroke:1px rgba(255,255,255,0.5);color:transparent;">
                     para el mundo digital

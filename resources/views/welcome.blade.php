@@ -43,7 +43,7 @@
 <!-- Sección de Servicios -->
 <section class="py-12 sm:py-16 md:py-20 lg:py-24 px-4 sm:px-6 lg:px-8 bg-[rgba(20,18,11)]">
     <div class="max-w-7xl mx-auto">
-        <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold text-white text-center mb-8 sm:mb-12 md:mb-16">
+        <h2 class="text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white text-center mb-8 sm:mb-12 md:mb-16 leading-tight tracking-tight">
             Servicios flexibles para cada<br class="hidden sm:block"> necesidad al instante
         </h2>
 
