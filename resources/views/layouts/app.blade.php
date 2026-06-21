@@ -157,16 +157,41 @@
 
         /* ─── HERO ─── */
         .hero-full {
-            min-height: 100vh;
-            padding-top: 4rem;
+            min-height: 100dvh;
+            padding-top: 5rem;
+            padding-bottom: 4rem;
             display: flex;
+            flex-direction: column;
             align-items: center;
             justify-content: center;
             position: relative;
             overflow: hidden;
         }
         @media (min-width: 640px) {
-            .hero-full { padding-top: 5rem; }
+            .hero-full { padding-top: 6rem; }
+        }
+        @media (max-height: 800px) {
+            .hero-full {
+                padding-top: 5.5rem !important;
+                padding-bottom: 3.5rem !important;
+            }
+            .hero-full h1 {
+                font-size: clamp(2rem, 8.5vh, 5.5rem) !important;
+                margin-bottom: 0.75rem !important;
+            }
+            .hero-full p {
+                margin-bottom: 1.25rem !important;
+                font-size: clamp(0.875rem, 2vh, 1.125rem) !important;
+                line-height: 1.4 !important;
+            }
+            .hero-full .hero-buttons-container {
+                margin-bottom: 1.25rem !important;
+                gap: 0.75rem !important;
+            }
+            .hero-full .hero-buttons-container a {
+                padding-top: 0.875rem !important;
+                padding-bottom: 0.875rem !important;
+            }
         }
         .hero-full::before {
             content: '';

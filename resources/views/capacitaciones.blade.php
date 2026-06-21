@@ -127,31 +127,31 @@
     {{-- HERO --}}
     <section class="relative hero-full px-4 sm:px-10 border-b border-blueprint">
         <div class="max-w-5xl mx-auto text-center relative z-10">
-            <h1 class="font-display text-4xl sm:text-6xl md:text-7xl lg:text-[100px] font-extrabold leading-[0.95] sm:leading-[0.9] tracking-tighter mb-8 text-white uppercase">
+            <h1 class="font-display text-3xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl 2xl:text-[100px] font-extrabold leading-[0.95] sm:leading-[0.9] tracking-tighter mb-4 sm:mb-6 text-white uppercase">
                 APRENDE.<br><span class="text-white/20">TECNOLOGÍA.</span>
             </h1>
-            <p class="text-white/40 text-base sm:text-lg md:text-xl max-w-2xl mx-auto mb-16 font-light leading-relaxed">
+            <p class="text-white/40 text-sm sm:text-lg md:text-xl max-w-2xl mx-auto mb-8 sm:mb-12 font-light leading-relaxed">
                 Cursos prácticos con instructores expertos. Desde cero hasta nivel profesional.
             </p>
-            <div class="flex flex-col sm:flex-row items-center justify-center gap-6 mb-20">
-                <a href="#cursos" class="w-full sm:w-auto px-10 py-5 bg-white text-black font-display font-bold text-sm uppercase tracking-widest btn-glow text-center">
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 mb-8 sm:mb-16 hero-buttons-container">
+                <a href="#cursos" class="w-full sm:w-auto px-8 sm:px-10 py-4 sm:py-5 bg-white text-black font-display font-bold text-xs sm:text-sm uppercase tracking-widest btn-glow text-center">
                     Ver cursos
                 </a>
             </div>
-            <div class="flex flex-col sm:flex-row items-center justify-center gap-6 sm:gap-8 text-white/20">
+            <div class="flex flex-row items-center justify-center gap-4 sm:gap-8 text-white/20">
                 <div class="text-center">
-                    <div class="font-display text-2xl sm:text-3xl font-extrabold text-white/60">+50</div>
-                    <div class="text-[10px] uppercase tracking-[0.2em] mt-1">Estudiantes</div>
+                    <div class="font-display text-xl sm:text-3xl font-extrabold text-white/60">+50</div>
+                    <div class="text-[9px] sm:text-[10px] uppercase tracking-[0.2em] mt-1">Estudiantes</div>
                 </div>
-                <div class="hidden sm:block w-px h-10 bg-white/10"></div>
+                <div class="w-px h-8 sm:h-10 bg-white/10"></div>
                 <div class="text-center">
-                    <div class="font-display text-2xl sm:text-3xl font-extrabold text-white/60">98%</div>
-                    <div class="text-[10px] uppercase tracking-[0.2em] mt-1">Satisfacción</div>
+                    <div class="font-display text-xl sm:text-3xl font-extrabold text-white/60">98%</div>
+                    <div class="text-[9px] sm:text-[10px] uppercase tracking-[0.2em] mt-1">Satisfacción</div>
                 </div>
-                <div class="hidden sm:block w-px h-10 bg-white/10"></div>
+                <div class="w-px h-8 sm:h-10 bg-white/10"></div>
                 <div class="text-center">
-                    <div class="font-display text-2xl sm:text-3xl font-extrabold text-white/60">2-3</div>
-                    <div class="text-[10px] uppercase tracking-[0.2em] mt-1">Meses por curso</div>
+                    <div class="font-display text-xl sm:text-3xl font-extrabold text-white/60">2-3</div>
+                    <div class="text-[9px] sm:text-[10px] uppercase tracking-[0.2em] mt-1">Meses por curso</div>
                 </div>
             </div>
         </div>
