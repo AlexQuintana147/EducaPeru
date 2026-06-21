@@ -51,10 +51,10 @@
   </section>
 
   {{-- QUIÉNES SOMOS --}}
-  <section class="py-32 px-4 sm:px-10 border-b border-blueprint">
+  <section class="py-16 sm:py-24 md:py-32 px-4 sm:px-10 border-b border-blueprint">
     <div class="max-w-4xl mx-auto">
       <div class="section-label">Quiénes somos</div>
-      <h2 class="font-display text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tighter mb-12 text-white uppercase">
+      <h2 class="font-display text-2xl sm:text-4xl md:text-5xl font-extrabold tracking-tighter mb-6 sm:mb-8 md:mb-12 text-white uppercase">
         Compromiso con el desarrollo profesional
       </h2>
       <div class="space-y-5 text-white/40 text-sm sm:text-base leading-relaxed font-light">
@@ -80,10 +80,10 @@
   </section>
 
   {{-- MISIÓN & VISIÓN --}}
-  <section class="py-32 px-4 sm:px-10 border-b border-blueprint">
+  <section class="py-16 sm:py-24 md:py-32 px-4 sm:px-10 border-b border-blueprint">
     <div class="max-w-5xl mx-auto">
       <div class="section-label">Misión y Visión</div>
-      <h2 class="font-display text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tighter mb-16 text-white uppercase">
+      <h2 class="font-display text-2xl sm:text-4xl md:text-5xl font-extrabold tracking-tighter mb-8 sm:mb-12 md:mb-16 text-white uppercase">
         Nuestro norte
       </h2>
       <div class="grid sm:grid-cols-2 gap-8">
@@ -110,10 +110,10 @@
   </section>
 
   {{-- VALORES --}}
-  <section id="valores" class="py-32 px-4 sm:px-10 border-b border-blueprint">
+  <section id="valores" class="py-16 sm:py-24 md:py-32 px-4 sm:px-10 border-b border-blueprint">
     <div class="max-w-5xl mx-auto">
       <div class="section-label">Valores</div>
-      <h2 class="font-display text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tighter mb-16 text-white uppercase">
+      <h2 class="font-display text-2xl sm:text-4xl md:text-5xl font-extrabold tracking-tighter mb-8 sm:mb-12 md:mb-16 text-white uppercase">
         Valores institucionales
       </h2>
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -157,10 +157,10 @@
   </section>
 
   {{-- A QUIÉN VA DIRIGIDO --}}
-  <section class="py-32 px-4 sm:px-10 border-b border-blueprint">
+  <section class="py-16 sm:py-24 md:py-32 px-4 sm:px-10 border-b border-blueprint">
     <div class="max-w-5xl mx-auto">
       <div class="section-label">Dirigido a</div>
-      <h2 class="font-display text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tighter mb-16 text-white uppercase">
+      <h2 class="font-display text-2xl sm:text-4xl md:text-5xl font-extrabold tracking-tighter mb-8 sm:mb-12 md:mb-16 text-white uppercase">
         ¿A quién va dirigido?
       </h2>
       <div class="grid grid-cols-1 sm:grid-cols-3 gap-8">
@@ -190,10 +190,10 @@
   </section>
 
   {{-- POR QUÉ ELEGIRNOS --}}
-  <section class="py-32 px-4 sm:px-10">
+  <section class="py-16 sm:py-24 md:py-32 px-4 sm:px-10">
     <div class="max-w-5xl mx-auto">
       <div class="section-label">Ventajas</div>
-      <h2 class="font-display text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tighter mb-16 text-white uppercase">
+      <h2 class="font-display text-2xl sm:text-4xl md:text-5xl font-extrabold tracking-tighter mb-8 sm:mb-12 md:mb-16 text-white uppercase">
         ¿Por qué elegirnos?
       </h2>
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">

@@ -42,9 +42,9 @@
   </section>
 
   <!-- SERVICIOS -->
-  <section class="py-32 px-4 sm:px-10 border-t border-blueprint">
+  <section class="py-16 sm:py-24 md:py-32 px-4 sm:px-10 border-t border-blueprint">
     <div class="max-w-7xl mx-auto">
-      <h2 class="font-display text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tighter mb-16 text-white uppercase text-center">
+      <h2 class="font-display text-2xl sm:text-4xl md:text-5xl font-extrabold tracking-tighter mb-8 sm:mb-12 md:mb-16 text-white uppercase text-center">
         Servicios flexibles para cada<br class="hidden sm:block"> necesidad al instante
       </h2>
 

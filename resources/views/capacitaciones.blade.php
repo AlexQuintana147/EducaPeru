@@ -158,12 +158,12 @@
     </section>
 
     {{-- COURSES --}}
-    <section id="cursos" class="py-32 px-4 sm:px-10">
+    <section id="cursos" class="py-16 sm:py-24 md:py-32 px-4 sm:px-10">
         <div class="max-w-7xl mx-auto">
 
-            <div class="mb-16">
+            <div class="mb-8 sm:mb-12">
                 <div class="section-label">Catálogo</div>
-                <h2 class="font-display text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tighter text-white uppercase">
+                <h2 class="font-display text-2xl sm:text-4xl md:text-5xl font-extrabold tracking-tighter text-white uppercase">
                     Todos los cursos
                 </h2>
             </div>

@@ -71,7 +71,7 @@
   </section>
 
   <!-- ═══════ BENEFICIOS ═══════ -->
-  <section class="py-32 px-4 sm:px-10 border-t border-blueprint">
+  <section class="py-16 sm:py-24 md:py-32 px-4 sm:px-10 border-t border-blueprint">
     <div class="max-w-7xl mx-auto">
       <div class="grid grid-cols-1 md:grid-cols-3 gap-y-16 md:gap-x-12 lg:gap-x-20">
 
@@ -109,10 +109,10 @@
   </section>
 
   <!-- ═══════ PROCESO / HOJA DE RUTA ═══════ -->
-  <section id="proceso" class="py-24 sm:py-32 lg:py-48 px-4 sm:px-10 border-t border-blueprint relative overflow-hidden">
+  <section id="proceso" class="py-16 sm:py-24 md:py-32 lg:py-40 px-4 sm:px-10 border-t border-blueprint relative overflow-hidden">
     <div class="max-w-7xl mx-auto">
-      <div class="text-center mb-16 sm:mb-32">
-        <h2 class="font-display text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tighter mb-4 text-white uppercase">NUESTRA HOJA DE RUTA</h2>
+      <div class="text-center mb-10 sm:mb-16 md:mb-24">
+        <h2 class="font-display text-2xl sm:text-4xl md:text-5xl font-extrabold tracking-tighter mb-4 text-white uppercase">NUESTRA HOJA DE RUTA</h2>
         <p class="text-white/40 uppercase tracking-[0.2em] text-xs">Cuatro fases hacia tu éxito digital</p>
       </div>
 
@@ -180,7 +180,7 @@
   </script>
 
   <!-- ═══════ CONTACTO ═══════ -->
-  <section id="contacto" class="relative py-24 sm:py-32 lg:py-48 px-4 sm:px-10 overflow-hidden">
+  <section id="contacto" class="relative py-16 sm:py-24 md:py-32 lg:py-40 px-4 sm:px-10 overflow-hidden">
 
     <div class="absolute inset-0 z-0 opacity-20 sm:opacity-30 cta-video-container">
       <video src="https://videos.pexels.com/video-files/8597294/8597294-hd_1280_720_30fps.mp4" poster="https://images.pexels.com/videos/8597294/pexels-photo-8597294.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=630&w=1200" autoplay muted loop playsinline preload="metadata" class="w-full h-full object-cover">
@@ -188,8 +188,8 @@
     </div>
 
     <div class="max-w-4xl mx-auto text-center relative z-10">
-      <h2 class="font-display text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-extrabold tracking-tighter mb-8 text-white uppercase">HAGÁMOSLO REAL.</h2>
-      <p class="text-white/60 text-base sm:text-lg mb-16 max-w-xl mx-auto font-light">
+      <h2 class="font-display text-3xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-extrabold tracking-tighter mb-4 sm:mb-6 text-white uppercase">HAGÁMOSLO REAL.</h2>
+      <p class="text-white/60 text-base sm:text-lg mb-8 sm:mb-12 max-w-xl mx-auto font-light">
         Cuéntanos tu idea hoy y recibe una propuesta profesional en menos de 24 horas.
       </p>
 
@@ -198,7 +198,7 @@
           <input type="text" placeholder="Tu Nombre / Empresa" required class="w-full bg-transparent border-b border-blueprint py-4 px-2 text-white placeholder:text-white/20 outline-none focus:border-white transition-colors">
           <input type="email" placeholder="Correo Electrónico" required class="w-full bg-transparent border-b border-blueprint py-4 px-2 text-white placeholder:text-white/20 outline-none focus:border-white transition-colors">
           <textarea placeholder="Cuéntanos brevemente sobre tu proyecto..." required rows="3" class="w-full bg-transparent border-b border-blueprint py-4 px-2 text-white placeholder:text-white/20 outline-none focus:border-white transition-colors resize-none"></textarea>
-          <button type="submit" class="w-full mt-10 px-10 py-6 bg-white text-black font-display font-black text-sm uppercase tracking-widest btn-glow transition-all">
+          <button type="submit" class="w-full mt-6 sm:mt-8 px-8 py-4 sm:py-5 bg-white text-black font-display font-black text-sm uppercase tracking-widest btn-glow transition-all">
             Solicitar Blueprint Gratuito
           </button>
         </form>
