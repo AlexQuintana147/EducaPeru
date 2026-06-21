@@ -42,7 +42,6 @@
     .banner-overlay {
         position: absolute;
         inset: 0;
-        background: linear-gradient(180deg, rgba(20, 18, 11, 0.1) 0%, rgba(20, 18, 11, 0.95) 100%);
         display: flex;
         flex-direction: column;
         justify-content: space-between;
@@ -97,31 +96,12 @@
 
                 {{-- FEATURED BANNER --}}
                 <div class="banner-card">
-                    <img src="{{ asset('image/ofimatica_banner.png') }}" alt="Ofimática Profesional Banner" class="banner-bg w-full h-full object-cover">
+                    <img src="{{ asset('https://x02.me/i/RD47.png') }}" alt="Ofimática Profesional Banner" class="w-full h-full">
                     <div class="banner-overlay">
                         {{-- Top tags --}}
                         <div class="flex flex-wrap gap-2">
                             <span class="px-3 py-1 bg-white text-black font-display font-bold text-[9px] sm:text-[10px] uppercase tracking-widest rounded-full">Destacado</span>
                             <span class="px-3 py-1 bg-white/10 text-white border border-white/15 font-display font-bold text-[9px] sm:text-[10px] uppercase tracking-widest rounded-full">Oficina Moderna</span>
-                        </div>
-
-                        {{-- Bottom Info --}}
-                        <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-6">
-                            {{-- Teacher Info --}}
-                            <div class="flex items-center gap-3">
-                                <img src="{{ asset('image/teacher_headshot.png') }}" alt="Ing. Marcos Quintana" class="w-12 h-12 rounded-full border border-blueprint object-cover">
-                                <div>
-                                    <div class="text-[10px] uppercase tracking-wider text-white/40">Un curso de</div>
-                                    <div class="font-display font-bold text-white text-sm">Ing. Marcos Quintana</div>
-                                </div>
-                            </div>
-                            {{-- CTA inside banner --}}
-                            <div>
-                                <a href="#iniciar" class="inline-flex items-center gap-2 px-6 py-3 bg-white text-black font-display font-bold text-xs uppercase tracking-widest btn-glow">
-                                    <svg width="12" height="12" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
-                                    Empezar curso
-                                </a>
-                            </div>
                         </div>
                     </div>
                 </div>
@@ -273,22 +253,36 @@
                     </div>
                 </div>
 
-                {{-- DOCENTE CARD --}}
+                {{-- DOCENTES CARD --}}
                 <div class="border border-blueprint rounded-3xl p-8 space-y-6" style="background-color: var(--bg-card);">
-                    <div class="font-display text-xs uppercase tracking-widest text-white/50 font-bold">Docente del curso:</div>
-                    <div class="flex items-center gap-4">
-                        <img src="{{ asset('image/teacher_headshot.png') }}" alt="Ing. Marcos Quintana" class="w-16 h-16 rounded-2xl border border-blueprint object-cover">
-                        <div>
-                            <h4 class="font-display font-extrabold text-white text-base">Ing. Marcos Quintana</h4>
-                            <p class="text-white/30 text-xs mt-0.5">Especialista en Ofimática Corporativa</p>
+                    <div class="font-display text-xs uppercase tracking-widest text-white/50 font-bold">Docentes del curso:</div>
+                    <div class="grid grid-cols-2 gap-6">
+                        {{-- Docente 1 --}}
+                        <div class="space-y-3">
+                            <div class="flex flex-col items-center text-center gap-3">
+                                <img src="{{ asset('https://alex123456.x02.me/i/UDC7Q7.png') }}" alt="Deysi Alicia Flores Toledo" class="w-16 h-16 rounded-2xl border border-blueprint object-cover">
+                                <div>
+                                    <h4 class="font-display font-extrabold text-white text-sm">Deysi A. Flores Toledo</h4>
+                                    <p class="text-white/30 text-[10px] mt-0.5">Docente</p>
+                                </div>
+                            </div>
+                            <a href="{{ asset('pdf/DeysiAlicia.pdf') }}" download class="block w-full py-2 text-center border border-blueprint rounded-xl text-white/50 text-[10px] font-display font-bold uppercase tracking-widest hover:bg-white/5 transition-colors">
+                                <i class="ti ti-file-cv text-sm mr-1"></i> Ver CV
+                            </a>
                         </div>
-                    </div>
-                    <p class="text-white/40 text-xs sm:text-sm font-light leading-relaxed">
-                        Consultor en procesos digitales y productividad de TI. Certificado como Microsoft Office Specialist (MOS) con más de 10 años capacitando a profesionales de empresas líderes del país en la optimización del trabajo administrativo.
-                    </p>
-                    <div class="flex items-center gap-2.5 text-white/20">
-                        <i class="ti ti-briefcase text-lg text-white/40"></i>
-                        <span class="text-[11px] font-bold text-white/50 uppercase tracking-wider">+10 años de experiencia</span>
+                        {{-- Docente 2 --}}
+                        <div class="space-y-3">
+                            <div class="flex flex-col items-center text-center gap-3">
+                                <img src="{{ asset('https://alex123456.x02.me/i/R3PR.webp') }}" alt="Roxana Karina Diaz Zavala" class="w-16 h-16 rounded-2xl border border-blueprint object-cover">
+                                <div>
+                                    <h4 class="font-display font-extrabold text-white text-sm">Roxana K. Diaz Zavala</h4>
+                                    <p class="text-white/30 text-[10px] mt-0.5">Docente</p>
+                                </div>
+                            </div>
+                            <a href="{{ asset('pdf/RoxanaKarina.pdf') }}" download class="block w-full py-2 text-center border border-blueprint rounded-xl text-white/50 text-[10px] font-display font-bold uppercase tracking-widest hover:bg-white/5 transition-colors">
+                                <i class="ti ti-file-cv text-sm mr-1"></i> Ver CV
+                            </a>
+                        </div>
                     </div>
                 </div>
 
