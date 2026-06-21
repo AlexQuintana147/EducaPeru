@@ -152,24 +152,35 @@
     </div>
   </section>
 
-  <!-- ═══════ TESTIMONIAL ═══════ -->
-  <section class="py-32 px-4 sm:px-10 border-y border-blueprint bg-white/[0.01]">
-    <div class="max-w-4xl mx-auto text-center">
-      <i class="ti ti-quote text-5xl text-white mb-10 block"></i>
-      <blockquote class="font-display text-xl sm:text-2xl md:text-3xl lg:text-4xl font-medium leading-tight tracking-tight mb-12 italic text-white/90">
-        "Triplicamos nuestros contactos desde que lanzamos la nueva web. Y lo mejor, no tuve que aprender nada de programación ni preocuparme por servidores."
-      </blockquote>
-      <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
-        <div class="w-12 h-12 rounded-full border border-blueprint overflow-hidden">
-          <img src="https://i.pravatar.cc/100?u=ceo" alt="CEO" class="w-full h-full object-cover">
-        </div>
-        <div class="text-center sm:text-left">
-          <p class="font-bold text-sm text-white">Carlos Mendoza</p>
-          <p class="text-xs text-white/40 uppercase tracking-widest mt-0.5">Director General, Logística Andina</p>
-        </div>
-      </div>
-    </div>
-  </section>
+
+  <script>
+  (function(){
+    for(var i=0;i<n;i++){
+      var d=document.createElement('button');
+      d.className='w-2 h-2 rounded-full transition-all duration-300 '+(i===0?'bg-white w-6':'bg-white/20');
+      d.setAttribute('aria-label','Testimonio '+(i+1));
+      (function(idx){d.onclick=function(){go(idx)}})(i);
+      dots.appendChild(d);
+    }
+    function go(idx){
+      cur=idx;
+      items[idx].scrollIntoView({behavior:'smooth',inline:'center',block:'nearest'});
+      var ds=dots.children;
+      for(var i=0;i<ds.length;i++){
+        ds[i].className='w-2 h-2 rounded-full transition-all duration-300 '+(i===idx?'bg-white w-6':'bg-white/20');
+      }
+      resetTimer();
+    }
+    function next(){go((cur+1)%n)}
+    function resetTimer(){clearInterval(timer);timer=setInterval(next,5000)}
+    el.addEventListener('scroll',function(){
+      var sl=el.scrollLeft,w=el.offsetWidth;
+      var idx=Math.round(sl/w);
+      if(idx!==cur&&idx>=0&&idx<n){cur=idx;var ds=dots.children;for(var i=0;i<ds.length;i++){ds[i].className='w-2 h-2 rounded-full transition-all duration-300 '+(i===idx?'bg-white w-6':'bg-white/20')}}
+    });
+    resetTimer();
+  })();
+  </script>
 
   <!-- ═══════ CONTACTO ═══════ -->
   <section id="contacto" class="relative py-48 px-4 sm:px-10 overflow-hidden">
