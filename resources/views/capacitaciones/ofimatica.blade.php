@@ -67,11 +67,6 @@
         border: 1px dashed rgba(255, 255, 255, 0.1);
         color: rgba(255, 255, 255, 0.6);
     }
-    .stack-badge:hover {
-        background: rgba(255, 255, 255, 0.1);
-        color: #fff;
-        border-color: rgba(255, 255, 255, 0.25);
-    }
 
     /* Learning grid card */
     .topic-card {
@@ -80,9 +75,14 @@
         border-radius: 20px;
         padding: 24px;
     }
-    .topic-card:hover {
-        border-color: rgba(255, 255, 255, 0.2);
-        background: rgba(27, 25, 19, 0.7);
+
+    /* Override global btn-glow: no transitions or transforms on this page */
+    .btn-glow,
+    .btn-glow:hover,
+    .btn-glow:active {
+        transition: none !important;
+        transform: none !important;
+        box-shadow: none !important;
     }
 </style>
 
