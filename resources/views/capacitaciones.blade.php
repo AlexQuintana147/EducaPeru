@@ -133,9 +133,6 @@
     {{-- HERO --}}
     <section class="relative pt-32 pb-48 px-4 sm:px-10 border-b border-blueprint">
         <div class="max-w-5xl mx-auto text-center relative z-10">
-            <div class="inline-block px-4 py-1.5 border border-blueprint rounded-full text-[10px] font-bold uppercase tracking-[0.3em] text-white/40 mb-12">
-                Programas Disponibles
-            </div>
             <h1 class="font-display text-4xl sm:text-6xl md:text-7xl lg:text-[100px] font-extrabold leading-[0.95] sm:leading-[0.9] tracking-tighter mb-8 text-white uppercase">
                 APRENDE.<br><span class="text-white/20">TECNOLOGÍA.</span>
             </h1>
