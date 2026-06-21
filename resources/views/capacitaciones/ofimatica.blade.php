@@ -74,6 +74,12 @@
         border-radius: 20px;
         padding: 24px;
     }
+    @media (max-width: 640px) {
+        .topic-card {
+            padding: 18px;
+            border-radius: 16px;
+        }
+    }
 
     /* Override global btn-glow: no transitions or transforms on this page */
     .btn-glow,
@@ -96,13 +102,57 @@
 
                 {{-- FEATURED BANNER --}}
                 <div class="banner-card">
-                    <img src="{{ asset('https://x02.me/i/RD47.png') }}" alt="Ofimática Profesional Banner" class="w-full h-full">
+                    <img src="{{ asset('https://x02.me/i/RD47.png') }}" alt="Ofimática Profesional Banner" class="w-full h-full object-cover">
                     <div class="banner-overlay">
                         {{-- Top tags --}}
                         <div class="flex flex-wrap gap-2">
                             <span class="px-3 py-1 bg-white text-black font-display font-bold text-[9px] sm:text-[10px] uppercase tracking-widest rounded-full">Destacado</span>
                             <span class="px-3 py-1 bg-white/10 text-white border border-white/15 font-display font-bold text-[9px] sm:text-[10px] uppercase tracking-widest rounded-full">Oficina Moderna</span>
                         </div>
+                    </div>
+                </div>
+
+                {{-- MOBILE PRICE (below banner) --}}
+                <div class="lg:hidden border border-blueprint rounded-2xl p-5 space-y-5" style="background-color: var(--bg-card);">
+                    <div class="space-y-2">
+                        <div class="text-[10px] font-extrabold uppercase tracking-widest text-white/30">Precio promocional</div>
+                        <div class="flex items-baseline gap-2">
+                            <span class="font-display text-2xl font-extrabold text-white">S/ 120</span>
+                            <span class="text-white/30 line-through text-sm">S/ 250</span>
+                        </div>
+                    </div>
+                    <div class="w-full h-px bg-white/10"></div>
+                    <ul class="space-y-3">
+                        <li class="flex items-center gap-3 text-white/60 text-sm font-light">
+                            <i class="ti ti-clock text-white/40 text-lg"></i>
+                            <span>Duración: <strong class="text-white/80">32 horas académicas</strong></span>
+                        </li>
+                        <li class="flex items-center gap-3 text-white/60 text-sm font-light">
+                            <i class="ti ti-book text-white/40 text-lg"></i>
+                            <span>Clases: <strong class="text-white/80">24 lecciones prácticas</strong></span>
+                        </li>
+                        <li class="flex items-center gap-3 text-white/60 text-sm font-light">
+                            <i class="ti ti-chart-bar text-white/40 text-lg"></i>
+                            <span>Nivel: <strong class="text-white/80">Desde cero hasta avanzado</strong></span>
+                        </li>
+                        <li class="flex items-center gap-3 text-white/60 text-sm font-light">
+                            <i class="ti ti-certificate text-white/40 text-lg"></i>
+                            <span>Certificación: <strong class="text-white/80">Certificado incluido</strong></span>
+                        </li>
+                        <li class="flex items-center gap-3 text-white/60 text-sm font-light">
+                            <i class="ti ti-device-laptop text-white/40 text-lg"></i>
+                            <span>Modalidad: <strong class="text-white/80">Online + asesorías</strong></span>
+                        </li>
+                        <li class="flex items-center gap-3 text-white/60 text-sm font-light">
+                            <i class="ti ti-messages text-white/40 text-lg"></i>
+                            <span>Soporte: <strong class="text-white/80">Resolución de dudas</strong></span>
+                        </li>
+                    </ul>
+                    <button class="w-full py-3 bg-white text-black font-display font-bold text-xs uppercase tracking-widest btn-glow text-center">
+                        Comenzar Ahora
+                    </button>
+                    <div class="text-[10px] text-center text-white/30">
+                        Acceso de por vida a los materiales del curso y actualizaciones futuras.
                     </div>
                 </div>
 
@@ -182,8 +232,8 @@
             {{-- RIGHT COLUMN: Sidebar card --}}
             <div id="iniciar" class="space-y-8 lg:sticky lg:top-24 self-start">
 
-                {{-- EL CURSO INCLUYE CARD --}}
-                <div class="border border-blueprint rounded-3xl p-8 space-y-6" style="background-color: var(--bg-card);">
+                {{-- EL CURSO INCLUYE CARD (desktop) --}}
+                <div class="hidden lg:block border border-blueprint rounded-3xl p-5 sm:p-8 space-y-6" style="background-color: var(--bg-card);">
                     <div class="space-y-2">
                         <div class="text-[10px] font-extrabold uppercase tracking-widest text-white/30">Precio promocional</div>
                         <div class="flex items-baseline gap-2">
@@ -232,7 +282,7 @@
                 </div>
 
                 {{-- STACK CARD --}}
-                <div class="border border-blueprint rounded-3xl p-8 space-y-4" style="background-color: var(--bg-card);">
+                <div class="border border-blueprint rounded-3xl p-5 sm:p-8 space-y-4" style="background-color: var(--bg-card);">
                     <div class="font-display text-xs uppercase tracking-widest text-white/50 font-bold">Herramientas:</div>
                     <div class="flex flex-wrap gap-2">
                         <span class="stack-badge flex items-center gap-1.5">
@@ -254,9 +304,9 @@
                 </div>
 
                 {{-- DOCENTES CARD --}}
-                <div class="border border-blueprint rounded-3xl p-8 space-y-6" style="background-color: var(--bg-card);">
+                <div class="border border-blueprint rounded-3xl p-5 sm:p-8 space-y-6" style="background-color: var(--bg-card);">
                     <div class="font-display text-xs uppercase tracking-widest text-white/50 font-bold">Docentes del curso:</div>
-                    <div class="grid grid-cols-2 gap-6">
+                    <div class="grid grid-cols-2 gap-4">
                         {{-- Docente 1 --}}
                         <div class="space-y-3">
                             <div class="flex flex-col items-center text-center gap-3">
