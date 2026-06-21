@@ -57,14 +57,14 @@
         Nuestro norte
       </h2>
       <div class="grid sm:grid-cols-2 gap-8">
-        <div class="border border-blueprint rounded-3xl p-8" style="background-color: var(--bg-card);"">
+        <div class="border border-blueprint rounded-3xl p-8" style="background-color: var(--bg-card);">>
           <div class="mb-6 text-white/20"><i class="ti ti-target text-5xl"></i></div>
           <h3 class="font-display text-xl font-bold mb-4 text-white uppercase">Misión</h3>
           <p class="text-white/40 text-sm leading-relaxed font-light">
             Brindar programas de capacitación, especialización y consultoría empresarial con altos estándares de calidad académica, orientados al desarrollo de competencias estratégicas, la actualización profesional continua y la aplicación práctica del conocimiento, contribuyendo al fortalecimiento del desempeño laboral y al crecimiento sostenible de las organizaciones.
           </p>
         </div>
-        <div class="border border-blueprint rounded-3xl p-8" style="background-color: var(--bg-card);"">
+        <div class="border border-blueprint rounded-3xl p-8" style="background-color: var(--bg-card);">>
           <div class="mb-6 text-white/20"><i class="ti ti-eye text-5xl"></i></div>
           <h3 class="font-display text-xl font-bold mb-4 text-white uppercase">Visión</h3>
           <p class="text-white/40 text-sm leading-relaxed font-light">
