@@ -213,7 +213,6 @@
                 <a href="/capacitaciones" class="nav-link">Capacitaciones</a>
                 <a href="/nosotros" class="nav-link">Nosotros</a>
                 <a href="/desarrollo-web" class="nav-link">Desarrollo Web</a>
-                <a href="#contacto" class="nav-link">Contacto</a>
             </nav>
 
             {{-- Desktop CTA --}}
@@ -258,9 +257,6 @@
         </a>
         <a href="/desarrollo-web" class="mobile-menu-link block py-5 text-lg font-display font-bold uppercase tracking-widest text-white/40 hover:text-white transition-colors">
             Desarrollo Web
-        </a>
-        <a href="#contacto" class="mobile-menu-link block py-5 text-lg font-display font-bold uppercase tracking-widest text-white/40 hover:text-white transition-colors">
-            Contacto
         </a>
         <div class="pt-8">
             <a href="/login" class="mobile-menu-link block py-5 text-center bg-white text-black font-display font-bold text-sm uppercase tracking-widest btn-glow">
@@ -319,7 +315,6 @@
                         <li><a href="/capacitaciones" class="footer-link">Capacitaciones</a></li>
                         <li><a href="/nosotros" class="footer-link">Nosotros</a></li>
                         <li><a href="/desarrollo-web" class="footer-link">Desarrollo Web</a></li>
-                        <li><a href="#contacto" class="footer-link">Contacto</a></li>
                     </ul>
                 </div>
                 <div>

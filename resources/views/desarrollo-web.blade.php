@@ -124,25 +124,25 @@
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-16 lg:gap-0 relative z-10">
 
           <div class="flex flex-col items-center lg:items-start lg:px-8">
-            <div class="font-display text-7xl sm:text-8xl font-extrabold text-white/5 mb-6 hover:text-white transition-colors duration-300 cursor-default">01</div>
+            <div class="font-display text-7xl sm:text-8xl font-extrabold text-white mb-6">01</div>
             <h4 class="font-display text-lg font-bold mb-3 text-white uppercase">DESCUBRIMIENTO</h4>
             <p class="text-xs sm:text-sm text-white/40 font-light leading-relaxed text-center lg:text-left max-w-[240px] lg:max-w-[200px]">Auditoría de tu negocio y definición de objetivos claros.</p>
           </div>
 
           <div class="flex flex-col items-center lg:items-start lg:px-8">
-            <div class="font-display text-7xl sm:text-8xl font-extrabold text-white/5 mb-6 hover:text-white transition-colors duration-300 cursor-default">02</div>
+            <div class="font-display text-7xl sm:text-8xl font-extrabold text-white mb-6">02</div>
             <h4 class="font-display text-lg font-bold mb-3 text-white uppercase">PROPUESTA</h4>
             <p class="text-xs sm:text-sm text-white/40 font-light leading-relaxed text-center lg:text-left max-w-[240px] lg:max-w-[200px]">Diseño visual y arquitectura del sitio bajo tu aprobación.</p>
           </div>
 
           <div class="flex flex-col items-center lg:items-start lg:px-8">
-            <div class="font-display text-7xl sm:text-8xl font-extrabold text-white/5 mb-6 hover:text-white transition-colors duration-300 cursor-default">03</div>
+            <div class="font-display text-7xl sm:text-8xl font-extrabold text-white mb-6">03</div>
             <h4 class="font-display text-lg font-bold mb-3 text-white uppercase">DESARROLLO</h4>
             <p class="text-xs sm:text-sm text-white/40 font-light leading-relaxed text-center lg:text-left max-w-[240px] lg:max-w-[200px]">Construcción con tecnologías modernas y optimización SEO.</p>
           </div>
 
           <div class="flex flex-col items-center lg:items-start lg:px-8">
-            <div class="font-display text-7xl sm:text-8xl font-extrabold text-white/5 mb-6 hover:text-white transition-colors duration-300 cursor-default">04</div>
+            <div class="font-display text-7xl sm:text-8xl font-extrabold text-white mb-6">04</div>
             <h4 class="font-display text-lg font-bold mb-3 text-white uppercase">LANZAMIENTO</h4>
             <p class="text-xs sm:text-sm text-white/40 font-light leading-relaxed text-center lg:text-left max-w-[240px] lg:max-w-[200px]">Pruebas finales, puesta en marcha y soporte continuo.</p>
           </div>
