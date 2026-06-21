@@ -4,49 +4,6 @@
 
 @section('content')
 <style>
-  @import url('https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap');
-  @import url('https://cdn.jsdelivr.net/npm/@tabler/icons-webfont/tabler-icons.min.css');
-
-  :root {
-    --font-display: 'Instrument Sans', sans-serif;
-    --font-body: 'Inter', sans-serif;
-  }
-
-  .dw-page {
-    background-color: #000000;
-    color: #ffffff;
-    font-family: var(--font-body);
-    -webkit-font-smoothing: antialiased;
-  }
-
-  .font-display { font-family: var(--font-display); }
-
-  /* Blueprint Grid Pattern */
-  .grid-pattern {
-    background-image: 
-      linear-gradient(to right, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
-      linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
-    background-size: 80px 80px;
-  }
-
-  /* Dashed Divider */
-  .border-blueprint {
-    border-style: dashed;
-    border-color: rgba(255, 255, 255, 0.1);
-  }
-
-  /* Custom Glow for Button */
-  .btn-glow {
-    transition: all 0.3s ease;
-  }
-  .btn-glow:hover {
-    box-shadow: 0 0 20px rgba(255, 255, 255, 0.35);
-    transform: translateY(-1px);
-  }
-  .btn-glow:active {
-    transform: translateY(0);
-  }
-
   /* Horizontal Line for Process */
   .process-line {
     position: absolute;
@@ -66,7 +23,7 @@
   }
 </style>
 
-<div class="relative w-full min-h-screen grid-pattern dw-page">
+<div class="relative w-full" style="background-color: var(--bg);">
 
   <!-- ═══════ HERO ═══════ -->
   <section class="relative pt-32 pb-48 px-4 sm:px-10">
@@ -95,7 +52,7 @@
   <section class="py-32 px-4 sm:px-10 border-t border-blueprint">
     <div class="max-w-7xl mx-auto">
       <div class="grid grid-cols-1 md:grid-cols-3 gap-y-16 md:gap-x-12 lg:gap-x-20">
-        
+
         <div class="group">
           <div class="mb-8 text-white/20 transition-colors duration-300 group-hover:text-white">
             <i class="ti ti-clock text-6xl font-thin"></i>
@@ -105,7 +62,7 @@
             Tu negocio nunca duerme. Construimos plataformas robustas que funcionan sin interrupciones, captando clientes mientras tú descansas.
           </p>
         </div>
-        
+
         <div class="group">
           <div class="mb-8 text-white/20 transition-colors duration-300 group-hover:text-white">
             <i class="ti ti-briefcase text-6xl font-thin"></i>
@@ -115,7 +72,7 @@
             La primera impresión es la que cuenta. Diseñamos estéticas que elevan el valor percibido de tu marca al nivel de las grandes empresas.
           </p>
         </div>
-        
+
         <div class="group">
           <div class="mb-8 text-white/20 transition-colors duration-300 group-hover:text-white">
             <i class="ti ti-users text-6xl font-thin"></i>
@@ -140,7 +97,7 @@
       <div class="relative">
         <div class="process-line hidden lg:block"></div>
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-16 lg:gap-0 relative z-10">
-          
+
           <div class="flex flex-col items-center lg:items-start lg:px-8">
             <div class="font-display text-7xl sm:text-8xl font-extrabold text-white/5 mb-6 hover:text-white transition-colors duration-300 cursor-default">01</div>
             <h4 class="font-display text-lg font-bold mb-3 text-white uppercase">DESCUBRIMIENTO</h4>
@@ -191,18 +148,18 @@
 
   <!-- ═══════ CONTACTO ═══════ -->
   <section id="contacto" class="relative py-48 px-4 sm:px-10 overflow-hidden">
-    
+
     <div class="absolute inset-0 z-0 opacity-20 sm:opacity-30 cta-video-container">
       <video src="https://videos.pexels.com/video-files/8597294/8597294-hd_1280_720_30fps.mp4" poster="https://images.pexels.com/videos/8597294/pexels-photo-8597294.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=630&w=1200" autoplay muted loop playsinline preload="metadata" class="w-full h-full object-cover">
       </video>
     </div>
-    
+
     <div class="max-w-4xl mx-auto text-center relative z-10">
       <h2 class="font-display text-5xl sm:text-7xl md:text-8xl font-extrabold tracking-tighter mb-8 text-white uppercase">HAGÁMOSLO REAL.</h2>
       <p class="text-white/60 text-base sm:text-lg mb-16 max-w-xl mx-auto font-light">
         Cuéntanos tu idea hoy y recibe una propuesta profesional en menos de 24 horas.
       </p>
-      
+
       <div class="max-w-md mx-auto">
         <form class="space-y-6" onsubmit="event.preventDefault(); this.querySelector('button').textContent='Enviado ✓'; this.querySelector('button').disabled=true;">
           <input type="text" placeholder="Tu Nombre / Empresa" required class="w-full bg-transparent border-b border-blueprint py-4 px-2 text-white placeholder:text-white/20 outline-none focus:border-white transition-colors">
