@@ -118,12 +118,41 @@
 
     /* Stats */
     .stat-sep { width:1px; height:16px; background:rgba(255,255,255,0.08); }
+
+    /* Floating icons */
+    .hero-float-icon {
+        position: absolute;
+        color: rgba(255,255,255,0.06);
+        z-index: 1;
+        pointer-events: none;
+        opacity: 0;
+        transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+    .hero-float-icon.show {
+        opacity: 1;
+    }
+    @media (min-width: 640px) {
+        .hero-float-icon svg { width: 56px; height: 56px; }
+    }
+    @media (min-width: 1024px) {
+        .hero-float-icon svg { width: 72px; height: 72px; }
+    }
 </style>
 
 <div class="relative w-full" style="background-color: var(--bg);">
 
     {{-- HERO --}}
-    <section class="relative hero-full px-4 sm:px-10 border-b border-blueprint">
+    <section class="relative hero-full px-4 sm:px-10 border-b border-blueprint overflow-hidden">
+        {{-- Floating SVG icons --}}
+        <div class="hero-float-icon" style="transform:scale(0.7)"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24"><path fill="currentColor" d="M6 20h7v2H6c-1.11 0-2-.89-2-2V4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8.54l-1.5-.82l-.5.28V4h-5v8l-2.5-2.25L8 12V4H6zm18-3l-5.5-3l-5.5 3l5.5 3zm-9 2.09v2L18.5 23l3.5-1.91v-2L18.5 21z"/></svg></div>
+        <div class="hero-float-icon" style="transform:scale(0.7)"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24"><path fill="currentColor" d="m13 21l2-1l2 1v-7h-4m4-5V7l-2 1l-2-1v2l-2 1l2 1v2l2-1l2 1v-2l2-1m1-7H4a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h7v-2H4V5h16v10h-1v2h1a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2m-9 5H5V6h6m-2 5H5V9h4m2 5H5v-2h6Z"/></svg></div>
+        <div class="hero-float-icon" style="transform:scale(0.7)"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24"><path fill="currentColor" d="M18 2c-.9 0-2 1-2 2H8c0-1-1.1-2-2-2H2v9c0 1 1 2 2 2h2.2c.4 2 1.7 3.7 4.8 4v2.08C8 19.54 8 22 8 22h8s0-2.46-3-2.92V17c3.1-.3 4.4-2 4.8-4H20c1 0 2-1 2-2V2zM6 11H4V4h2zm10 .5c0 1.93-.58 3.5-4 3.5c-3.41 0-4-1.57-4-3.5V6h8zm4-.5h-2V4h2z"/></svg></div>
+        <div class="hero-float-icon" style="transform:scale(0.7)"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24"><path fill="currentColor" d="M4 6h16v10H4m16 2a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2H4c-1.11 0-2 .89-2 2v10a2 2 0 0 0 2 2H0v2h24v-2z"/></svg></div>
+        <div class="hero-float-icon" style="transform:scale(0.7)"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24"><path fill="currentColor" d="M12 3L1 9l4 2.18v6L12 21l7-3.82v-6l2-1.09V17h2V9zm6.82 6L12 12.72L5.18 9L12 5.28zM17 16l-5 2.72L7 16v-3.73L12 15l5-2.73z"/></svg></div>
+        <div class="hero-float-icon" style="transform:scale(0.7)"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24"><path fill="currentColor" d="M8 3a2 2 0 0 0-2 2v4a2 2 0 0 1-2 2H3v2h1a2 2 0 0 1 2 2v4a2 2 0 0 0 2 2h2v-2H8v-5a2 2 0 0 0-2-2a2 2 0 0 0 2-2V5h2V3m6 0a2 2 0 0 1 2 2v4a2 2 0 0 0 2 2h1v2h-1a2 2 0 0 0-2 2v4a2 2 0 0 1-2 2h-2v-2h2v-5a2 2 0 0 1 2-2a2 2 0 0 1-2-2V5h-2V3z"/></svg></div>
+        <div class="hero-float-icon" style="transform:scale(0.7)"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24"><path fill="currentColor" d="m16 11.78l4.24-7.33l1.73 1l-5.23 9.05l-6.51-3.75L5.46 19H22v2H2V3h2v14.54L9.5 8z"/></svg></div>
+        <div class="hero-float-icon" style="transform:scale(0.7)"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24"><path fill="currentColor" d="m13.16 22.19l-1.66-3.84c1.6-.58 3.07-1.35 4.43-2.27l-2.78 6.11m-7.5-9.69l-3.84-1.65l6.11-2.78C7 9.43 6.23 10.91 5.65 12.5M20 4c-2.96-.22-5.2.83-7.55 3.31c-2.36 2.47-3.36 4.5-3.95 6.04l2.17 2.1c2.29-.87 4.33-2.18 6.03-3.89C20 8.27 20.17 5.4 20 4m-9 1.9c2.63-2.8 7-4.82 10.66-3.55c0 0 2.12 4.96-3.55 10.65c-2.2 2.17-4.58 3.5-6.72 4.34c-.24.09-1.15.39-2.13-.46l-2.13-2.13c-.56-.56-.74-1.38-.47-2.13C7.5 10.5 8.41 8.69 11 5.9M6.25 22H4.84l4.09-4.1c.3.21.63.36.97.45zM2 22v-1.41l4.77-4.78l1.43 1.42L3.41 22zm0-2.83v-1.42l3.65-3.65c.09.35.24.68.45.97zM16 6a2 2 0 0 1 2 2c0 1.11-.89 2-2 2a2 2 0 1 1 0-4"/></svg></div>
+
         <div class="max-w-5xl mx-auto text-center relative z-10">
             <h1 class="font-display text-3xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl 2xl:text-[100px] font-extrabold leading-[0.95] sm:leading-[0.9] tracking-tighter mb-4 sm:mb-6 text-white uppercase">
                 APRENDE.<br><span class="text-white/20">TECNOLOGÍA.</span>
@@ -276,4 +305,63 @@
     </section>
 </div>
 
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    const icons = [...document.querySelectorAll('.hero-float-icon')];
+    const spots = [
+        { top:'6%',  left:'4%',  right:'',   bottom:'' },
+        { top:'8%',  left:'',   right:'5%',  bottom:'' },
+        { top:'35%', left:'5%', right:'',   bottom:'' },
+        { top:'38%', left:'',   right:'4%',  bottom:'' },
+        { top:'55%', left:'3%', right:'',   bottom:'' },
+        { top:'58%', left:'',   right:'6%',  bottom:'' },
+        { top:'',    left:'',   right:'',   bottom:'12%' },
+        { top:'',    left:'15%',right:'',   bottom:'' },
+    ];
+    const taken = new Set();
+    const lastSpot = icons.map(() => -1);
+
+    function place(el, si) {
+        const s = spots[si];
+        el.style.top = s.top; el.style.left = s.left;
+        el.style.right = s.right; el.style.bottom = s.bottom;
+        el.style.transform = 'scale(1)';
+    }
+    function hide(el, si) {
+        el.style.transform = 'scale(0.7)';
+    }
+    function pickSpot(i) {
+        const ok = [...Array(spots.length).keys()].filter(s => !taken.has(s) && s !== lastSpot[i]);
+        return ok.length ? ok[Math.floor(Math.random() * ok.length)] : [...Array(spots.length).keys()].filter(s => !taken.has(s))[0];
+    }
+
+    function cycleIcon(i) {
+        const el = icons[i];
+        if (lastSpot[i] >= 0) taken.delete(lastSpot[i]);
+        el.classList.remove('show');
+        hide(el, lastSpot[i] >= 0 ? lastSpot[i] : 0);
+        setTimeout(() => {
+            const si = pickSpot(i);
+            lastSpot[i] = si;
+            taken.add(si);
+            place(el, si);
+            el.classList.add('show');
+        }, 800);
+        setTimeout(() => cycleIcon(i), 4000 + Math.random() * 3000);
+    }
+
+    const startCount = 3 + Math.floor(Math.random() * 2);
+    for (let i = 0; i < startCount && i < icons.length; i++) {
+        const si = pickSpot(i);
+        lastSpot[i] = si;
+        taken.add(si);
+        place(icons[i], si);
+        icons[i].classList.add('show');
+        setTimeout(() => cycleIcon(i), 4000 + Math.random() * 3000);
+    }
+    for (let i = startCount; i < icons.length; i++) {
+        setTimeout(() => cycleIcon(i), 1500 + Math.random() * 2500);
+    }
+});
+</script>
 @endsection
