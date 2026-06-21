@@ -171,7 +171,7 @@
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
 
                 {{-- Ofimática --}}
-                <div class="c-card">
+                <a href="/capacitaciones/ofimatica" class="c-card block">
                     <img class="c-thumb-img" src="https://x02.me/i/RD47.png" alt="Ofimática Profesional">
                     <div class="c-overlay">
                         <div class="c-overlay-title">Ofimática Profesional</div>
@@ -182,13 +182,13 @@
                                 </div>
                                 4 horas a la semana
                             </div>
-                            <a href="#" class="btn-go">
+                            <span class="btn-go">
                                 <svg width="12" height="12" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
                                 Ir al curso
-                            </a>
+                            </span>
                         </div>
                     </div>
-                </div>
+                </a>
 
                 {{-- C++ --}}
                 <div class="c-card">

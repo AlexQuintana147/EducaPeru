@@ -17,3 +17,8 @@ Route::get('/nosotros', function () {
 Route::get('/desarrollo-web', function () {
     return view('desarrollo-web');
 });
+
+Route::get('/capacitaciones/ofimatica', function () {
+    return view('capacitaciones.ofimatica');
+});
+
