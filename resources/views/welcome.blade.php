@@ -22,17 +22,17 @@
           Desarrollo web
         </a>
       </div>
-      <div class="flex items-center justify-center gap-8 sm:gap-14 text-white/20">
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-6 sm:gap-8 text-white/20">
         <div class="text-center">
           <div class="font-display text-2xl sm:text-3xl font-extrabold text-white/60">+50</div>
           <div class="text-[10px] uppercase tracking-[0.2em] mt-1">Estudiantes</div>
         </div>
-        <div class="w-px h-10 bg-white/10"></div>
+        <div class="hidden sm:block w-px h-10 bg-white/10"></div>
         <div class="text-center">
           <div class="font-display text-2xl sm:text-3xl font-extrabold text-white/60">98%</div>
           <div class="text-[10px] uppercase tracking-[0.2em] mt-1">Satisfacción</div>
         </div>
-        <div class="w-px h-10 bg-white/10"></div>
+        <div class="hidden sm:block w-px h-10 bg-white/10"></div>
         <div class="text-center">
           <div class="font-display text-2xl sm:text-3xl font-extrabold text-white/60">3</div>
           <div class="text-[10px] uppercase tracking-[0.2em] mt-1">Programas</div>

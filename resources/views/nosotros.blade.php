@@ -22,7 +22,7 @@
           Ver cursos
         </a>
       </div>
-      <div class="flex items-center justify-center gap-8 sm:gap-14 text-white/20">
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-6 sm:gap-8 text-white/20">
         <div class="flex items-center gap-3">
           <i class="ti ti-award text-2xl text-white"></i>
           <div class="text-left">
@@ -30,7 +30,7 @@
             <div class="text-[10px] text-white/25">Académica</div>
           </div>
         </div>
-        <div class="w-px h-10 bg-white/10"></div>
+        <div class="hidden sm:block w-px h-10 bg-white/10"></div>
         <div class="flex items-center gap-3">
           <i class="ti ti-bulb text-2xl text-white"></i>
           <div class="text-left">
@@ -38,7 +38,7 @@
             <div class="text-[10px] text-white/25">Metodológica</div>
           </div>
         </div>
-        <div class="w-px h-10 bg-white/10"></div>
+        <div class="hidden sm:block w-px h-10 bg-white/10"></div>
         <div class="flex items-center gap-3">
           <i class="ti ti-heart-handshake text-2xl text-white"></i>
           <div class="text-left">

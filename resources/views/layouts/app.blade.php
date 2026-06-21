@@ -325,7 +325,7 @@
                         <li><a href="#" class="footer-link flex items-center gap-2">Python <span class="text-[10px] text-white/20 font-bold uppercase tracking-wider">Pronto</span></a></li>
                     </ul>
                 </div>
-                <div>
+                <div class="col-span-2 sm:col-span-1">
                     <div class="font-display text-[11px] font-extrabold tracking-[0.14em] uppercase text-white mb-5">Contacto</div>
                     <ul class="space-y-3">
                         <li class="flex items-start gap-2">

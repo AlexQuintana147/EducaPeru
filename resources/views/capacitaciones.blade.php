@@ -4,15 +4,6 @@
 
 @section('content')
 <style>
-    /* Course Grid */
-    .courses-grid {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 24px;
-    }
-    @media (max-width: 900px) { .courses-grid { grid-template-columns: repeat(2, 1fr); } }
-    @media (max-width: 560px) { .courses-grid { grid-template-columns: 1fr; } }
-
     /* Card */
     .c-card {
         position: relative;
@@ -29,7 +20,7 @@
     }
     .c-thumb-img { width: 100%; height: auto; display: block; }
 
-    /* Overlay */
+    /* Overlay - always visible on mobile, hover on desktop */
     .c-overlay {
         position: absolute; inset: 0;
         background: linear-gradient(180deg, transparent 30%, rgba(0, 0, 0, 0.97) 100%);
@@ -37,6 +28,9 @@
         padding: 14px 16px;
         opacity: 0; transform: translateY(4px);
         transition: opacity .3s ease, transform .3s ease;
+    }
+    @media (max-width: 768px) {
+        .c-overlay { opacity: 1; transform: translateY(0); }
     }
     .c-card:hover .c-overlay { opacity: 1; transform: translateY(0); }
     .c-overlay-title { font-size: 14px; font-weight: 800; color: #f1f5f9; margin-bottom: 10px; line-height: 1.3; }
@@ -144,17 +138,17 @@
                     Ver cursos
                 </a>
             </div>
-            <div class="flex items-center justify-center gap-8 sm:gap-14 text-white/20">
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-6 sm:gap-8 text-white/20">
                 <div class="text-center">
                     <div class="font-display text-2xl sm:text-3xl font-extrabold text-white/60">+50</div>
                     <div class="text-[10px] uppercase tracking-[0.2em] mt-1">Estudiantes</div>
                 </div>
-                <div class="w-px h-10 bg-white/10"></div>
+                <div class="hidden sm:block w-px h-10 bg-white/10"></div>
                 <div class="text-center">
                     <div class="font-display text-2xl sm:text-3xl font-extrabold text-white/60">98%</div>
                     <div class="text-[10px] uppercase tracking-[0.2em] mt-1">Satisfacción</div>
                 </div>
-                <div class="w-px h-10 bg-white/10"></div>
+                <div class="hidden sm:block w-px h-10 bg-white/10"></div>
                 <div class="text-center">
                     <div class="font-display text-2xl sm:text-3xl font-extrabold text-white/60">2-3</div>
                     <div class="text-[10px] uppercase tracking-[0.2em] mt-1">Meses por curso</div>
@@ -174,7 +168,7 @@
                 </h2>
             </div>
 
-            <div class="courses-grid">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
 
                 {{-- Ofimática --}}
                 <div class="c-card">

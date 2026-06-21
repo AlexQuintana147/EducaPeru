@@ -42,7 +42,7 @@
           Ver Metodología
         </a>
       </div>
-      <div class="flex items-center justify-center gap-8 sm:gap-14 text-white/20">
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-6 sm:gap-8 text-white/20">
         <div class="flex items-center gap-3">
           <i class="ti ti-clock text-2xl text-white"></i>
           <div class="text-left">
@@ -50,7 +50,7 @@
             <div class="text-[10px] text-white/25">Presencia</div>
           </div>
         </div>
-        <div class="w-px h-10 bg-white/10"></div>
+        <div class="hidden sm:block w-px h-10 bg-white/10"></div>
         <div class="flex items-center gap-3">
           <i class="ti ti-device-mobile text-2xl text-white"></i>
           <div class="text-left">
@@ -58,7 +58,7 @@
             <div class="text-[10px] text-white/25">Diseño</div>
           </div>
         </div>
-        <div class="w-px h-10 bg-white/10"></div>
+        <div class="hidden sm:block w-px h-10 bg-white/10"></div>
         <div class="flex items-center gap-3">
           <i class="ti ti-rocket text-2xl text-white"></i>
           <div class="text-left">
@@ -109,37 +109,37 @@
   </section>
 
   <!-- ═══════ PROCESO / HOJA DE RUTA ═══════ -->
-  <section id="proceso" class="py-48 px-4 sm:px-10 border-t border-blueprint relative overflow-hidden">
+  <section id="proceso" class="py-24 sm:py-32 lg:py-48 px-4 sm:px-10 border-t border-blueprint relative overflow-hidden">
     <div class="max-w-7xl mx-auto">
-      <div class="text-center mb-32">
-        <h2 class="font-display text-4xl sm:text-5xl font-extrabold tracking-tighter mb-4 text-white uppercase">NUESTRA HOJA DE RUTA</h2>
+      <div class="text-center mb-16 sm:mb-32">
+        <h2 class="font-display text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tighter mb-4 text-white uppercase">NUESTRA HOJA DE RUTA</h2>
         <p class="text-white/40 uppercase tracking-[0.2em] text-xs">Cuatro fases hacia tu éxito digital</p>
       </div>
 
       <div class="relative">
         <div class="process-line hidden lg:block"></div>
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-16 lg:gap-0 relative z-10">
+        <div class="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-16 lg:gap-0 relative z-10">
 
           <div class="flex flex-col items-center lg:items-start lg:px-8">
-            <div class="font-display text-7xl sm:text-8xl font-extrabold text-white mb-6">01</div>
+            <div class="font-display text-5xl sm:text-7xl md:text-8xl font-extrabold text-white mb-4 sm:mb-6">01</div>
             <h4 class="font-display text-lg font-bold mb-3 text-white uppercase">DESCUBRIMIENTO</h4>
             <p class="text-xs sm:text-sm text-white/40 font-light leading-relaxed text-center lg:text-left max-w-[240px] lg:max-w-[200px]">Auditoría de tu negocio y definición de objetivos claros.</p>
           </div>
 
           <div class="flex flex-col items-center lg:items-start lg:px-8">
-            <div class="font-display text-7xl sm:text-8xl font-extrabold text-white mb-6">02</div>
+            <div class="font-display text-5xl sm:text-7xl md:text-8xl font-extrabold text-white mb-4 sm:mb-6">02</div>
             <h4 class="font-display text-lg font-bold mb-3 text-white uppercase">PROPUESTA</h4>
             <p class="text-xs sm:text-sm text-white/40 font-light leading-relaxed text-center lg:text-left max-w-[240px] lg:max-w-[200px]">Diseño visual y arquitectura del sitio bajo tu aprobación.</p>
           </div>
 
           <div class="flex flex-col items-center lg:items-start lg:px-8">
-            <div class="font-display text-7xl sm:text-8xl font-extrabold text-white mb-6">03</div>
+            <div class="font-display text-5xl sm:text-7xl md:text-8xl font-extrabold text-white mb-4 sm:mb-6">03</div>
             <h4 class="font-display text-lg font-bold mb-3 text-white uppercase">DESARROLLO</h4>
             <p class="text-xs sm:text-sm text-white/40 font-light leading-relaxed text-center lg:text-left max-w-[240px] lg:max-w-[200px]">Construcción con tecnologías modernas y optimización SEO.</p>
           </div>
 
           <div class="flex flex-col items-center lg:items-start lg:px-8">
-            <div class="font-display text-7xl sm:text-8xl font-extrabold text-white mb-6">04</div>
+            <div class="font-display text-5xl sm:text-7xl md:text-8xl font-extrabold text-white mb-4 sm:mb-6">04</div>
             <h4 class="font-display text-lg font-bold mb-3 text-white uppercase">LANZAMIENTO</h4>
             <p class="text-xs sm:text-sm text-white/40 font-light leading-relaxed text-center lg:text-left max-w-[240px] lg:max-w-[200px]">Pruebas finales, puesta en marcha y soporte continuo.</p>
           </div>
@@ -180,7 +180,7 @@
   </script>
 
   <!-- ═══════ CONTACTO ═══════ -->
-  <section id="contacto" class="relative py-48 px-4 sm:px-10 overflow-hidden">
+  <section id="contacto" class="relative py-24 sm:py-32 lg:py-48 px-4 sm:px-10 overflow-hidden">
 
     <div class="absolute inset-0 z-0 opacity-20 sm:opacity-30 cta-video-container">
       <video src="https://videos.pexels.com/video-files/8597294/8597294-hd_1280_720_30fps.mp4" poster="https://images.pexels.com/videos/8597294/pexels-photo-8597294.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=630&w=1200" autoplay muted loop playsinline preload="metadata" class="w-full h-full object-cover">
@@ -188,7 +188,7 @@
     </div>
 
     <div class="max-w-4xl mx-auto text-center relative z-10">
-      <h2 class="font-display text-5xl sm:text-7xl md:text-8xl font-extrabold tracking-tighter mb-8 text-white uppercase">HAGÁMOSLO REAL.</h2>
+      <h2 class="font-display text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-extrabold tracking-tighter mb-8 text-white uppercase">HAGÁMOSLO REAL.</h2>
       <p class="text-white/60 text-base sm:text-lg mb-16 max-w-xl mx-auto font-light">
         Cuéntanos tu idea hoy y recibe una propuesta profesional en menos de 24 horas.
       </p>
