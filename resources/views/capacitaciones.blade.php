@@ -12,7 +12,6 @@
         cursor: pointer;
         background: rgba(0, 0, 0, 0.4);
         border: 1px dashed rgba(255,255,255,0.1);
-        transition: border-color .25s ease, box-shadow .25s ease;
     }
     .c-card:hover {
         border-color: rgba(255,255,255,0.35);
@@ -26,13 +25,12 @@
         background: linear-gradient(180deg, transparent 30%, rgba(0, 0, 0, 0.97) 100%);
         display: flex; flex-direction: column; justify-content: flex-end;
         padding: 14px 16px;
-        opacity: 0; transform: translateY(4px);
-        transition: opacity .3s ease, transform .3s ease;
+        opacity: 0;
     }
     @media (max-width: 768px) {
-        .c-overlay { opacity: 1; transform: translateY(0); }
+        .c-overlay { opacity: 1; }
     }
-    .c-card:hover .c-overlay { opacity: 1; transform: translateY(0); }
+    .c-card:hover .c-overlay { opacity: 1; }
     .c-overlay-title { font-size: 14px; font-weight: 800; color: #f1f5f9; margin-bottom: 10px; line-height: 1.3; }
     .c-overlay-row { display: flex; align-items: center; justify-content: space-between; gap: 10px; }
     .c-overlay-info { display: flex; align-items: center; gap: 7px; font-size: 12.5px; color: #cbd5e1; }

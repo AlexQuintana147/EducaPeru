@@ -37,10 +37,6 @@
         height: 100%;
         object-cover: cover;
         opacity: 0.65;
-        transition: transform 0.5s ease;
-    }
-    .banner-card:hover .banner-bg {
-        transform: scale(1.03);
     }
 
     .banner-overlay {
@@ -70,7 +66,6 @@
         background: rgba(255, 255, 255, 0.05);
         border: 1px dashed rgba(255, 255, 255, 0.1);
         color: rgba(255, 255, 255, 0.6);
-        transition: all 0.3s ease;
     }
     .stack-badge:hover {
         background: rgba(255, 255, 255, 0.1);
@@ -84,26 +79,15 @@
         border: 1px dashed rgba(255, 255, 255, 0.08);
         border-radius: 20px;
         padding: 24px;
-        transition: all 0.3s ease;
     }
     .topic-card:hover {
         border-color: rgba(255, 255, 255, 0.2);
         background: rgba(27, 25, 19, 0.7);
-        transform: translateY(-2px);
     }
 </style>
 
 <div class="relative w-full course-detail-container pb-24" style="background-color: var(--bg);">
     <div class="max-w-7xl mx-auto px-4 sm:px-10">
-
-        {{-- BREADCRUMBS --}}
-        <div class="flex items-center gap-2 text-xs sm:text-sm text-white/30 font-medium mb-8">
-            <a href="/" class="hover:text-white transition-colors">Inicio</a>
-            <i class="ti ti-chevron-right text-xs"></i>
-            <a href="/capacitaciones" class="hover:text-white transition-colors">Capacitaciones</a>
-            <i class="ti ti-chevron-right text-xs"></i>
-            <span class="text-white/60">Ofimática Profesional</span>
-        </div>
 
         {{-- MAIN GRID --}}
         <div class="grid grid-cols-1 lg:grid-cols-3 gap-10">
@@ -161,10 +145,12 @@
                     <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
                         <!-- Word -->
                         <div class="topic-card">
-                            <div class="w-10 h-10 rounded-xl bg-white/5 border border-blueprint flex items-center justify-center text-white mb-4">
-                                <i class="ti ti-file-text text-xl"></i>
+                            <div class="flex items-center gap-3 mb-4">
+                                <div class="w-10 h-10 rounded-xl bg-white/5 border border-blueprint flex items-center justify-center text-white shrink-0">
+                                    <i class="ti ti-file-text text-xl"></i>
+                                </div>
+                                <h3 class="font-display text-lg font-bold text-white leading-tight">Procesamiento Eficiente (Word)</h3>
                             </div>
-                            <h3 class="font-display text-lg font-bold text-white mb-2">Procesamiento Eficiente (Word)</h3>
                             <p class="text-white/40 text-sm leading-relaxed font-light">
                                 Creación de documentos corporativos impecables, uso de estilos avanzados, automatización de tablas de contenido, correspondencia combinada y plantillas dinámicas.
                             </p>
@@ -172,10 +158,12 @@
 
                         <!-- Excel -->
                         <div class="topic-card">
-                            <div class="w-10 h-10 rounded-xl bg-white/5 border border-blueprint flex items-center justify-center text-white mb-4">
-                                <i class="ti ti-table text-xl"></i>
+                            <div class="flex items-center gap-3 mb-4">
+                                <div class="w-10 h-10 rounded-xl bg-white/5 border border-blueprint flex items-center justify-center text-white shrink-0">
+                                    <i class="ti ti-table text-xl"></i>
+                                </div>
+                                <h3 class="font-display text-lg font-bold text-white leading-tight">Análisis de Datos (Excel)</h3>
                             </div>
-                            <h3 class="font-display text-lg font-bold text-white mb-2">Análisis de Datos (Excel)</h3>
                             <p class="text-white/40 text-sm leading-relaxed font-light">
                                 Fórmulas y funciones lógicas, búsqueda de datos, tablas dinámicas avanzadas, modelado y visualización de gráficos ejecutivos para la toma de decisiones rápidas.
                             </p>
@@ -183,10 +171,12 @@
 
                         <!-- PowerPoint -->
                         <div class="topic-card">
-                            <div class="w-10 h-10 rounded-xl bg-white/5 border border-blueprint flex items-center justify-center text-white mb-4">
-                                <i class="ti ti-presentation text-xl"></i>
+                            <div class="flex items-center gap-3 mb-4">
+                                <div class="w-10 h-10 rounded-xl bg-white/5 border border-blueprint flex items-center justify-center text-white shrink-0">
+                                    <i class="ti ti-presentation text-xl"></i>
+                                </div>
+                                <h3 class="font-display text-lg font-bold text-white leading-tight">Presentaciones de Impacto</h3>
                             </div>
-                            <h3 class="font-display text-lg font-bold text-white mb-2">Presentaciones de Impacto</h3>
                             <p class="text-white/40 text-sm leading-relaxed font-light">
                                 Diseño visual premium de diapositivas, aplicación de transiciones modernas, inserción de elementos multimedia e interactivos y técnicas avanzadas de oratoria corporativa.
                             </p>
@@ -194,10 +184,12 @@
 
                         <!-- Nube -->
                         <div class="topic-card">
-                            <div class="w-10 h-10 rounded-xl bg-white/5 border border-blueprint flex items-center justify-center text-white mb-4">
-                                <i class="ti ti-cloud-upload text-xl"></i>
+                            <div class="flex items-center gap-3 mb-4">
+                                <div class="w-10 h-10 rounded-xl bg-white/5 border border-blueprint flex items-center justify-center text-white shrink-0">
+                                    <i class="ti ti-cloud-upload text-xl"></i>
+                                </div>
+                                <h3 class="font-display text-lg font-bold text-white leading-tight">Colaboración Digital</h3>
                             </div>
-                            <h3 class="font-display text-lg font-bold text-white mb-2">Colaboración Digital</h3>
                             <p class="text-white/40 text-sm leading-relaxed font-light">
                                 Gestión de archivos compartidos en la nube a través de OneDrive y Google Drive. Trabajo colaborativo en tiempo real utilizando herramientas de Google Docs y Sheets.
                             </p>
@@ -263,11 +255,21 @@
                 <div class="border border-blueprint rounded-3xl p-8 space-y-4" style="background-color: var(--bg-card);">
                     <div class="font-display text-xs uppercase tracking-widest text-white/50 font-bold">Herramientas:</div>
                     <div class="flex flex-wrap gap-2">
-                        <span class="stack-badge">MS Excel</span>
-                        <span class="stack-badge">MS Word</span>
-                        <span class="stack-badge">MS PowerPoint</span>
-                        <span class="stack-badge">OneDrive</span>
-                        <span class="stack-badge">Google Workspace</span>
+                        <span class="stack-badge flex items-center gap-1.5">
+                            <i class="ti ti-file-spreadsheet text-sm"></i> MS Excel
+                        </span>
+                        <span class="stack-badge flex items-center gap-1.5">
+                            <i class="ti ti-file-text text-sm"></i> MS Word
+                        </span>
+                        <span class="stack-badge flex items-center gap-1.5">
+                            <i class="ti ti-presentation text-sm"></i> MS PowerPoint
+                        </span>
+                        <span class="stack-badge flex items-center gap-1.5">
+                            <i class="ti ti-cloud text-sm"></i> OneDrive
+                        </span>
+                        <span class="stack-badge flex items-center gap-1.5">
+                            <i class="ti ti-brand-google text-sm"></i> Google Workspace
+                        </span>
                     </div>
                 </div>
 
