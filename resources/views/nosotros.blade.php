@@ -27,7 +27,7 @@
       </div>
       <div class="flex items-center justify-center gap-8 sm:gap-14 text-white/20">
         <div class="flex items-center gap-3">
-          <i class="ti ti-award text-2xl text-white/30"></i>
+          <i class="ti ti-award text-2xl text-white"></i>
           <div class="text-left">
             <div class="text-[11px] font-bold text-white/50 uppercase tracking-wider">Excelencia</div>
             <div class="text-[10px] text-white/25">Académica</div>
@@ -35,7 +35,7 @@
         </div>
         <div class="w-px h-10 bg-white/10"></div>
         <div class="flex items-center gap-3">
-          <i class="ti ti-bulb text-2xl text-white/30"></i>
+          <i class="ti ti-bulb text-2xl text-white"></i>
           <div class="text-left">
             <div class="text-[11px] font-bold text-white/50 uppercase tracking-wider">Innovación</div>
             <div class="text-[10px] text-white/25">Metodológica</div>
@@ -43,7 +43,7 @@
         </div>
         <div class="w-px h-10 bg-white/10"></div>
         <div class="flex items-center gap-3">
-          <i class="ti ti-heart-handshake text-2xl text-white/30"></i>
+          <i class="ti ti-heart-handshake text-2xl text-white"></i>
           <div class="text-left">
             <div class="text-[11px] font-bold text-white/50 uppercase tracking-wider">Compromiso</div>
             <div class="text-[10px] text-white/25">Permanente</div>
@@ -91,15 +91,19 @@
       </h2>
       <div class="grid sm:grid-cols-2 gap-8">
         <div class="border border-blueprint rounded-3xl p-8" style="background-color: var(--bg-card);">
-          <div class="mb-6 text-white/20"><i class="ti ti-target text-5xl"></i></div>
-          <h3 class="font-display text-xl font-bold mb-4 text-white uppercase">Misión</h3>
+          <div class="flex items-center gap-4 mb-4">
+            <i class="ti ti-target text-3xl text-white"></i>
+            <h3 class="font-display text-xl font-bold text-white uppercase">Misión</h3>
+          </div>
           <p class="text-white/40 text-sm leading-relaxed font-light">
             Brindar programas de capacitación, especialización y consultoría empresarial con altos estándares de calidad académica, orientados al desarrollo de competencias estratégicas, la actualización profesional continua y la aplicación práctica del conocimiento, contribuyendo al fortalecimiento del desempeño laboral y al crecimiento sostenible de las organizaciones.
           </p>
         </div>
         <div class="border border-blueprint rounded-3xl p-8" style="background-color: var(--bg-card);">
-          <div class="mb-6 text-white/20"><i class="ti ti-eye text-5xl"></i></div>
-          <h3 class="font-display text-xl font-bold mb-4 text-white uppercase">Visión</h3>
+          <div class="flex items-center gap-4 mb-4">
+            <i class="ti ti-eye text-3xl text-white"></i>
+            <h3 class="font-display text-xl font-bold text-white uppercase">Visión</h3>
+          </div>
           <p class="text-white/40 text-sm leading-relaxed font-light">
             Consolidarnos como una institución referente a nivel nacional en formación especializada y consultoría empresarial, reconocida por su excelencia académica, innovación metodológica y compromiso permanente con el desarrollo profesional y la mejora continua.
           </p>
@@ -116,29 +120,39 @@
         Valores institucionales
       </h2>
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        <div class="group border border-blueprint rounded-2xl p-6" style="background-color: var(--bg-card);" transition-all duration-300 hover:border-white/30">
-          <div class="mb-4 text-white/20 transition-colors duration-300 group-hover:text-white"><i class="ti ti-award text-4xl"></i></div>
-          <h4 class="font-display text-sm font-bold mb-2 text-white uppercase">Excelencia Académica</h4>
+        <div class="border border-blueprint rounded-2xl p-6" style="background-color: var(--bg-card);">
+          <div class="flex items-center gap-3 mb-3">
+            <i class="ti ti-award text-2xl text-white"></i>
+            <h4 class="font-display text-sm font-bold text-white uppercase">Excelencia Académica</h4>
+          </div>
           <p class="text-white/40 text-xs sm:text-sm leading-relaxed font-light">Promovemos altos estándares de calidad en nuestros programas formativos, garantizando contenidos actualizados y pertinentes.</p>
         </div>
-        <div class="group border border-blueprint rounded-2xl p-6" style="background-color: var(--bg-card);" transition-all duration-300 hover:border-white/30">
-          <div class="mb-4 text-white/20 transition-colors duration-300 group-hover:text-white"><i class="ti ti-shield-check text-4xl"></i></div>
-          <h4 class="font-display text-sm font-bold mb-2 text-white uppercase">Responsabilidad</h4>
+        <div class="border border-blueprint rounded-2xl p-6" style="background-color: var(--bg-card);">
+          <div class="flex items-center gap-3 mb-3">
+            <i class="ti ti-shield-check text-2xl text-white"></i>
+            <h4 class="font-display text-sm font-bold text-white uppercase">Responsabilidad</h4>
+          </div>
           <p class="text-white/40 text-xs sm:text-sm leading-relaxed font-light">Actuamos con compromiso, seriedad y cumplimiento en cada uno de nuestros procesos académicos y administrativos.</p>
         </div>
-        <div class="group border border-blueprint rounded-2xl p-6" style="background-color: var(--bg-card);" transition-all duration-300 hover:border-white/30">
-          <div class="mb-4 text-white/20 transition-colors duration-300 group-hover:text-white"><i class="ti ti-heart-handshake text-4xl"></i></div>
-          <h4 class="font-display text-sm font-bold mb-2 text-white uppercase">Ética Profesional</h4>
+        <div class="border border-blueprint rounded-2xl p-6" style="background-color: var(--bg-card);">
+          <div class="flex items-center gap-3 mb-3">
+            <i class="ti ti-heart-handshake text-2xl text-white"></i>
+            <h4 class="font-display text-sm font-bold text-white uppercase">Ética Profesional</h4>
+          </div>
           <p class="text-white/40 text-xs sm:text-sm leading-relaxed font-light">Desarrollamos nuestras actividades con transparencia, integridad y respeto hacia todos nuestros estudiantes y colaboradores.</p>
         </div>
-        <div class="group border border-blueprint rounded-2xl p-6" style="background-color: var(--bg-card);" transition-all duration-300 hover:border-white/30">
-          <div class="mb-4 text-white/20 transition-colors duration-300 group-hover:text-white"><i class="ti ti-bulb text-4xl"></i></div>
-          <h4 class="font-display text-sm font-bold mb-2 text-white uppercase">Innovación</h4>
+        <div class="border border-blueprint rounded-2xl p-6" style="background-color: var(--bg-card);">
+          <div class="flex items-center gap-3 mb-3">
+            <i class="ti ti-bulb text-2xl text-white"></i>
+            <h4 class="font-display text-sm font-bold text-white uppercase">Innovación</h4>
+          </div>
           <p class="text-white/40 text-xs sm:text-sm leading-relaxed font-light">Impulsamos metodologías modernas y el uso de herramientas tecnológicas que aporten valor real al aprendizaje.</p>
         </div>
-        <div class="group border border-blueprint rounded-2xl p-6" style="background-color: var(--bg-card);" transition-all duration-300 hover:border-white/30">
-          <div class="mb-4 text-white/20 transition-colors duration-300 group-hover:text-white"><i class="ti ti-hand-click text-4xl"></i></div>
-          <h4 class="font-display text-sm font-bold mb-2 text-white uppercase">Vocación de Servicio</h4>
+        <div class="border border-blueprint rounded-2xl p-6" style="background-color: var(--bg-card);">
+          <div class="flex items-center gap-3 mb-3">
+            <i class="ti ti-hand-click text-2xl text-white"></i>
+            <h4 class="font-display text-sm font-bold text-white uppercase">Vocación de Servicio</h4>
+          </div>
           <p class="text-white/40 text-xs sm:text-sm leading-relaxed font-light">Brindamos acompañamiento y atención oportuna, priorizando las necesidades de nuestra comunidad académica.</p>
         </div>
       </div>
@@ -153,19 +167,25 @@
         ¿A quién va dirigido?
       </h2>
       <div class="grid grid-cols-1 sm:grid-cols-3 gap-8">
-        <div class="group border border-blueprint rounded-2xl p-8" style="background-color: var(--bg-card);" transition-all duration-300 hover:border-white/30 text-center">
-          <div class="mb-6 text-white/20 transition-colors duration-300 group-hover:text-white"><i class="ti ti-school text-5xl"></i></div>
-          <h4 class="font-display text-base font-bold mb-3 text-white uppercase">Estudiantes</h4>
+        <div class="border border-blueprint rounded-2xl p-8" style="background-color: var(--bg-card);">
+          <div class="flex items-center gap-3 mb-4">
+            <i class="ti ti-school text-2xl text-white"></i>
+            <h4 class="font-display text-base font-bold text-white uppercase">Estudiantes</h4>
+          </div>
           <p class="text-white/40 text-sm leading-relaxed font-light">Que buscan complementar su formación universitaria con habilidades técnicas reales y demandadas.</p>
         </div>
-        <div class="group border border-blueprint rounded-2xl p-8" style="background-color: var(--bg-card);" transition-all duration-300 hover:border-white/30 text-center">
-          <div class="mb-6 text-white/20 transition-colors duration-300 group-hover:text-white"><i class="ti ti-rocket text-5xl"></i></div>
-          <h4 class="font-display text-base font-bold mb-3 text-white uppercase">Personas que inician</h4>
+        <div class="border border-blueprint rounded-2xl p-8" style="background-color: var(--bg-card);">
+          <div class="flex items-center gap-3 mb-4">
+            <i class="ti ti-rocket text-2xl text-white"></i>
+            <h4 class="font-display text-base font-bold text-white uppercase">Personas que inician</h4>
+          </div>
           <p class="text-white/40 text-sm leading-relaxed font-light">Que desean aprender programación desde cero, con una base sólida y acompañamiento constante.</p>
         </div>
-        <div class="group border border-blueprint rounded-2xl p-8" style="background-color: var(--bg-card);" transition-all duration-300 hover:border-white/30 text-center">
-          <div class="mb-6 text-white/20 transition-colors duration-300 group-hover:text-white"><i class="ti ti-briefcase text-5xl"></i></div>
-          <h4 class="font-display text-base font-bold mb-3 text-white uppercase">Profesionales</h4>
+        <div class="border border-blueprint rounded-2xl p-8" style="background-color: var(--bg-card);">
+          <div class="flex items-center gap-3 mb-4">
+            <i class="ti ti-briefcase text-2xl text-white"></i>
+            <h4 class="font-display text-base font-bold text-white uppercase">Profesionales</h4>
+          </div>
           <p class="text-white/40 text-sm leading-relaxed font-light">Que quieren mejorar su perfil tecnológico y acceder a mejores oportunidades laborales.</p>
         </div>
       </div>
@@ -180,24 +200,32 @@
         ¿Por qué elegirnos?
       </h2>
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-        <div class="group border border-blueprint rounded-2xl p-6" style="background-color: var(--bg-card);" transition-all duration-300 hover:border-white/30">
-          <div class="mb-4 text-white/20 transition-colors duration-300 group-hover:text-white"><i class="ti ti-code text-4xl"></i></div>
-          <h4 class="font-display text-sm font-bold mb-2 text-white uppercase">Contenido práctico</h4>
+        <div class="border border-blueprint rounded-2xl p-6" style="background-color: var(--bg-card);">
+          <div class="flex items-center gap-3 mb-3">
+            <i class="ti ti-code text-2xl text-white"></i>
+            <h4 class="font-display text-sm font-bold text-white uppercase">Contenido práctico</h4>
+          </div>
           <p class="text-white/40 text-xs sm:text-sm leading-relaxed font-light">Aprendes haciendo, no solo mirando teoría. Proyectos reales desde el primer día.</p>
         </div>
-        <div class="group border border-blueprint rounded-2xl p-6" style="background-color: var(--bg-card);" transition-all duration-300 hover:border-white/30">
-          <div class="mb-4 text-white/20 transition-colors duration-300 group-hover:text-white"><i class="ti ti-user-star text-4xl"></i></div>
-          <h4 class="font-display text-sm font-bold mb-2 text-white uppercase">Docentes con experiencia</h4>
+        <div class="border border-blueprint rounded-2xl p-6" style="background-color: var(--bg-card);">
+          <div class="flex items-center gap-3 mb-3">
+            <i class="ti ti-user-star text-2xl text-white"></i>
+            <h4 class="font-display text-sm font-bold text-white uppercase">Docentes con experiencia</h4>
+          </div>
           <p class="text-white/40 text-xs sm:text-sm leading-relaxed font-light">Profesionales activos en el sector tecnológico que conocen las exigencias del mercado.</p>
         </div>
-        <div class="group border border-blueprint rounded-2xl p-6" style="background-color: var(--bg-card);" transition-all duration-300 hover:border-white/30">
-          <div class="mb-4 text-white/20 transition-colors duration-300 group-hover:text-white"><i class="ti ti-trending-up text-4xl"></i></div>
-          <h4 class="font-display text-sm font-bold mb-2 text-white uppercase">Enfoque laboral</h4>
+        <div class="border border-blueprint rounded-2xl p-6" style="background-color: var(--bg-card);">
+          <div class="flex items-center gap-3 mb-3">
+            <i class="ti ti-trending-up text-2xl text-white"></i>
+            <h4 class="font-display text-sm font-bold text-white uppercase">Enfoque laboral</h4>
+          </div>
           <p class="text-white/40 text-xs sm:text-sm leading-relaxed font-light">Pensado para el mundo real y el empleo. Cada curso está alineado al mercado laboral actual.</p>
         </div>
-        <div class="group border border-blueprint rounded-2xl p-6" style="background-color: var(--bg-card);" transition-all duration-300 hover:border-white/30">
-          <div class="mb-4 text-white/20 transition-colors duration-300 group-hover:text-white"><i class="ti ti-refresh text-4xl"></i></div>
-          <h4 class="font-display text-sm font-bold mb-2 text-white uppercase">Contenido actualizado</h4>
+        <div class="border border-blueprint rounded-2xl p-6" style="background-color: var(--bg-card);">
+          <div class="flex items-center gap-3 mb-3">
+            <i class="ti ti-refresh text-2xl text-white"></i>
+            <h4 class="font-display text-sm font-bold text-white uppercase">Contenido actualizado</h4>
+          </div>
           <p class="text-white/40 text-xs sm:text-sm leading-relaxed font-light">Tecnologías y buenas prácticas actuales. Actualizamos constantemente nuestros programas.</p>
         </div>
       </div>

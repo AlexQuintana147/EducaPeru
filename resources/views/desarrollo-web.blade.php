@@ -47,7 +47,7 @@
       </div>
       <div class="flex items-center justify-center gap-8 sm:gap-14 text-white/20">
         <div class="flex items-center gap-3">
-          <i class="ti ti-clock text-2xl text-white/30"></i>
+          <i class="ti ti-clock text-2xl text-white"></i>
           <div class="text-left">
             <div class="text-[11px] font-bold text-white/50 uppercase tracking-wider">24/7</div>
             <div class="text-[10px] text-white/25">Presencia</div>
@@ -55,7 +55,7 @@
         </div>
         <div class="w-px h-10 bg-white/10"></div>
         <div class="flex items-center gap-3">
-          <i class="ti ti-device-mobile text-2xl text-white/30"></i>
+          <i class="ti ti-device-mobile text-2xl text-white"></i>
           <div class="text-left">
             <div class="text-[11px] font-bold text-white/50 uppercase tracking-wider">Responsive</div>
             <div class="text-[10px] text-white/25">Diseño</div>
@@ -63,7 +63,7 @@
         </div>
         <div class="w-px h-10 bg-white/10"></div>
         <div class="flex items-center gap-3">
-          <i class="ti ti-rocket text-2xl text-white/30"></i>
+          <i class="ti ti-rocket text-2xl text-white"></i>
           <div class="text-left">
             <div class="text-[11px] font-bold text-white/50 uppercase tracking-wider">SEO</div>
             <div class="text-[10px] text-white/25">Optimizado</div>
@@ -78,31 +78,31 @@
     <div class="max-w-7xl mx-auto">
       <div class="grid grid-cols-1 md:grid-cols-3 gap-y-16 md:gap-x-12 lg:gap-x-20">
 
-        <div class="group">
-          <div class="mb-8 text-white/20 transition-colors duration-300 group-hover:text-white">
-            <i class="ti ti-clock text-6xl font-thin"></i>
+        <div>
+          <div class="flex items-center gap-4 mb-4">
+            <i class="ti ti-clock text-3xl text-white"></i>
+            <h3 class="font-display text-2xl font-bold text-white">Presencia 24/7</h3>
           </div>
-          <h3 class="font-display text-2xl font-bold mb-4 text-white">Presencia 24/7</h3>
           <p class="text-white/40 leading-relaxed font-light text-sm sm:text-base">
             Tu negocio nunca duerme. Construimos plataformas robustas que funcionan sin interrupciones, captando clientes mientras tú descansas.
           </p>
         </div>
 
-        <div class="group">
-          <div class="mb-8 text-white/20 transition-colors duration-300 group-hover:text-white">
-            <i class="ti ti-briefcase text-6xl font-thin"></i>
+        <div>
+          <div class="flex items-center gap-4 mb-4">
+            <i class="ti ti-briefcase text-3xl text-white"></i>
+            <h3 class="font-display text-2xl font-bold text-white">Imagen Profesional</h3>
           </div>
-          <h3 class="font-display text-2xl font-bold mb-4 text-white">Imagen Profesional</h3>
           <p class="text-white/40 leading-relaxed font-light text-sm sm:text-base">
             La primera impresión es la que cuenta. Diseñamos estéticas que elevan el valor percibido de tu marca al nivel de las grandes empresas.
           </p>
         </div>
 
-        <div class="group">
-          <div class="mb-8 text-white/20 transition-colors duration-300 group-hover:text-white">
-            <i class="ti ti-users text-6xl font-thin"></i>
+        <div>
+          <div class="flex items-center gap-4 mb-4">
+            <i class="ti ti-users text-3xl text-white"></i>
+            <h3 class="font-display text-2xl font-bold text-white">Más Contactos</h3>
           </div>
-          <h3 class="font-display text-2xl font-bold mb-4 text-white">Más Contactos</h3>
           <p class="text-white/40 leading-relaxed font-light text-sm sm:text-base">
             No solo es diseño, es psicología. Optimizamos cada sección para guiar al visitante hacia la acción, aumentando tus prospectos reales.
           </p>
@@ -155,7 +155,7 @@
   <!-- ═══════ TESTIMONIAL ═══════ -->
   <section class="py-32 px-4 sm:px-10 border-y border-blueprint bg-white/[0.01]">
     <div class="max-w-4xl mx-auto text-center">
-      <i class="ti ti-quote text-5xl text-white/20 mb-10 block"></i>
+      <i class="ti ti-quote text-5xl text-white mb-10 block"></i>
       <blockquote class="font-display text-xl sm:text-2xl md:text-3xl lg:text-4xl font-medium leading-tight tracking-tight mb-12 italic text-white/90">
         "Triplicamos nuestros contactos desde que lanzamos la nueva web. Y lo mejor, no tuve que aprender nada de programación ni preocuparme por servidores."
       </blockquote>
