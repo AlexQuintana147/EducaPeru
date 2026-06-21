@@ -8,12 +8,48 @@
   {{-- HERO --}}
   <section class="relative hero-full px-4 sm:px-10 border-b border-blueprint">
     <div class="max-w-5xl mx-auto text-center relative z-10">
+      <div class="inline-block px-4 py-1.5 border border-blueprint rounded-full text-[10px] font-bold uppercase tracking-[0.3em] text-white/40 mb-12">
+        Sobre Nosotros
+      </div>
       <h1 class="font-display text-4xl sm:text-6xl md:text-7xl lg:text-[100px] font-extrabold leading-[0.95] sm:leading-[0.9] tracking-tighter mb-8 text-white uppercase">
         FORMAMOS<br><span class="text-white/20">DESARROLLADORES</span>
       </h1>
-      <p class="text-white/40 text-base sm:text-lg md:text-xl max-w-2xl mx-auto font-light leading-relaxed">
+      <p class="text-white/40 text-base sm:text-lg md:text-xl max-w-2xl mx-auto mb-16 font-light leading-relaxed">
         Plataforma de capacitaciones enfocada en enseñar programación de forma práctica, accesible y alineada al mercado laboral.
       </p>
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-6 mb-20">
+        <a href="#valores" class="w-full sm:w-auto px-10 py-5 bg-white text-black font-display font-bold text-sm uppercase tracking-widest btn-glow text-center">
+          Nuestros valores
+        </a>
+        <a href="/capacitaciones" class="w-full sm:w-auto px-10 py-5 border border-blueprint text-white font-display font-bold text-sm uppercase tracking-widest hover:bg-white/5 transition-all text-center">
+          Ver cursos
+        </a>
+      </div>
+      <div class="flex items-center justify-center gap-8 sm:gap-14 text-white/20">
+        <div class="flex items-center gap-3">
+          <i class="ti ti-award text-2xl text-white/30"></i>
+          <div class="text-left">
+            <div class="text-[11px] font-bold text-white/50 uppercase tracking-wider">Excelencia</div>
+            <div class="text-[10px] text-white/25">Académica</div>
+          </div>
+        </div>
+        <div class="w-px h-10 bg-white/10"></div>
+        <div class="flex items-center gap-3">
+          <i class="ti ti-bulb text-2xl text-white/30"></i>
+          <div class="text-left">
+            <div class="text-[11px] font-bold text-white/50 uppercase tracking-wider">Innovación</div>
+            <div class="text-[10px] text-white/25">Metodológica</div>
+          </div>
+        </div>
+        <div class="w-px h-10 bg-white/10"></div>
+        <div class="flex items-center gap-3">
+          <i class="ti ti-heart-handshake text-2xl text-white/30"></i>
+          <div class="text-left">
+            <div class="text-[11px] font-bold text-white/50 uppercase tracking-wider">Compromiso</div>
+            <div class="text-[10px] text-white/25">Permanente</div>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -54,14 +90,14 @@
         Nuestro norte
       </h2>
       <div class="grid sm:grid-cols-2 gap-8">
-        <div class="border border-blueprint rounded-3xl p-8" style="background-color: var(--bg-card);">>
+        <div class="border border-blueprint rounded-3xl p-8" style="background-color: var(--bg-card);">
           <div class="mb-6 text-white/20"><i class="ti ti-target text-5xl"></i></div>
           <h3 class="font-display text-xl font-bold mb-4 text-white uppercase">Misión</h3>
           <p class="text-white/40 text-sm leading-relaxed font-light">
             Brindar programas de capacitación, especialización y consultoría empresarial con altos estándares de calidad académica, orientados al desarrollo de competencias estratégicas, la actualización profesional continua y la aplicación práctica del conocimiento, contribuyendo al fortalecimiento del desempeño laboral y al crecimiento sostenible de las organizaciones.
           </p>
         </div>
-        <div class="border border-blueprint rounded-3xl p-8" style="background-color: var(--bg-card);">>
+        <div class="border border-blueprint rounded-3xl p-8" style="background-color: var(--bg-card);">
           <div class="mb-6 text-white/20"><i class="ti ti-eye text-5xl"></i></div>
           <h3 class="font-display text-xl font-bold mb-4 text-white uppercase">Visión</h3>
           <p class="text-white/40 text-sm leading-relaxed font-light">
@@ -73,7 +109,7 @@
   </section>
 
   {{-- VALORES --}}
-  <section class="py-32 px-4 sm:px-10 border-b border-blueprint">
+  <section id="valores" class="py-32 px-4 sm:px-10 border-b border-blueprint">
     <div class="max-w-5xl mx-auto">
       <div class="section-label">Valores</div>
       <h2 class="font-display text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tighter mb-16 text-white uppercase">

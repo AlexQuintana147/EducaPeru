@@ -8,19 +8,38 @@
   <!-- HERO -->
   <section class="relative hero-full px-4 sm:px-10">
     <div class="max-w-5xl mx-auto text-center relative z-10">
+      <div class="inline-block px-4 py-1.5 border border-blueprint rounded-full text-[10px] font-bold uppercase tracking-[0.3em] text-white/40 mb-12">
+        Capacitación Profesional en Programación
+      </div>
       <h1 class="font-display text-4xl sm:text-6xl md:text-7xl lg:text-[100px] font-extrabold leading-[0.95] sm:leading-[0.9] tracking-tighter mb-8 text-white uppercase">
         FORMAMOS<br>DESARROLLADORES.
       </h1>
       <p class="text-white/40 text-base sm:text-lg md:text-xl max-w-2xl mx-auto mb-16 font-light leading-relaxed">
         Programas especializados en tecnologías modernas para equipos de alto rendimiento y empresas que quieren crecer.
       </p>
-      <div class="flex flex-col sm:flex-row items-center justify-center gap-6">
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-6 mb-20">
         <a href="/capacitaciones" class="w-full sm:w-auto px-10 py-5 bg-white text-black font-display font-bold text-sm uppercase tracking-widest btn-glow text-center">
           Ver capacitaciones
         </a>
         <a href="/desarrollo-web" class="w-full sm:w-auto px-10 py-5 border border-blueprint text-white font-display font-bold text-sm uppercase tracking-widest hover:bg-white/5 transition-all text-center">
           Desarrollo web
         </a>
+      </div>
+      <div class="flex items-center justify-center gap-8 sm:gap-14 text-white/20">
+        <div class="text-center">
+          <div class="font-display text-2xl sm:text-3xl font-extrabold text-white/60">+50</div>
+          <div class="text-[10px] uppercase tracking-[0.2em] mt-1">Estudiantes</div>
+        </div>
+        <div class="w-px h-10 bg-white/10"></div>
+        <div class="text-center">
+          <div class="font-display text-2xl sm:text-3xl font-extrabold text-white/60">98%</div>
+          <div class="text-[10px] uppercase tracking-[0.2em] mt-1">Satisfacción</div>
+        </div>
+        <div class="w-px h-10 bg-white/10"></div>
+        <div class="text-center">
+          <div class="font-display text-2xl sm:text-3xl font-extrabold text-white/60">3</div>
+          <div class="text-[10px] uppercase tracking-[0.2em] mt-1">Programas</div>
+        </div>
       </div>
     </div>
   </section>
