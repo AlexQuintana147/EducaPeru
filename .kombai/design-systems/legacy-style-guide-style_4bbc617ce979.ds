@@ -1,0 +1,176 @@
+---
+name: "[Legacy SG] framer-inspiration"
+slug: legacy-style-guide-style_4bbc617ce979
+modes: [light]
+color:
+  palette:
+    canvas: "#ffffff"
+    ink: "#1a1a1a"
+    ink-2: "#555555"
+    ink-3: "#8a8a8a"
+    line: "#e2e2e2"
+    primary: "#ffffff"
+    on-primary: "#000000"
+    secondary-bg: "rgba(255,255,255,0.1)"
+    on-surface: "#ffffff"
+    on-surface-secondary: "rgba(255,255,255,0.6)"
+    on-surface-muted: "rgba(255,255,255,0.4)"
+    surface: "#000000"
+    surface-card: "#0e0e0e"
+    control-fill: "#eeeeee"
+    hairline: "rgba(255,255,255,0.1)"
+  semantic:
+    background.canvas: "{color.palette.canvas}"
+    surface.default: "{color.palette.canvas}"
+    surface.raised: "{color.palette.canvas}"
+    text.primary: "{color.palette.ink}"
+    text.secondary: "{color.palette.ink-2}"
+    text.tertiary: "{color.palette.ink-3}"
+    text.link: "{color.palette.primary}"
+    border.default: "{color.palette.line}"
+    border.focus: "{color.palette.primary}"
+    primary.bg: "{color.palette.primary}"
+    primary.fg: "{color.palette.on-primary}"
+typography:
+  family: { primary: "\"GT Walsheim\", \"GT Walsheim Medium\", sans-serif" }
+  textStyle:
+    heading-lg: { fontFamily: "\"GT Walsheim\", \"GT Walsheim Medium\", sans-serif", fontSize: "24px", fontWeight: 600, lineHeight: 1.2 }
+    body-md: { fontFamily: "\"GT Walsheim\", \"GT Walsheim Medium\", sans-serif", fontSize: "15px", fontWeight: 400, lineHeight: 1.5 }
+spacing:
+  base: "8px"
+  scale: "[4px, 8px, 12px, 16px, 24px, 32px, 48px, 64px, 96px]"
+radius:
+  control: "8px"
+  pill: "40px"
+  card: "24px"
+---
+
+> Migrated from a legacy style guide.
+> The palette above is mapped from the original tokens, which are also preserved below.
+
+## Legacy style-guide tokens
+
+### Colors
+
+- `primary`: `#ffffff`
+- `on-primary`: `#000000`
+- `secondary-bg`: `rgba(255,255,255,0.1)`
+- `on-surface`: `#ffffff`
+- `on-surface-secondary`: `rgba(255,255,255,0.6)`
+- `on-surface-muted`: `rgba(255,255,255,0.4)`
+- `surface`: `#000000`
+- `surface-card`: `#0e0e0e`
+- `control-fill`: `#eeeeee`
+- `hairline`: `rgba(255,255,255,0.1)`
+
+### Typography
+
+- `font-display`: `{"family":"\"GT Walsheim\", \"GT Walsheim Medium\", sans-serif","size":"","url":""}`
+- `font-body`: `{"family":"\"Inter Variable\", \"Inter\", sans-serif","size":"","url":""}`
+- `font-button`: `{"family":"\"Inter\", sans-serif","size":"","url":""}`
+- `display`: `{"family":"{typography.font-display}","size":"84px","url":""}`
+- `title`: `{"family":"{typography.font-display}","size":"48px","url":""}`
+- `subhead`: `{"family":"{typography.font-body}","size":"18px","url":""}`
+- `feature-title`: `{"family":"{typography.font-body}","size":"18px","url":""}`
+- `body`: `{"family":"{typography.font-body}","size":"14px","url":""}`
+
+### Spacing
+
+- `base`: `8px`
+- `scale`: `[4px, 8px, 12px, 16px, 24px, 32px, 48px, 64px, 96px]`
+
+### Radius
+
+- `control`: `8px`
+- `pill`: `40px`
+- `card`: `24px`
+
+## Design instructions
+
+## Token Instructions
+
+- `primary` (#ffffff) -> the white pill primary button surface ("Start for free"), with black label
+- `secondary-bg` (white @10%) -> secondary pill buttons and control fills ("Start with AI", "Find an Expert")
+- `on-surface-secondary` (white @60%) -> hero sub-paragraph and feature descriptions
+- `surface` (#000000) -> pure-black page; introduce no brand accent, color comes from the work
+- `surface-card` -> dark feature panels paired with a faint `hairline` (white @10%) border
+- `control-fill` (#eeeeee) -> light in-product controls shown inside product mockups
+- `font-display` (GT Walsheim) -> huge, very tight headlines (-0.05em, sub-1.0 leading); OSS substitute Geist or Aeonik
+- `font-body` / `font-button` (Inter) -> body copy and SemiBold buttons
+- `rounded.pill` (40px) -> marketing buttons; `rounded.control` (8px) -> in-product controls; `rounded.card` (24px) -> showcase and feature cards
+
+# Framer
+
+**framer-design — version alpha**
+
+Surfaces studied via Playwright (framer.com home): computed styles + screenshots. Framer's marketing site (built in Framer) exposes no semantic `:root` brand vars, so values are read from **computed styles** on representative elements — high-confidence on type (GT Walsheim / Inter), the black canvas, and the white/dark pill buttons.
+
+## Overview
+
+Framer's canvas is **bold and gallery-first**: pure black (`{colors.surface}` #000) with white text, designed to make **work** the hero. Display type is **GT Walsheim Medium** run **huge and extremely tight** — the hero "Build better sites, faster" is **84px / weight 500 / -0.05em** with sub-1.0 line-height, so the words nearly stack. Body and UI use **Inter** (with Inter SemiBold for buttons). The brand chrome is **strictly monochrome black/white**: a **white pill** primary ("Start for free") and a **dark translucent pill** secondary ("Start with AI"). All the color in the page comes from a **dense bento wall of vivid customer-site thumbnails** (orange, blue, lime, editorial spreads) — Framer shows, rather than decorates. Geometry is **rounded** (pill buttons, 8px in-product controls, ~24px showcase cards) and the page is **flat** — no shadows — letting typography and the work carry it.
+
+## Colors
+
+- **White — `{colors.primary}` #fff.** The primary action surface (the "Start for free" pill, black label).
+- **Dark translucent — `{colors.secondary-bg}` (white @10%).** Secondary pill buttons and control fills ("Start with AI", "Find an Expert").
+- **Ink.** White `{colors.on-surface}` for headlines; **white @60%** `{colors.on-surface-secondary}` for the hero sub-paragraph and feature descriptions; white @40% for the faintest tier.
+- **Surfaces.** Pure-black page; dark `{colors.surface-card}` (~#0e0e0e) feature panels with a faint white-alpha border; a light `{colors.control-fill}` (#eee) for controls shown inside product mockups.
+- **Color = the work.** Framer uses **no brand accent**; chroma comes entirely from the embedded customer-site thumbnails in the showcase wall. This is the defining discipline.
+
+## Typography
+
+- **GT Walsheim Medium** — display. Closest open-source substitute: **Geist** or Aeonik (geometric grotesque). The signature is **huge size + very tight tracking (-0.05em) + sub-1.0 leading**.
+- **Inter** — body (14px) and the muted sub-paragraph (18px/white@60%); **Inter SemiBold** for buttons. (Inter is open source.)
+
+| Token | Family | Size | Weight | Line-height | Tracking | Usage |
+|---|---|---|---|---|---|---|
+| display | GT Walsheim | 84px | 500 | 0.85 | -0.05em | Hero |
+| title | GT Walsheim | 48px | 500 | 1.1 | -0.0375em | Section heads |
+| subhead | Inter | 18px | 400 | 1.2 | -0.01em | Hero sub (white@60%) |
+| feature-title | Inter | 18px | 500 | — | normal | "AI / Design / CMS" |
+| body | Inter | 14px | 400 | 1.4 | normal | Body / captions |
+
+## Layout
+
+Base 8px. The hero is **centered**: small kicker, giant GT Walsheim headline, muted Inter sub-paragraph, two pills. Below sits the signature **bento/masonry showcase wall** — many rounded customer-site thumbnails in varied sizes, scrolling/parallaxing. Feature sections use a **left-aligned text column** (title + muted body + "Learn more ›") beside a **large rounded card**; a testimonial carousel and an expert-grid (2-up rounded cards with avatar + name + country) follow. Whitespace is generous; the work dominates.
+
+## Elevation & Depth
+
+**Flat.** No shadow ladder; feature cards are dark fills with a 1px white-alpha border on black. Depth comes from the **layered, parallaxing showcase wall** of thumbnails and the contrast of bright work against the black canvas.
+
+## Shapes
+
+Rounded: **40px pills** (`{rounded.pill}`) for marketing buttons (effectively full), **8px** for in-product controls/inputs, and **~24px** for large showcase/feature cards. The mix of big pills and large card radii reads modern and confident.
+
+## Components
+
+- **Primary button `{components.button-primary}`** — white pill, black SemiBold label ("Start for free").
+- **Secondary button `{components.button-secondary}`** — dark translucent pill ("Start with AI", "Find an Expert").
+- **Control button `{components.button-control}`** — light #eee, 8px radius, shown inside product mockups.
+- **Showcase card `{components.card-showcase}`** — live colorful customer-site thumbnail in a rounded frame; tiled into the bento wall.
+- **Feature card `{components.card-feature}`** — dark fill, 1px white-alpha border, ~24px radius (AI / Design / CMS / Collaborate panels).
+- **Link CTA `{components.link-cta}`** — white text with trailing "›".
+
+## Motion
+
+Smooth scroll-driven reveals; the **showcase wall scrolls and parallaxes**, and testimonial/expert carousels advance via circular arrow buttons. Polished and fluid — fitting for a site-building/animation tool — without being gimmicky.
+
+## Iconography
+
+Thin **outline monoline** icons, white; chevron "›" trails "Learn more" links. The logo is the **white folded-F Framer mark**. Customer/integration logos render white in the trust strip. Sizes 16/20/24px.
+
+## Do's and Don'ts
+
+- **Do** keep the canvas pure black with white text.
+- **Do** set headlines in GT Walsheim Medium **huge and very tight** (-0.05em, sub-1.0 leading).
+- **Do** keep UI monochrome — white pill primary, dark pill secondary.
+- **Do** let color come from the **bento wall of customer-site thumbnails**.
+- **Do** use Inter for body and the muted white@60% sub-paragraph.
+- **Don't** introduce a brand accent color — the work provides the color.
+- **Don't** add drop shadows; cards are flat with a faint border.
+- **Don't** loosen the display tracking — tightness is the signature.
+
+## Known Gaps
+
+- Framer's site exposes no semantic `:root` tokens; card gray and showcase radius are nearest-hex / inferred from rendering.
+- GT Walsheim is proprietary; weight axis names beyond Medium (500) not enumerated. Hero size scales responsively above 84px.
