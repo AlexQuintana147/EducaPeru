@@ -35,7 +35,7 @@
         Eliminamos la fricción técnica para que puedas concentrarte en lo que importa: hacer crecer tu negocio con una web que proyecta confianza y calidad.
       </p>
       <div class="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 mb-8 sm:mb-16 hero-buttons-container">
-        <a href="#contacto" class="w-full sm:w-auto px-8 sm:px-10 py-4 sm:py-5 bg-white text-black font-display font-bold text-xs sm:text-sm uppercase tracking-widest btn-glow text-center">
+        <a href="https://wa.me/51976277534?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20el%20desarrollo%20web." target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto px-8 sm:px-10 py-4 sm:py-5 bg-white text-black font-display font-bold text-xs sm:text-sm uppercase tracking-widest btn-glow text-center">
           Empezar Ahora
         </a>
         <a href="#proceso" class="w-full sm:w-auto px-8 sm:px-10 py-4 sm:py-5 border border-blueprint text-white font-display font-bold text-xs sm:text-sm uppercase tracking-widest hover:bg-white/5 transition-all text-center">

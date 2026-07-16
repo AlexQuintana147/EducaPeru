@@ -184,6 +184,19 @@
         </div>
     </section>
 
+    {{-- DISCOUNT BANNER --}}
+    <section class="px-4 sm:px-10 py-6 border-b border-blueprint" style="background-color: rgba(255,255,255,0.02);">
+        <div class="max-w-5xl mx-auto flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 text-center sm:text-left">
+            <span class="text-white/70 text-sm font-light">
+                ¿Te interesan varios cursos? <strong class="text-white">A partir del segundo curso</strong> tienes un descuento personalizado.
+            </span>
+            <a href="https://wa.me/51957290861?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20el%20descuento%20por%20varios%20cursos." target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-white font-display font-bold text-xs uppercase tracking-widest hover:text-white/70 transition-colors whitespace-nowrap">
+                <i class="ti ti-brand-whatsapp text-lg"></i>
+                Consúltalo aquí
+            </a>
+        </div>
+    </section>
+
     {{-- COURSES --}}
     <section id="cursos" class="py-16 sm:py-24 md:py-32 px-4 sm:px-10">
         <div class="max-w-7xl mx-auto">

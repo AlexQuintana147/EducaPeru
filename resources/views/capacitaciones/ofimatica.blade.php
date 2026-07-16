@@ -174,8 +174,23 @@
                             <span class="font-display text-3xl font-extrabold text-white">S/ 49.90</span>
                             <span class="text-white/30 line-through text-sm">S/ 100.00</span>
                         </div>
+                        <div class="text-xs text-white/60 mt-1">Mensual</div>
                         <div class="text-[10px] text-white/40 mt-2">Válido hasta el 2 de agosto</div>
                     </div>
+
+                    <div class="grid grid-cols-2 gap-3">
+                        <div class="border border-blueprint p-3 text-center" style="background-color: rgba(255,255,255,0.02);">
+                            <div class="text-[10px] uppercase tracking-widest text-white/30 mb-1">Fecha de inicio</div>
+                            <div class="font-display text-base font-extrabold text-white">8 ago</div>
+                            <div class="text-[10px] text-white/40">Sábado</div>
+                        </div>
+                        <div class="border border-blueprint p-3 text-center" style="background-color: rgba(255,255,255,0.02);">
+                            <div class="text-[10px] uppercase tracking-widest text-white/30 mb-1">Fecha de fin</div>
+                            <div class="font-display text-base font-extrabold text-white">26 sep</div>
+                            <div class="text-[10px] text-white/40">Sábado</div>
+                        </div>
+                    </div>
+
                     <ul class="space-y-3">
                         <li class="flex items-center gap-3 text-white/60 text-sm font-light">
                             <i class="ti ti-clock text-white/40 text-lg"></i>
@@ -202,9 +217,9 @@
                             <span>Plataformas: <strong class="text-white/80">Google Meet y Moodle</strong></span>
                         </li>
                     </ul>
-                    <button class="w-full py-3 bg-white text-black font-display font-bold text-xs uppercase tracking-widest btn-glow text-center">
+                    <a href="https://wa.me/51957290861?text=Hola%2C%20quiero%20inscribirme%20al%20curso%20de%20Ofim%C3%A1tica%20Profesional." target="_blank" rel="noopener noreferrer" class="block w-full py-3 bg-white text-black font-display font-bold text-xs uppercase tracking-widest btn-glow text-center">
                         Inscribirme Ahora
-                    </button>
+                    </a>
                     <div class="text-[10px] text-center text-white/30">
                         8 de agosto – 26 de septiembre. Cupos limitados.
                     </div>
@@ -421,7 +436,21 @@
                             <span class="font-display text-3xl sm:text-4xl font-extrabold text-white">S/ 49.90</span>
                             <span class="text-white/30 line-through text-sm">S/ 100.00</span>
                         </div>
+                        <div class="text-xs text-white/60 mt-1">Mensual</div>
                         <div class="text-[10px] text-white/40 mt-2">Válido hasta el 2 de agosto</div>
+                    </div>
+
+                    <div class="grid grid-cols-2 gap-3">
+                        <div class="border border-blueprint p-3 text-center" style="background-color: rgba(255,255,255,0.02);">
+                            <div class="text-[10px] uppercase tracking-widest text-white/30 mb-1">Fecha de inicio</div>
+                            <div class="font-display text-base sm:text-lg font-extrabold text-white">8 ago</div>
+                            <div class="text-[10px] text-white/40">Sábado</div>
+                        </div>
+                        <div class="border border-blueprint p-3 text-center" style="background-color: rgba(255,255,255,0.02);">
+                            <div class="text-[10px] uppercase tracking-widest text-white/30 mb-1">Fecha de fin</div>
+                            <div class="font-display text-base sm:text-lg font-extrabold text-white">26 sep</div>
+                            <div class="text-[10px] text-white/40">Sábado</div>
+                        </div>
                     </div>
 
                     <div class="w-full h-px bg-white/10"></div>
@@ -454,9 +483,9 @@
                         </li>
                     </ul>
 
-                    <button class="w-full py-4 bg-white text-black font-display font-bold text-xs uppercase tracking-widest btn-glow text-center">
+                    <a href="https://wa.me/51957290861?text=Hola%2C%20quiero%20inscribirme%20al%20curso%20de%20Ofim%C3%A1tica%20Profesional." target="_blank" rel="noopener noreferrer" class="block w-full py-4 bg-white text-black font-display font-bold text-xs uppercase tracking-widest btn-glow text-center">
                         Inscribirme Ahora
-                    </button>
+                    </a>
 
                     <div class="text-[10px] text-center text-white/30">
                         8 de agosto – 26 de septiembre. Cupos limitados.
