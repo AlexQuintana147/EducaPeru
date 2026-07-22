@@ -22,3 +22,7 @@ Route::get('/capacitaciones/ofimatica', function () {
     return view('capacitaciones.ofimatica');
 });
 
+Route::get('/capacitaciones/python', function () {
+    return view('capacitaciones.python');
+});
+

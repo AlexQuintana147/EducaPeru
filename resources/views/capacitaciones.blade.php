@@ -231,10 +231,9 @@
                 </a>
 
                 {{-- Python --}}
-                <div class="c-card">
+                <a href="/capacitaciones/python" class="c-card block">
                     <div class="cpp-thumb" style="position:absolute;inset:0;width:100%;height:100%;background-image: url('https://alex123456.x02.me/i/3W5R.png'); background-size: cover; background-position: center; background-repeat: no-repeat;">
                     </div>
-                    <span class="c-badge badge-soon" style="z-index:3;">Próximamente</span>
                     <div class="c-overlay">
                         <div class="c-overlay-title">Programación en Python</div>
                         <div class="c-overlay-row">
@@ -244,13 +243,13 @@
                                 </div>
                                 4 horas a la semana
                             </div>
-                            <div class="btn-go-disabled">
+                            <span class="btn-go">
                                 <svg width="12" height="12" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
-                                Próximamente
-                            </div>
+                                Ir al curso
+                            </span>
                         </div>
                     </div>
-                </div>
+                </a>
                 
                 {{-- C++ --}}
                 <div class="c-card">
