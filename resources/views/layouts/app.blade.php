@@ -313,19 +313,19 @@
                 </p>
                 {{-- Social icons --}}
                 <div class="flex gap-2">
-                    <a href="#" aria-label="Facebook"
+                    <a href="https://web.facebook.com/profile.php?id=61592206799070" aria-label="Facebook" target="_blank" rel="noopener noreferrer"
                        class="w-10 h-10 rounded-xl border border-blueprint flex items-center justify-center text-white/30 hover:text-white hover:border-white/30 transition-all">
                         <i class="ti ti-brand-facebook text-lg"></i>
                     </a>
-                    <a href="#" aria-label="TikTok"
+                    <a href="https://www.tiktok.com/@educaperusac" aria-label="TikTok" target="_blank" rel="noopener noreferrer"
                        class="w-10 h-10 rounded-xl border border-blueprint flex items-center justify-center text-white/30 hover:text-white hover:border-white/30 transition-all">
                         <i class="ti ti-brand-tiktok text-lg"></i>
                     </a>
-                    <a href="#" aria-label="WhatsApp"
+                    <a href="https://wa.me/51957290861?text=Hola%2C%20tengo%20una%20consulta%20sobre%20sus%20servicios." aria-label="WhatsApp" target="_blank" rel="noopener noreferrer"
                        class="w-10 h-10 rounded-xl border border-blueprint flex items-center justify-center text-white/30 hover:text-white hover:border-white/30 transition-all">
                         <i class="ti ti-brand-whatsapp text-lg"></i>
                     </a>
-                    <a href="#" aria-label="Instagram"
+                    <a href="https://www.instagram.com/educaperusac/" aria-label="Instagram" target="_blank" rel="noopener noreferrer"
                        class="w-10 h-10 rounded-xl border border-blueprint flex items-center justify-center text-white/30 hover:text-white hover:border-white/30 transition-all">
                         <i class="ti ti-brand-instagram text-lg"></i>
                     </a>
@@ -345,7 +345,7 @@
                 <div>
                     <div class="font-display text-[11px] font-extrabold tracking-[0.14em] uppercase text-white mb-5">Cursos</div>
                     <ul class="space-y-3">
-                        <li><a href="#" class="footer-link">Ofimática</a></li>
+                        <li><a href="/capacitaciones/ofimatica" class="footer-link">Ofimática</a></li>
                         <li><a href="#" class="footer-link flex items-center gap-2">C++ <span class="text-[10px] text-white/20 font-bold uppercase tracking-wider">Pronto</span></a></li>
                         <li><a href="#" class="footer-link flex items-center gap-2">Python <span class="text-[10px] text-white/20 font-bold uppercase tracking-wider">Pronto</span></a></li>
                     </ul>
@@ -417,6 +417,18 @@
         });
     });
 </script>
+
+{{-- Floating WhatsApp --}}
+@php
+    $waMessage = request()->is('desarrollo-web')
+        ? 'Hola%2C%20quiero%20saber%20m%C3%A1s%20sobre%20el%20desarrollo%20web.'
+        : 'Hola%2C%20quiero%20saber%20m%C3%A1s%20sobre%20las%20capacitaciones.';
+@endphp
+<a href="https://wa.me/51957290861?text={{ $waMessage }}" target="_blank" rel="noopener noreferrer"
+   class="fixed bottom-6 right-6 z-50 w-14 h-14 rounded-full bg-[#25D366] text-white flex items-center justify-center shadow-lg hover:scale-110 transition-transform"
+   aria-label="WhatsApp">
+    <i class="ti ti-brand-whatsapp text-3xl"></i>
+</a>
 
 </body>
 </html>

@@ -186,7 +186,7 @@
                         </div>
                         <div class="border border-blueprint p-3 text-center" style="background-color: rgba(255,255,255,0.02);">
                             <div class="text-[10px] uppercase tracking-widest text-white/30 mb-1">Fecha de fin</div>
-                            <div class="font-display text-base font-extrabold text-white">26 sep</div>
+                            <div class="font-display text-base font-extrabold text-white">24 oct</div>
                             <div class="text-[10px] text-white/40">Sábado</div>
                         </div>
                     </div>
@@ -194,15 +194,15 @@
                     <ul class="space-y-3">
                         <li class="flex items-center gap-3 text-white/60 text-sm font-light">
                             <i class="ti ti-clock text-white/40 text-lg"></i>
-                            <span>Duración: <strong class="text-white/80">100 horas</strong></span>
+                            <span>Duración: <strong class="text-white/80">150 horas</strong></span>
                         </li>
                         <li class="flex items-center gap-3 text-white/60 text-sm font-light">
                             <i class="ti ti-calendar text-white/40 text-lg"></i>
-                            <span>Sesiones: <strong class="text-white/80">8 sesiones</strong></span>
+                            <span>Sesiones: <strong class="text-white/80">12 sesiones</strong></span>
                         </li>
                         <li class="flex items-center gap-3 text-white/60 text-sm font-light">
                             <i class="ti ti-chart-bar text-white/40 text-lg"></i>
-                            <span>Nivel: <strong class="text-white/80">Básico</strong></span>
+                            <span>Nivel: <strong class="text-white/80">Básico e Intermedio</strong></span>
                         </li>
                         <li class="flex items-center gap-3 text-white/60 text-sm font-light">
                             <i class="ti ti-certificate text-white/40 text-lg"></i>
@@ -221,7 +221,7 @@
                         Inscribirme Ahora
                     </a>
                     <div class="text-[10px] text-center text-white/30">
-                        8 de agosto – 26 de septiembre. Cupos limitados.
+                        8 de agosto – 24 de octubre. Cupos limitados.
                     </div>
                 </div>
 
@@ -295,10 +295,16 @@
                         Cronograma del curso
                     </h2>
 
+                    {{-- Módulo I: Microsoft Word --}}
                     <div class="module-card">
                         <div class="module-header">
                             <div class="text-[10px] font-extrabold uppercase tracking-widest text-white/30 mb-1">Módulo I</div>
-                            <h3 class="font-display text-lg sm:text-xl font-bold text-white uppercase">Microsoft Word</h3>
+                            <div class="flex items-center gap-3">
+                                <div class="w-8 h-8 rounded-lg bg-white/5 border border-blueprint flex items-center justify-center text-white">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3v4a1 1 0 0 0 1 1h4"/><path d="M17 21H7a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h7l5 5v11a2 2 0 0 1-2 2"/><path d="m9 12l1.333 5L12 13l1.667 4L15 12"/></svg>
+                                </div>
+                                <h3 class="font-display text-lg sm:text-xl font-bold text-white uppercase">Microsoft Word</h3>
+                            </div>
                         </div>
                         <table class="schedule-table">
                             <thead>
@@ -310,81 +316,44 @@
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td>Introducción a Word</td>
-                                    <td>Sábado 8 de agosto</td>
-                                    <td>4:00 pm – 7:00 pm</td>
-                                </tr>
-                                <tr>
-                                    <td>Edición y formato de texto</td>
+                                    <td>Introducción a Word. Edición y formato de texto</td>
                                     <td>Sábado 8 de agosto</td>
                                     <td>4:00 pm – 7:00 pm</td>
                                 </tr>
                                 <tr>
                                     <td>Formato profesional de documentos</td>
-                                    <td>Sábado 8 de agosto</td>
+                                    <td>Sábado 15 de agosto</td>
                                     <td>4:00 pm – 7:00 pm</td>
                                 </tr>
                                 <tr>
                                     <td>Configuración de página e impresión</td>
-                                    <td>Sábado 8 de agosto</td>
+                                    <td>Sábado 22 de agosto</td>
+                                    <td>4:00 pm – 7:00 pm</td>
+                                </tr>
+                                <tr>
+                                    <td>Presentación de proyecto y examen final</td>
+                                    <td>Sábado 29 de agosto</td>
                                     <td>4:00 pm – 7:00 pm</td>
                                 </tr>
                             </tbody>
                         </table>
+                        <div class="px-6 py-4 border-t border-dashed border-white/10">
+                            <p class="text-white/40 text-xs font-light">*Entrega de certificado por 50 horas.</p>
+                        </div>
                     </div>
 
+                    {{-- Módulo II: Microsoft PowerPoint y Canva --}}
                     <div class="module-card">
                         <div class="module-header">
                             <div class="text-[10px] font-extrabold uppercase tracking-widest text-white/30 mb-1">Módulo II</div>
-                            <h3 class="font-display text-lg sm:text-xl font-bold text-white uppercase">Microsoft Excel</h3>
-                        </div>
-                        <table class="schedule-table">
-                            <thead>
-                                <tr>
-                                    <th>Clases</th>
-                                    <th>Fecha</th>
-                                    <th>Hora</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>Introducción a Excel</td>
-                                    <td>Sábado</td>
-                                    <td>4:00 pm – 7:00 pm</td>
-                                </tr>
-                                <tr>
-                                    <td>Fórmulas y funciones básicas</td>
-                                    <td>Sábado</td>
-                                    <td>4:00 pm – 7:00 pm</td>
-                                </tr>
-                                <tr>
-                                    <td>Funciones intermedias</td>
-                                    <td>Sábado</td>
-                                    <td>4:00 pm – 7:00 pm</td>
-                                </tr>
-                                <tr>
-                                    <td>Gestión y análisis de datos</td>
-                                    <td>Sábado</td>
-                                    <td>4:00 pm – 7:00 pm</td>
-                                </tr>
-                                <tr>
-                                    <td>Gráficos y visualización</td>
-                                    <td>Sábado</td>
-                                    <td>4:00 pm – 7:00 pm</td>
-                                </tr>
-                                <tr>
-                                    <td>Herramientas avanzadas</td>
-                                    <td>Sábado</td>
-                                    <td>4:00 pm – 7:00 pm</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-
-                    <div class="module-card">
-                        <div class="module-header">
-                            <div class="text-[10px] font-extrabold uppercase tracking-widest text-white/30 mb-1">Módulo III</div>
-                            <h3 class="font-display text-lg sm:text-xl font-bold text-white uppercase">Microsoft PowerPoint</h3>
+                            <div class="flex items-center gap-3">
+                                <div class="flex -space-x-2">
+                                    <div class="w-8 h-8 rounded-lg bg-white/5 border border-blueprint flex items-center justify-center text-white">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21a9 9 0 0 1 0-18c4.97 0 9 3.582 9 8c0 1.06-.474 2.078-1.318 2.828S17.693 15 16.5 15H14a2 2 0 0 0-1 3.75A1.3 1.3 0 0 1 12 21"/><path d="M7.5 10.5a1 1 0 1 0 2 0a1 1 0 1 0-2 0m4-3a1 1 0 1 0 2 0a1 1 0 1 0-2 0m4 3a1 1 0 1 0 2 0a1 1 0 1 0-2 0"/></svg>
+                                    </div>
+                                </div>
+                                <h3 class="font-display text-lg sm:text-xl font-bold text-white uppercase">Microsoft PowerPoint y Canva</h3>
+                            </div>
                         </div>
                         <table class="schedule-table">
                             <thead>
@@ -397,31 +366,77 @@
                             <tbody>
                                 <tr>
                                     <td>Introducción a PowerPoint</td>
-                                    <td>Sábado</td>
-                                    <td>4:00 pm – 7:00 pm</td>
-                                </tr>
-                                <tr>
-                                    <td>Diseño de diapositivas</td>
-                                    <td>Sábado</td>
+                                    <td>Sábado 5 de septiembre</td>
                                     <td>4:00 pm – 7:00 pm</td>
                                 </tr>
                                 <tr>
                                     <td>Inserción de elementos</td>
-                                    <td>Sábado</td>
+                                    <td>Sábado 19 de septiembre</td>
                                     <td>4:00 pm – 7:00 pm</td>
                                 </tr>
                                 <tr>
-                                    <td>Animaciones y transiciones</td>
-                                    <td>Sábado</td>
+                                    <td>Diseño y presentaciones en Canva</td>
+                                    <td>Sábado 26 de septiembre</td>
                                     <td>4:00 pm – 7:00 pm</td>
                                 </tr>
                                 <tr>
-                                    <td>Presentación profesional</td>
+                                    <td>Presentación profesional y examen final</td>
                                     <td>Sábado 26 de septiembre</td>
                                     <td>4:00 pm – 7:00 pm</td>
                                 </tr>
                             </tbody>
                         </table>
+                        <div class="px-6 py-4 border-t border-dashed border-white/10">
+                            <p class="text-white/40 text-xs font-light">*Entrega de certificado por 50 horas.</p>
+                        </div>
+                    </div>
+
+                    {{-- Módulo III: Microsoft Excel --}}
+                    <div class="module-card">
+                        <div class="module-header">
+                            <div class="text-[10px] font-extrabold uppercase tracking-widest text-white/30 mb-1">Módulo III</div>
+                            <div class="flex items-center gap-3">
+                                <div class="w-8 h-8 rounded-lg bg-white/5 border border-blueprint flex items-center justify-center text-white">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3v4a1 1 0 0 0 1 1h4"/><path d="M17 21H7a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h7l5 5v11a2 2 0 0 1-2 2m-7-9l4 5m-4 0l4-5"/></svg>
+                                </div>
+                                <h3 class="font-display text-lg sm:text-xl font-bold text-white uppercase">Microsoft Excel</h3>
+                            </div>
+                        </div>
+                        <table class="schedule-table">
+                            <thead>
+                                <tr>
+                                    <th>Clases</th>
+                                    <th>Fecha</th>
+                                    <th>Hora</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Introducción a Excel</td>
+                                    <td>Sábado 3 de octubre</td>
+                                    <td>4:00 pm – 7:00 pm</td>
+                                </tr>
+                                <tr>
+                                    <td>Funciones intermedias</td>
+                                    <td>Sábado 10 de octubre</td>
+                                    <td>4:00 pm – 7:00 pm</td>
+                                </tr>
+                                <tr>
+                                    <td>Gráficos y visualización</td>
+                                    <td>Sábado 17 de octubre</td>
+                                    <td>4:00 pm – 7:00 pm</td>
+                                </tr>
+                                <tr>
+                                    <td>Presentación de proyecto y examen final</td>
+                                    <td>Sábado 24 de octubre</td>
+                                    <td>4:00 pm – 7:00 pm</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="px-6 py-4 border-t border-dashed border-white/10 space-y-1">
+                            <p class="text-white/40 text-xs font-light">*Entrega de certificado por 50 horas.</p>
+                            <p class="text-white/40 text-xs font-light">*Nota: Al realizar los 3 módulos se entrega un certificado por 150 horas.</p>
+                        </div>
                     </div>
                 </div>
 
@@ -448,7 +463,7 @@
                         </div>
                         <div class="border border-blueprint p-3 text-center" style="background-color: rgba(255,255,255,0.02);">
                             <div class="text-[10px] uppercase tracking-widest text-white/30 mb-1">Fecha de fin</div>
-                            <div class="font-display text-base sm:text-lg font-extrabold text-white">26 sep</div>
+                            <div class="font-display text-base sm:text-lg font-extrabold text-white">24 oct</div>
                             <div class="text-[10px] text-white/40">Sábado</div>
                         </div>
                     </div>
@@ -459,15 +474,15 @@
                     <ul class="space-y-4">
                         <li class="flex items-center gap-3 text-white/60 text-sm font-light">
                             <i class="ti ti-clock text-white/40 text-lg"></i>
-                            <span>Duración: <strong class="text-white/80">100 horas</strong></span>
+                            <span>Duración: <strong class="text-white/80">150 horas</strong></span>
                         </li>
                         <li class="flex items-center gap-3 text-white/60 text-sm font-light">
                             <i class="ti ti-calendar text-white/40 text-lg"></i>
-                            <span>Sesiones: <strong class="text-white/80">8 sesiones</strong></span>
+                            <span>Sesiones: <strong class="text-white/80">12 sesiones</strong></span>
                         </li>
                         <li class="flex items-center gap-3 text-white/60 text-sm font-light">
                             <i class="ti ti-chart-bar text-white/40 text-lg"></i>
-                            <span>Nivel: <strong class="text-white/80">Básico</strong></span>
+                            <span>Nivel: <strong class="text-white/80">Básico e Intermedio</strong></span>
                         </li>
                         <li class="flex items-center gap-3 text-white/60 text-sm font-light">
                             <i class="ti ti-certificate text-white/40 text-lg"></i>
@@ -488,7 +503,7 @@
                     </a>
 
                     <div class="text-[10px] text-center text-white/30">
-                        8 de agosto – 26 de septiembre. Cupos limitados.
+                        8 de agosto – 24 de octubre. Cupos limitados.
                     </div>
                 </div>
 
