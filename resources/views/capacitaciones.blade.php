@@ -230,6 +230,28 @@
                     </div>
                 </a>
 
+                {{-- Python --}}
+                <div class="c-card">
+                    <div class="cpp-thumb" style="position:absolute;inset:0;width:100%;height:100%;background-image: url('https://alex123456.x02.me/i/3W5R.png'); background-size: cover; background-position: center; background-repeat: no-repeat;">
+                    </div>
+                    <span class="c-badge badge-soon" style="z-index:3;">Próximamente</span>
+                    <div class="c-overlay">
+                        <div class="c-overlay-title">Programación en Python</div>
+                        <div class="c-overlay-row">
+                            <div class="c-overlay-info">
+                                <div class="c-overlay-info-icon">
+                                    <svg width="13" height="13" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                                </div>
+                                4 horas a la semana
+                            </div>
+                            <div class="btn-go-disabled">
+                                <svg width="12" height="12" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                                Próximamente
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
                 {{-- C++ --}}
                 <div class="c-card">
                     <div class="cpp-thumb" style="position:absolute;inset:0;width:100%;height:100%;aspect-ratio:unset;">
@@ -274,44 +296,6 @@
                     </div>
                 </div>
 
-                {{-- Python --}}
-                <div class="c-card">
-                    <div class="cpp-thumb" style="background: linear-gradient(135deg, rgba(0,0,0,0.6) 0%, #000 100%);">
-                        <div class="cpp-grid"></div>
-                        <div class="cpp-orb"></div>
-                        <div class="cpp-code" aria-hidden="true">
-                            def saludar(nombre):<br>
-                            &nbsp;&nbsp;return f"Hola, {nombre}"<br><br>
-                            class Curso:<br>
-                            &nbsp;&nbsp;def __init__(self):<br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;self.nombre = "Python"<br><br>
-                            &nbsp;&nbsp;def iniciar(self):<br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;print("Aprendiendo")<br><br>
-                            curso = Curso()<br>
-                            curso.iniciar()
-                        </div>
-                        <div class="cpp-label">
-                            <div class="cpp-text" style="font-size:44px;">Python</div>
-                            <div class="cpp-sub-label">Programación</div>
-                        </div>
-                    </div>
-                    <span class="c-badge badge-soon" style="z-index:3;">Próximamente</span>
-                    <div class="c-overlay">
-                        <div class="c-overlay-title">Programación en Python</div>
-                        <div class="c-overlay-row">
-                            <div class="c-overlay-info">
-                                <div class="c-overlay-info-icon">
-                                    <svg width="13" height="13" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-                                </div>
-                                4 horas a la semana
-                            </div>
-                            <div class="btn-go-disabled">
-                                <svg width="12" height="12" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
-                                Próximamente
-                            </div>
-                        </div>
-                    </div>
-                </div>
 
             </div>
         </div>
