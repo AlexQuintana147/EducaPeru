@@ -346,8 +346,8 @@
                     <div class="font-display text-[11px] font-extrabold tracking-[0.14em] uppercase text-white mb-5">Cursos</div>
                     <ul class="space-y-3">
                         <li><a href="/capacitaciones/ofimatica" class="footer-link">Ofimática</a></li>
+                        <li><a href="/capacitaciones/python" class="footer-link">Python</a></li>
                         <li><a href="#" class="footer-link flex items-center gap-2">C++ <span class="text-[10px] text-white/20 font-bold uppercase tracking-wider">Pronto</span></a></li>
-                        <li><a href="#" class="footer-link flex items-center gap-2">Python <span class="text-[10px] text-white/20 font-bold uppercase tracking-wider">Pronto</span></a></li>
                     </ul>
                 </div>
                 <div class="col-span-2 sm:col-span-1">
